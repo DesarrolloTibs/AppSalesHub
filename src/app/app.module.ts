@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
+  declarations: [ //TODO:Declaraciones, Directivas,Componentes,pipes
     AppComponent
   ],
-  imports: [
+  imports: [ //TODO: Solo se importan otros modules
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
