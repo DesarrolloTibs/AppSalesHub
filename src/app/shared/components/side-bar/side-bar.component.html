@@ -1,1 +1,15 @@
 <p>side-bar works!</p>
+<mat-sidenav-container class="example-container" >
+    <mat-sidenav #sidenav mode="side" >
+      Sidenav content
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <p><mat-checkbox >sidenav.opened</mat-checkbox></p>
+      <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+      <p>Events:</p>
+      <div class="example-events">
+        
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
