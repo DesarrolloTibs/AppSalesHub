@@ -1,15 +1,55 @@
-<p>side-bar works!</p>
-<mat-sidenav-container class="example-container" >
-    <mat-sidenav #sidenav mode="side" >
-      Sidenav content
-    </mat-sidenav>
-  
-    <mat-sidenav-content>
-      <p><mat-checkbox >sidenav.opened</mat-checkbox></p>
-      <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
-      <p>Events:</p>
-      <div class="example-events">
-        
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+<mat-toolbar class="mat-elevation-z8">
+  <!-- Button Hidden -->
+  <!-- <button
+      mat-icon-button
+      *ngIf="sidenav.mode === 'over'" 
+      (click)="sidenav.toggle()"
+    > -->
+  <button
+    mat-icon-button
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  SalesHUB
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+    />
+
+    <h4 class="name">Hector Esparza</h4>
+    <p class="designation">Software Engineer</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/Main">
+      <mat-icon>home</mat-icon>
+      <span >Home</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/contacts">
+      <mat-icon>person</mat-icon>
+      <span>Contactos</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/about">
+      <mat-icon>info</mat-icon>
+      <span>About</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/auth">
+      <mat-icon>logout</mat-icon>
+      <span>Cerrar Sesion</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet name="child"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
