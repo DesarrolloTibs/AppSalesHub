@@ -82,6 +82,941 @@
         "updatedAt": "2023-01-06T21:54:47.978Z",
         "tenantId": "tibs",
         "deletedAt": "2023-01-06T21:54:37.487Z"
+      },{
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
+      },
+      {
+        "_id": "63b871cf034ade1129abab69",
+        "fullName": "Oscar Hernandez",
+        "officePhone": [
+          "8118249932",
+          "8125485963"
+        ],
+        "mobilesPhone": [
+          "8115698963",
+          "8112546965"
+        ],
+        "emails": [
+          "oscar.hernandez@tibs.com.mx",
+          "oscar@gmail.com"
+        ],
+        "channel": "WhastApp",
+        "typeContacts": "62271512ee5081a7027e636a",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Apodaca",
+        "totalBusiness": 80000,
+        "deleted": false,
+        "createdAt": "2023-01-06T19:09:03.623Z",
+        "updatedAt": "2023-01-06T19:09:03.623Z",
+        "tenantId": "tibs"
       }
     ],
     "totalDocs": 3,
