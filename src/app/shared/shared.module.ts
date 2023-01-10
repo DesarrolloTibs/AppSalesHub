@@ -4,11 +4,13 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { HeaderUserComponent } from './components/header-user/header-user.component';
 import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
+import { TableGridComponent } from './components/table-grid/table-grid.component';
 
 @NgModule({
   declarations: [
     SideBarComponent,
-    HeaderUserComponent
+    HeaderUserComponent,
+    TableGridComponent
   ],
   imports: [
     CommonModule, 
@@ -19,6 +21,7 @@ import { RouterModule } from '@angular/router';
   exports:[
     SideBarComponent,
     HeaderUserComponent,
+    TableGridComponent
   ],
   bootstrap:[SideBarComponent]
 })

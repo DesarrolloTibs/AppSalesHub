@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { ContactsRoutingModule } from './contacts-routing.module';
 
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { MaterialModule } from '@shared/material.module';
+import { SharedModule } from '@shared/shared.module';
 
 
 @NgModule({
@@ -13,6 +15,9 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
   imports: [
     CommonModule,
     ContactsRoutingModule,
+    MaterialModule,
+    SharedModule
+
 
   ]
 })

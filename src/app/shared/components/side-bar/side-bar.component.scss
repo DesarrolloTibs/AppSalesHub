@@ -4,7 +4,7 @@ mat-toolbar {
   }
   
   mat-sidenav {
-    margin: 16px;
+    /*margin: 0px;*/
     width: 200px;
     border-right: none;
     background:var( --background-color-1);
@@ -18,7 +18,7 @@ mat-toolbar {
     height: calc(100vh - 130px);
     /*border-radius: 10px;*/
     margin: 16px;
-    margin-left: 32px;
+    margin-left: 16px;
   
     padding: 16px;
   
