@@ -1,0 +1,13 @@
+<app-table-grid
+  [data]="dataSource"
+  [displayedColumns]="displayedColumns"
+></app-table-grid>
+<button
+  mat-fab
+  color="primary"
+  aria-label="New button contacts"
+  class="md-fab-bottom-right"
+  (click)="handleClick()"
+>
+  <mat-icon>add</mat-icon>
+</button>

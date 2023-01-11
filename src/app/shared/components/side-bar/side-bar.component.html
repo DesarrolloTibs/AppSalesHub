@@ -5,10 +5,7 @@
       *ngIf="sidenav.mode === 'over'" 
       (click)="sidenav.toggle()"
     > -->
-  <button
-    mat-icon-button
-    (click)="sidenav.toggle()"
-  >
+  <button mat-icon-button (click)="sidenav.toggle()">
     <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
     <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
   </button>
@@ -26,32 +23,32 @@
     <p class="designation">Software Engineer</p>
 
     <mat-divider></mat-divider>
-
-    <button mat-button class="menu-button" routerLink="/main">
-      <mat-icon>home</mat-icon>
-      <span >Home</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/contacts">
-      <mat-icon>person</mat-icon>
-      <span>Contactos</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>info</mat-icon>
-      <span>About</span>
-    </button>
+    <app-side-bar-navigation
+      [Icon]="'home'"
+      [Title]="'Home'"
+      [Link]="'main'"
+    ></app-side-bar-navigation>
+    <app-side-bar-navigation
+      [Icon]="'person'"
+      [Title]="'Contactos'"
+      [Link]="'contacts'"
+    ></app-side-bar-navigation>
+    <app-side-bar-navigation
+      [Icon]="'home'"
+      [Title]="'Home'"
+      [Link]="'main'"
+    ></app-side-bar-navigation>
 
     <mat-divider></mat-divider>
-
-    <button mat-button class="menu-button" routerLink="/auth">
-      <mat-icon>logout</mat-icon>
-      <span>Cerrar Sesion</span>
-    </button>
+    <app-side-bar-navigation
+      [Icon]="'logout'"
+      [Title]="'Cerrar Sesion'"
+      [Link]="'auth'"
+    ></app-side-bar-navigation>
   </mat-sidenav>
 
-  
   <mat-sidenav-content>
-    <div class="content ">
-      
+    <div class="content">
       <ng-content></ng-content>
     </div>
   </mat-sidenav-content>

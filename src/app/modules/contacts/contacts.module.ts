@@ -7,14 +7,18 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { MaterialModule } from '@shared/material.module';
 import { SharedModule } from '@shared/shared.module';
 import { ContactEditPageComponent } from './pages/contact-edit-page/contact-edit-page.component';
-import { ContactListComponent } from './pages/contact-list/contact-list.component';
+import { ContactListPageComponent } from './pages/contact-list-page/contact-list-page.component';
+import { ContactDetailPageComponent } from './pages/contact-detail-page/contact-detail-page.component';
+import { ContactNewPageComponent } from './pages/contact-new-page/contact-new-page.component';
 
 
 @NgModule({
   declarations: [
     ContactPageComponent,
     ContactEditPageComponent,
-    ContactListComponent
+    ContactListPageComponent,
+    ContactDetailPageComponent,
+    ContactNewPageComponent
   ],
   imports: [
     CommonModule,

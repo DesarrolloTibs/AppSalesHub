@@ -29,20 +29,7 @@ mat-toolbar {
     height: calc(100vh - 65px);
   }
   
-  .menu-button {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 1rem;
-    mat-icon {
-      margin-right: 8px;
-      color: var(--color-4);
-    }
-    span{
-      color: var(--color-4);
-    }
-  }
+ 
   
   .avatar {
     margin-top: 16px;

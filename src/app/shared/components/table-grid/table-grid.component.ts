@@ -5,6 +5,7 @@ import { TableColumns } from '@core/models/tableColumns.model';
 import {MatSort, Sort} from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { ActivatedRoute, Router} from '@angular/router';
+import { getCurrentRoute } from 'src/app/utils/utils';
 @Component({
   selector: 'app-table-grid',
   templateUrl: './table-grid.component.html',
@@ -13,7 +14,7 @@ import { ActivatedRoute, Router} from '@angular/router';
 export class TableGridComponent  implements OnInit, AfterViewInit {
   @Input() displayedColumns:Array<TableColumns>=[]
   @Input() data=[]
-  @Input() routeTo:string=""
+  routeTo:string=""
   public columnsToDisplay: string[]=[];
   constructor(private _liveAnnouncer: LiveAnnouncer,private route: ActivatedRoute, private router: Router) {}
   @ViewChild(MatSort) sort!: MatSort;
@@ -25,6 +26,11 @@ export class TableGridComponent  implements OnInit, AfterViewInit {
     //this.dataSource.data = [];
     this.dataSource.data = itemsList;
     this.columnsToDisplay=this.displayedColumns.map(m=>m.reference);
+    
+    //this.router.url.split("/")[1]
+    console.log("route Current",getCurrentRoute(this.router.url))
+  
+    this.routeTo=getCurrentRoute(this.router.url)
   }
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
@@ -45,6 +51,7 @@ export class TableGridComponent  implements OnInit, AfterViewInit {
 
   public redirectToDetails = (id: string) => {
     console.log(`redireccionando ${this.routeTo} DETALLE con el identificador:${id}`)
+    this.router.navigate([`/${this.routeTo}/detail/${id}`]);
   }
   public redirectToUpdate = (id: string) => {
     this.router.navigate([`/${this.routeTo}/editar/${id}`]);

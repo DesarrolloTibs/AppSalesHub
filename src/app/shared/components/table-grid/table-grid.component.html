@@ -25,7 +25,7 @@
               color="primary"
               (click)="redirectToDetails(element._id)"
             >
-              <mat-icon class="mat-18">reorder</mat-icon>
+              <mat-icon class="mat-18">edit</mat-icon>
             </button>
             <button
               *ngSwitchCase="'update'"
@@ -33,7 +33,7 @@
               color="accent"
               (click)="redirectToUpdate(element._id)"
             >
-              <mat-icon class="mat-18">system_update</mat-icon>
+              <mat-icon class="mat-18">update</mat-icon>
             </button>
             <button
               *ngSwitchCase="'delete'"
