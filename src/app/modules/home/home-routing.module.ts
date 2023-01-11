@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactListPageComponent } from '@modules/contacts/pages/contact-list-page/contact-list-page.component';
 
 
 
@@ -10,12 +11,13 @@ const routes: Routes = [
       {
         path: "contacts",
         loadChildren: () => import("@modules/contacts/contacts.module").then(m => m.ContactsModule),
-
+       
+       
       },
       {
         path: "vendors",//
         loadChildren: () => import("@modules/vendors/vendors.module").then(m => m.VendorsModule),
-
+   
       },
       {
         path: "managers",//
@@ -35,7 +37,7 @@ const routes: Routes = [
       {
         path: "main",//
         loadChildren: () => import("@modules/main/main.module").then(m => m.MainModule),
-
+      
       },
       {
         path: '**',//TODO 404 cuando no existe la ruta

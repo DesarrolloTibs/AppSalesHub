@@ -49,5 +49,11 @@ table {
 .mat-mdc-form-field {
     font-size: 14px;
     width: 25%;
+    
   }
-
+  .parent {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: row;
+  }

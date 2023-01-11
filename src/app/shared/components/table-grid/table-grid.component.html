@@ -1,8 +1,11 @@
-
+{{dataSource.toString()}}
+<div class="parent">
   <mat-form-field>
     <mat-label>Busqueda rápida</mat-label>
     <input matInput type="text" (keyup)="doFilter($event)" placeholder="" />
   </mat-form-field>
+</div>
+ 
 
   <table mat-table [dataSource]="dataSource" matSort>
     <ng-container

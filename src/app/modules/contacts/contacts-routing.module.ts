@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactAddPageComponent } from './pages/contact-add-page/contact-add-page.component';
 import { ContactDetailPageComponent } from './pages/contact-detail-page/contact-detail-page.component';
-import { ContactEditPageComponent } from './pages/contact-edit-page/contact-edit-page.component';
 import { ContactListPageComponent } from './pages/contact-list-page/contact-list-page.component';
-import { ContactNewPageComponent } from './pages/contact-new-page/contact-new-page.component';
+
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 const routes: Routes = [
@@ -16,6 +16,7 @@ const routes: Routes = [
   {
     path: '',
     component: ContactPageComponent,
+
     children: [
       {
         path: 'list',
@@ -23,7 +24,7 @@ const routes: Routes = [
       },
       {
         path: 'editar/:id',
-        component: ContactEditPageComponent,
+        component: ContactAddPageComponent,
       },
       {
         path: 'detail/:id',
@@ -31,7 +32,8 @@ const routes: Routes = [
       },
       {
         path: 'new',
-        component: ContactNewPageComponent,
+        component: ContactAddPageComponent,
+        pathMatch:'full'
       }]
   }
 ];

@@ -13,7 +13,7 @@ import { getCurrentRoute } from 'src/app/utils/utils';
 })
 export class TableGridComponent  implements OnInit, AfterViewInit {
   @Input() displayedColumns:Array<TableColumns>=[]
-  @Input() data=[]
+  @Input() data:Array<any>=[]
   routeTo:string=""
   public columnsToDisplay: string[]=[];
   constructor(private _liveAnnouncer: LiveAnnouncer,private route: ActivatedRoute, private router: Router) {}
@@ -25,6 +25,7 @@ export class TableGridComponent  implements OnInit, AfterViewInit {
     const itemsList= this.data;
     //this.dataSource.data = [];
     this.dataSource.data = itemsList;
+    console.log("data component",itemsList)
     this.columnsToDisplay=this.displayedColumns.map(m=>m.reference);
     
     //this.router.url.split("/")[1]
