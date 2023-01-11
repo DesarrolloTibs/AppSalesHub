@@ -1,10 +1,10 @@
 import { AfterViewInit, Component, Input, OnInit,ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
-import { TableColumns } from '@core/models/TableColumns.model';
+import { TableColumns } from '@core/models/tableColumns.model';
 import {MatSort, Sort} from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
-
+import { ActivatedRoute, Router} from '@angular/router';
 @Component({
   selector: 'app-table-grid',
   templateUrl: './table-grid.component.html',
@@ -13,12 +13,13 @@ import { MatPaginator } from '@angular/material/paginator';
 export class TableGridComponent  implements OnInit, AfterViewInit {
   @Input() displayedColumns:Array<TableColumns>=[]
   @Input() data=[]
-  @Input() route:string=""
+  @Input() routeTo:string=""
   public columnsToDisplay: string[]=[];
-  constructor(private _liveAnnouncer: LiveAnnouncer) {}
+  constructor(private _liveAnnouncer: LiveAnnouncer,private route: ActivatedRoute, private router: Router) {}
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   public dataSource = new MatTableDataSource<any>();
+
   ngOnInit() {
     const itemsList= this.data;
     //this.dataSource.data = [];
@@ -43,14 +44,14 @@ export class TableGridComponent  implements OnInit, AfterViewInit {
   }
 
   public redirectToDetails = (id: string) => {
-    console.log(`redireccionando ${this.route} DETALLE con el identificador:${id}`)
+    console.log(`redireccionando ${this.routeTo} DETALLE con el identificador:${id}`)
   }
   public redirectToUpdate = (id: string) => {
-    console.log(`redireccionando ${this.route} ACTUALIZAR con el identificador:${id}`)
+    this.router.navigate([`/${this.routeTo}/editar/${id}`]);
   }
   public redirectToDelete = (id: string) => {
-
-    console.log(`redireccionando ${this.route} DELETE con el identificador:${id}`) 
+    this.router.navigate([`/${this.routeTo}/delete`]);
+    //console.log(`redireccionando ${this.routeTo} DELETE con el identificador:${id}`) 
    }
    public doFilter = (event:KeyboardEvent) => {
 

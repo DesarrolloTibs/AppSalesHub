@@ -27,7 +27,7 @@
 
     <mat-divider></mat-divider>
 
-    <button mat-button class="menu-button" routerLink="/Main">
+    <button mat-button class="menu-button" routerLink="/main">
       <mat-icon>home</mat-icon>
       <span >Home</span>
     </button>
@@ -47,9 +47,12 @@
       <span>Cerrar Sesion</span>
     </button>
   </mat-sidenav>
+
+  
   <mat-sidenav-content>
     <div class="content ">
-      <router-outlet name="child"></router-outlet>
+      
+      <ng-content></ng-content>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

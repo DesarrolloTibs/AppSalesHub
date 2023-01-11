@@ -1,7 +1,9 @@
-.div-table{
+/*.div-table{
+    width: 100%;
     height: calc( 100vh - 200px);
     padding: 15px;
-}
+}*/
+/*properties table */
 table {
     table-layout: fixed;
     width: 100%;
@@ -13,6 +15,28 @@ table {
     text-align: left;
     max-width: 300px;
  }
+
+
+  /*column rules*/
+  /*.mat-column-detail{
+    width: 12px;
+
+    padding: 1px;
+    text-align: center;
+  }
+  .mat-column-update{
+    width: 12px;
+    padding: 1px;
+    text-align: center;
+  }
+  .mat-column-delete{
+    width: 12px;
+
+    padding: 1px;
+    text-align: center;
+  }*/
+/*other rules */
+
 
 .no-data{
     text-align: center;

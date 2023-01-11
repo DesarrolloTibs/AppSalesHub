@@ -15,6 +15,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
+  
     MatSlideToggleModule
   ]
 })

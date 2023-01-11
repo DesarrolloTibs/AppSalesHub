@@ -5,7 +5,6 @@ import { MainPageComponent } from './page/main-page/main-page.component';
 const routes: Routes = [ {
   path:'',
   component:MainPageComponent,
-  outlet:"child"
 },];
 
 @NgModule({
