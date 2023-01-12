@@ -6,7 +6,8 @@ import { MatSort, Sort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { ActivatedRoute, Router } from '@angular/router';
 import { getCurrentRoute } from 'src/app/utils/utils';
-import { TableGridService } from './services/table-grid.service';
+import { RestService } from '@core/services/rest.service';
+
 @Component({
   selector: 'app-table-grid',
   templateUrl: './table-grid.component.html',
@@ -22,7 +23,7 @@ export class TableGridComponent implements OnInit, AfterViewInit {
   constructor(private _liveAnnouncer: LiveAnnouncer,
     private route: ActivatedRoute,
     private router: Router,
-    private _serviceTable: TableGridService) {
+    private _restService: RestService) {
   }
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -71,8 +72,10 @@ export class TableGridComponent implements OnInit, AfterViewInit {
   }
 
   loadData(): void {
-    this._serviceTable.getAllData$(this.routeTo)
+    console.log(this.routeTo)
+    this._restService.get$(this.routeTo)
       .subscribe((response: any[]) => {
+        console.log(response)
         this.dataSource.data = response
       })
   }
