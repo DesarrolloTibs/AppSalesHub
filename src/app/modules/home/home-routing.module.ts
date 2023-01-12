@@ -1,18 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactListPageComponent } from '@modules/contacts/pages/contact-list-page/contact-list-page.component';
 
 
 
-const routes: Routes = [
-  {//Todo: Change Routes in Sidebar, Routing module each path 
-    path: '',
-    children: [
+const routes: Routes = [//Todo: Change Routes in Sidebar, Routing module each path 
       {
         path: "contacts",
         loadChildren: () => import("@modules/contacts/contacts.module").then(m => m.ContactsModule),
-       
-       
       },
       {
         path: "vendors",//
@@ -42,8 +36,7 @@ const routes: Routes = [
       {
         path: '**',//TODO 404 cuando no existe la ruta
         redirectTo: '/main'
-      }]
-  }
+      }
 
 ];
 @NgModule({

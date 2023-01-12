@@ -3,3 +3,62 @@
     left: 25px;
     margin: 15px;
 }
+/*.div-table{
+    width: 100%;
+    height: calc( 100vh - 200px);
+    padding: 15px;
+}*/
+/*properties table */
+table {
+    table-layout: fixed;
+    width: 100%;
+    //overflow: auto; 
+    //display: table;
+   // min-height: calc( 100vh - 300px);
+}
+ th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+ }
+
+
+  /*column rules*/
+  /*.mat-column-detail{
+    width: 12px;
+
+    padding: 1px;
+    text-align: center;
+  }
+  .mat-column-update{
+    width: 12px;
+    padding: 1px;
+    text-align: center;
+  }
+  .mat-column-delete{
+    width: 12px;
+
+    padding: 1px;
+    text-align: center;
+  }*/
+/*other rules */
+
+
+.no-data{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+[hidden] {
+    display: none !important;
+}
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 25%;
+    
+  }
+  .parent {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: row;
+  }

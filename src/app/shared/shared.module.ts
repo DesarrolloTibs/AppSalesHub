@@ -10,7 +10,6 @@ import { SideBarNavigationComponent } from './components/side-bar-navigation/sid
 @NgModule({
   declarations: [
     SideBarComponent,
-  
     TableGridComponent,
        SideBarNavigationComponent
   ],
@@ -22,7 +21,6 @@ import { SideBarNavigationComponent } from './components/side-bar-navigation/sid
   ],
   exports:[
     SideBarComponent,
-
     TableGridComponent
   ],
   bootstrap:[SideBarComponent]

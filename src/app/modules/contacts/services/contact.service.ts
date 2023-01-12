@@ -7,11 +7,8 @@ import { map, mergeMap, tap, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ContactService {
-  private  URL = environment.api;
+  private readonly URL = environment.api;
   constructor(private http: HttpClient) {
-  }
-  getAllContacts2$(): Observable<any> {
-    return this.http.get(`${this.URL}/contacts/get`)
   }
     /**
    * //TODO {data:[..1,...2,..2]}

@@ -13,20 +13,21 @@ import { getCurrentRoute } from 'src/app/utils/utils';
 })
 export class TableGridComponent  implements OnInit, AfterViewInit {
   @Input() displayedColumns:Array<TableColumns>=[]
-  @Input() data:Array<any>=[]
+  @Input() dataContacts:Array<any>=[]
   routeTo:string=""
   public columnsToDisplay: string[]=[];
-  constructor(private _liveAnnouncer: LiveAnnouncer,private route: ActivatedRoute, private router: Router) {}
+  public dataSource = new MatTableDataSource<any>();
+  constructor(private _liveAnnouncer: LiveAnnouncer,private route: ActivatedRoute, private router: Router) {
+  }
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  public dataSource = new MatTableDataSource<any>();
 
-  ngOnInit() {
-    const itemsList= this.data;
-    //this.dataSource.data = [];
-    this.dataSource.data = itemsList;
-    console.log("data component",itemsList)
+  ngOnInit():void {
+  
     this.columnsToDisplay=this.displayedColumns.map(m=>m.reference);
+    //const itemsList= this.dataContacts;
+    //this.dataSource.data = [];
+    this.dataSource.data = this.dataContacts;
     
     //this.router.url.split("/")[1]
     console.log("route Current",getCurrentRoute(this.router.url))
