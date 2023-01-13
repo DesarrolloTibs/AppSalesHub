@@ -6,6 +6,7 @@ import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
 import { TableGridComponent } from './components/table-grid/table-grid.component';
 import { SideBarNavigationComponent } from './components/side-bar-navigation/side-bar-navigation.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SideBarNavigationComponent } from './components/side-bar-navigation/sid
   imports: [
     CommonModule, 
     MaterialModule,
-   RouterModule
+   RouterModule,
+   TranslateModule
   
   ],
   exports:[

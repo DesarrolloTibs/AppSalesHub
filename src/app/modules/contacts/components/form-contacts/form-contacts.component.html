@@ -1,47 +1,92 @@
-<mat-card class="example-card">
+<mat-card >
   <mat-card-header>
-    <mat-card-title>Registrar Contacto</mat-card-title>
+    <mat-card-title>{{"GENERAL.FORMCONTACTS" | translate}}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form class="signup-form">
+    <form *ngIf="dataform" [formGroup]="form" (ngSubmit)="sendData()" >
       <div class="form-body">
         <div class="row">
           <div class="input-group">
-            <mat-form-field>
-              <mat-label>Message</mat-label>
-              <input matInput value="Disco party!" #message />
+            <mat-form-field appearance="outline">
+              <mat-label>{{"CONTACTS.FULLNAME" | translate}}</mat-label>
+              <input matInput matNativeControl="text" formControlName="fullName" />
             </mat-form-field>
           </div>
           <div class="input-group">
-            <mat-form-field>
-              <mat-label>Message</mat-label>
-              <input matInput value="Disco party!" #message />
+            <mat-form-field appearance="outline">
+              <mat-label>{{"CONTACTS.OFFICEPHONE" | translate}}</mat-label>
+              <input  matInput matNativeControl="text" formControlName="officePhone" />
             </mat-form-field>
           </div>
+         
          
         
         </div>
         <div class="row">
           <div class="input-group">
-            <mat-form-field>
-              <mat-label>Message</mat-label>
-              <input matInput value="Disco party!" #message />
+            <mat-form-field appearance="outline">
+              <mat-label>{{"CONTACTS.MOBILESPHONE" | translate}}</mat-label>
+              <input matNativeControl="text" formControlName="mobilesPhone"   />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <mat-form-field appearance="outline">
+              <mat-label>{{"CONTACTS.EMAILS" | translate}}</mat-label>
+              <input matNativeControl="text" formControlName="emails"  />
+            </mat-form-field>
+          </div>
+         
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <mat-form-field appearance="outline">
+              <mat-label>{{"CONTACTS.CHANNEL" | translate}}</mat-label>
+              <input matNativeControl="text" formControlName="channel"  />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <mat-form-field appearance="outline">
+              <mat-label>{{"CONTACTS.TYPECONTACTS" | translate}}</mat-label>
+              <input matNativeControl="text" formControlName="typeContacts"  />
             </mat-form-field>
           </div>
         </div>
         <div class="row">
           <div class="input-group">
-            <mat-form-field>
-              <mat-label>Message</mat-label>
-              <input matInput value="Disco party!" #message />
+            <mat-form-field appearance="outline">
+              <mat-label>{{"CONTACTS.COUNTRY" | translate}}</mat-label>
+              <input matNativeControl="text" formControlName="country"  />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <mat-form-field appearance="outline">
+              <mat-label>{{"CONTACTS.STATE" | translate}}</mat-label>
+              <input matNativeControl="text" formControlName="state"  />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <mat-form-field appearance="outline">
+              <mat-label>{{"CONTACTS.CITY" | translate}}</mat-label>
+              <input matNativeControl="text" formControlName="city"   />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <mat-form-field appearance="outline">
+              <mat-label>{{"CONTACTS.TOTALBUSINESS" | translate}}</mat-label>
+              <input matNativeControl="text" formControlName="totalBusiness"   />
             </mat-form-field>
           </div>
         </div>
       </div>
+      <mat-card-actions class="form-actions">
+        <button mat-flat-button [disabled]="form.invalid" type="submit" color="primary">{{"GENERAL.SAVE" | translate}}</button>
+        <button mat-flat-button color="warn">{{"GENERAL.CLEAR" | translate}}</button>
+      </mat-card-actions>
       </form>
     </mat-card-content>
-  <mat-card-actions class="form-actions">
-    <button mat-flat-button color="primary">Guardar</button>
-    <button mat-flat-button color="warn">Limpiar</button>
-  </mat-card-actions>
+
 </mat-card>
+
+{{form.invalid}}

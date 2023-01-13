@@ -11,7 +11,7 @@ import { ContactDetailPageComponent } from './pages/contact-detail-page/contact-
 import { FormContactsComponent } from './components/form-contacts/form-contacts.component';
 import { ContactAddPageComponent } from './pages/contact-add-page/contact-add-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     SharedModule,
     ReactiveFormsModule,
+    TranslateModule
    
 
 

@@ -4,7 +4,7 @@
         "secure":false,
         "logLevel":"debug",
         "headers":{
-            "origin":"tibs.saleshub.test"
+            "origin":"local2.saleshub.test"
         }
     }
 }

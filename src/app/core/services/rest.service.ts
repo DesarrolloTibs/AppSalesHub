@@ -89,6 +89,10 @@ export class RestService {
     try {
       return this.http.post(`${this.url}/${path}`, body)
         .pipe(
+          map(({ data }: any) => {
+            console.log("DataService Post",data)
+            return data
+          }),
           catchError((e: any) => {
             this.handleError(e.status, e.statusText, e.error);
             return throwError(() => ({
@@ -113,6 +117,10 @@ export class RestService {
     try {
       return this.http.patch(`${this.url}/${path}`, body)
         .pipe(
+          map(({ data }: any) => {
+            console.log("DataService patch",data)
+            return data
+          }),
           catchError((e: any) => {
             if (toast) {
               // this.sharedService.showError('Error', e.statusText);
@@ -139,8 +147,39 @@ export class RestService {
       return this.http.get(`${this.url}/${path}/get`,{headers: this.parseHeader()})
         .pipe(
            map(({ data:{itemsList} }: any) => {
-            console.log("DataService",itemsList)
+            console.log("DataService Get",itemsList)
             return itemsList
+          }),
+          catchError((e: any) => {
+            console.log(e)
+            if (toast) {
+              // this.sharedService.showError('Error', e.statusText);
+            }
+            this.handleError(e.status, e.statusText);
+            return throwError(() => ({
+              status: e.status,
+              statusText: e.statusText,
+            }));
+          }),
+        );
+    } catch (e: any) {
+      throw new Error(e);
+    }
+  }
+   /**
+   * 
+   * @param path 
+   * @param toast 
+   * @returns 
+   */
+   getById$(path = '',param='', toast = true): Observable<any> {
+    try {
+      console.log("URLFORM",`${this.url}/${path}/get/${param}`)
+      return this.http.get(`${this.url}/${path}/get/${param}`,{headers: this.parseHeader()})
+        .pipe(
+           map(({ data }: any) => {
+            console.log("DataService GetByID",data)
+            return data
           }),
           catchError((e: any) => {
             console.log(e)
@@ -169,6 +208,10 @@ export class RestService {
     try {
       return this.http.delete(`${this.url}/${path}`)
         .pipe(
+          map(({ data }: any) => {
+            console.log("DataService delete",data)
+            return data
+          }),
           catchError((e: any) => {
             if (toast) {
               // this.sharedService.showError('Error', e.statusText);

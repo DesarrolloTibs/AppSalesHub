@@ -12,7 +12,7 @@
       matColumnDef="{{ col.reference }}"
       *ngFor="let col of displayedColumns"
     >
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ col.title }}</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ col.title |translate}}</th>
       <div *ngIf="!col.action; then thenBlock; else elseBlock"></div>
       <ng-template #thenBlock>
         <td mat-cell *matCellDef="let element" matTooltip="{{ element[col.reference] }}">

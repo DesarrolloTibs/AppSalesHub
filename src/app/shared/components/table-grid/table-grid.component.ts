@@ -7,6 +7,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { ActivatedRoute, Router } from '@angular/router';
 import { getCurrentRoute } from 'src/app/utils/utils';
 import { RestService } from '@core/services/rest.service';
+import { routeEnpoints } from 'src/app/global/endpoints';
 
 @Component({
   selector: 'app-table-grid',
@@ -72,8 +73,8 @@ export class TableGridComponent implements OnInit, AfterViewInit {
   }
 
   loadData(): void {
-    console.log(this.routeTo)
-    this._restService.get$(this.routeTo)
+    console.log(routeEnpoints.contacts)
+    this._restService.get$(routeEnpoints.contacts)
       .subscribe((response: any[]) => {
         console.log(response)
         this.dataSource.data = response
