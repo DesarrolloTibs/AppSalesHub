@@ -1,5 +1,27 @@
-:host {
-    display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
+.row {
+  display:flex;
+  flex-direction:row;
+}
+.input-group {
+  flex:1;  
+  display:flex;
+  flex-direction:column; 
+  margin: 10px 5px;
+}
+.form-actions {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  padding: 15px;
+  
+  gap: 15px;
+}
+.example-card {
+  max-width: 800px;
+}
+@media only screen and (max-width: 500px) {
+  .row{
+    flex-direction:column; 
   }
+}

@@ -1,32 +1,47 @@
-
-<mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
-  </mat-form-field>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Registrar Contacto</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="signup-form">
+      <div class="form-body">
+        <div class="row">
+          <div class="input-group">
+            <mat-form-field>
+              <mat-label>Message</mat-label>
+              <input matInput value="Disco party!" #message />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <mat-form-field>
+              <mat-label>Message</mat-label>
+              <input matInput value="Disco party!" #message />
+            </mat-form-field>
+          </div>
+         
+        
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <mat-form-field>
+              <mat-label>Message</mat-label>
+              <input matInput value="Disco party!" #message />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group">
+            <mat-form-field>
+              <mat-label>Message</mat-label>
+              <input matInput value="Disco party!" #message />
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      </form>
+    </mat-card-content>
+  <mat-card-actions class="form-actions">
+    <button mat-flat-button color="primary">Guardar</button>
+    <button mat-flat-button color="warn">Limpiar</button>
+  </mat-card-actions>
+</mat-card>
