@@ -4,11 +4,24 @@ import { TableColumns } from '@core/models/tableColumns.model';
 import { ActivatedRoute, Router} from '@angular/router';
 import { getCurrentRoute } from 'src/app/utils/utils';
 import { TranslateService } from '@ngx-translate/core';
+import {animate, query, stagger, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-contact-list-page',
   templateUrl: './contact-list-page.component.html',
-  styleUrls: ['./contact-list-page.component.scss']
+  styleUrls: ['./contact-list-page.component.scss'],
+  animations: [
+    trigger('listAnimation', [
+      transition('* => *', [
+        query(':enter', [
+          style({opacity: 0}),
+          stagger(30, [
+            animate(100, style({opacity: 1}))
+          ])
+        ], {optional: true})
+      ])
+    ])
+  ]
 })
 export class ContactListPageComponent implements OnInit {
   /**

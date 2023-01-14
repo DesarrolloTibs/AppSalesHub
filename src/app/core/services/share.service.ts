@@ -62,6 +62,19 @@ public confirm = () => new Promise((resolve, reject) => {
   });
 
 })
+
+public openUpdateModal = (data: any = {}) => {
+  const initialState = {
+    section: data
+  };
+  // this.bsModalRef = this.modalService.show(
+  //   ModalUpdateComponent,
+  //   Object.assign({initialState}, {
+  //     class: 'modal-light-upgrade',
+  //     ignoreBackdropClick: true
+  //   })
+  // );
+}
   public getUserInfo = () => {
     try {
       return JSON.parse(this.cookie.get('user'))
