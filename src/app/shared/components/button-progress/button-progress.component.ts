@@ -1,6 +1,7 @@
 
 import {Component, EventEmitter, Input, NgZone, OnInit, Output} from '@angular/core';
 import {AnimationOptions} from "ngx-lottie";
+
 //import {faTimes} from '@fortawesome/free-solid-svg-icons';
 import {AnimationItem} from "lottie-web";
 @Component({

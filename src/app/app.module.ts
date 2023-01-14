@@ -13,18 +13,14 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HTTP_INTERCEPTORS, HttpClient} from "@angular/common/http";
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
-import {LottieModule} from 'ngx-lottie';
-import player from 'lottie-web';
-import { LoadingSvgComponent } from './components/loading-svg/loading-svg.component';
+
+
 // for Router import:
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { ButtonProgressComponent } from './components/button-progress/button-progress.component';
-import { ErrorLayerComponent } from './components/error-layer/error-layer.component';
+import { SharedModule } from '@shared/shared.module';
 
-export function playerFactory() {
-  return player;
-}
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -32,9 +28,6 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [ //TODO:Declaraciones, Directivas,Componentes,pipes
     AppComponent,
-    LoadingSvgComponent,
-    ButtonProgressComponent,
-    ErrorLayerComponent, 
   ],
   imports: [ //TODO: Solo se importan otros modules
     BrowserModule,
@@ -44,8 +37,6 @@ export function HttpLoaderFactory(http: HttpClient) {
    LoadingBarModule,
    LoadingBarHttpClientModule,
    LoadingBarRouterModule,
-
-
     TranslateModule.forRoot({
       defaultLanguage: 'es',
       loader: {
@@ -54,8 +45,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-
-   LottieModule.forRoot({player: playerFactory}),
+    SharedModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
   
   ],

@@ -92,6 +92,9 @@ export class ErrorLayerComponent  implements OnInit, AfterViewInit {
     path: '/assets/images/400.json',
   };
 
+  error500: AnimationOptions = {
+    path: '/assets/images/400.json',
+  };
   error0: AnimationOptions = {
     path: '/assets/images/0.json',
   };
