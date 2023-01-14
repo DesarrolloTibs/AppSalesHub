@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
 
   
     this.rest.catchError.subscribe(res => {
+      console.log("ErrorGeneral",res)
       this.error = res;
     })
   }

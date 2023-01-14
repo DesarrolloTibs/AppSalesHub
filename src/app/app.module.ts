@@ -19,6 +19,8 @@ import { LoadingSvgComponent } from './components/loading-svg/loading-svg.compon
 // for Router import:
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { ButtonProgressComponent } from './components/button-progress/button-progress.component';
+import { ErrorLayerComponent } from './components/error-layer/error-layer.component';
 
 export function playerFactory() {
   return player;
@@ -30,7 +32,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [ //TODO:Declaraciones, Directivas,Componentes,pipes
     AppComponent,
-    LoadingSvgComponent
+    LoadingSvgComponent,
+    ButtonProgressComponent,
+    ErrorLayerComponent, 
   ],
   imports: [ //TODO: Solo se importan otros modules
     BrowserModule,
@@ -40,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
    LoadingBarModule,
    LoadingBarHttpClientModule,
    LoadingBarRouterModule,
+
 
     TranslateModule.forRoot({
       defaultLanguage: 'es',

@@ -10,7 +10,7 @@ import {animate, style, transition, trigger} from "@angular/animations";
   animations: [
     trigger('swipe', [
       transition(':enter', [
-        style({opacity: '.6'}),
+        style({opacity: '.6'},),
         animate('0.15s ease-in')
       ])
     ])
