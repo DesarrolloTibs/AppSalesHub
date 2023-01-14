@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
     public shared: ShareService,
     private swUpdate: SwUpdate,
     private swPush: SwPush,){
-    const state = this.loader.useRef("router");
+    const state = this.loader.useRef("http");
     state.value$.subscribe(res => {
       console.log("Progress",res)
       
