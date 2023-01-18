@@ -1,0 +1,33 @@
+.row {
+    display:flex;
+    flex-direction:row;
+  }
+  .input-group {
+    flex:1;  
+    display:flex;
+    flex-direction:column; 
+    margin: 10px 10px;
+  
+  }
+  .form-actions {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    //margin: 15px;
+    //padding: 15px;
+    gap: 15px;
+    
+  }
+  .form-body{
+    width: 100%;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .row{
+      flex-direction:column; 
+    }
+  }
+  
+  /*input.ng-invalid.ng-touched {
+    border: solid 2px red !important
+  }*/

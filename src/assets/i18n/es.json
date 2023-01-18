@@ -1,37 +1,46 @@
 {
-    "GENERAL": {
-      "ERROR_404": "Lo sentimos esta pagina no existe, o estamos trabajando en ella",
-      "SAVE": "Guardar",
-      "CLEAR":"Limpiar",
-      "LOADING": "Cargando información",
-      "LOADING_SINGLE": "Cargando",
-      "LIST": "Lista",
-      "ADD": "Agregar",
-      "DETAIL": "Detalle",
-      "DELETE": "Eliminar",
-      "UPDATE": "Actualizar",
-      "EMPTY": "Sin resultados",
-      "NOT_ALLOWED": "No tienes permisos",
-      "ERROR_CODE": "Código",
-      "ERROR": "¡Algo sucedio!",
-      "ERROR_MESSAGE": "Mensaje",
-      "ARE_YOU_SURE": "¿Estas seguro?",
-      "ARE_YOU_SURE_SENTENCE": "Los cambios no pueden revertirse",
-      "OK": "OK",
-      "FORMCONTACTS":"Registrar Nuevo Contacto"
-    },
-    "CONTACTS": {
-      "_ID": "Id",
-      "FULLNAME": "Nombre Completo",
-      "OFFICEPHONE":"Teléfono oficina",
-        "MOBILESPHONE": "Teléfono Móvil",
-        "EMAILS": "Correo(s)",
-        "CHANNEL": "Canal",
-        "TYPECONTACTS": "Tipo",
-        "COUNTRY": "País",
-        "STATE": "Estado",
-        "CITY": "Ciudad",
-        "TOTALBUSINESS": "Total"
-    }
+  "GENERAL": {
+    "ERROR_404": "Lo sentimos esta pagina no existe, o estamos trabajando en ella",
+    "SAVE": "Guardar",
+    "CLEAR": "Limpiar",
+    "LOADING": "Cargando información",
+    "LOADING_SINGLE": "Cargando",
+    "LIST": "Lista",
+    "ADD": "Agregar",
+    "DETAIL": "Detalle",
+    "DELETE": "Eliminar",
+    "UPDATE": "Actualizar",
+    "EMPTY": "Sin resultados",
+    "NOT_ALLOWED": "No tienes permisos",
+    "ERROR_CODE": "Código",
+    "ERROR": "¡Algo sucedio!",
+    "ERROR_MESSAGE": "Mensaje",
+    "ARE_YOU_SURE": "¿Estas seguro?",
+    "ARE_YOU_SURE_SENTENCE": "Los cambios no pueden revertirse",
+    "OK": "OK",
+    "FORMCONTACTS": "Registrar Nuevo Contacto",
+    "FORMCOORDINATORS": "Registrar Nuevo Coordinator"
+  },
+  "CONTACTS": {
+    "_ID": "Id",
+    "FULLNAME": "Nombre Completo",
+    "OFFICEPHONE": "Teléfono oficina",
+    "MOBILESPHONE": "Teléfono Móvil",
+    "EMAILS": "Correo(s)",
+    "CHANNEL": "Canal",
+    "TYPECONTACTS": "Tipo",
+    "COUNTRY": "País",
+    "STATE": "Estado",
+    "CITY": "Ciudad",
+    "TOTALBUSINESS": "Total"
+  },
+  "COORDINATORS": {
+    "_ID": "Id",
+    "FULLNAME": "Nombre Completo",
+    "PHONES": "Teléfonos",
+    "EMAILS": "Correo(s)",
+    "ORGANIZATION": "Organizacion",
+    "REGIONS": "Regiones",
+    "ZONES": "Zonas"
   }
-  
+}

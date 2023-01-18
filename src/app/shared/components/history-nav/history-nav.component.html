@@ -10,8 +10,15 @@
     <ul class="history-menu" *ngIf="!limitAccount">
         <li>{{title}}</li>
         <li *ngFor="let a of history" [routerLink]="a.router">
-            <mat-icon class="icon-forward">arrow_forward</mat-icon>
-          <span class="ml-1">{{a?.name}}</span>
+            <!-- <mat-icon class="icon-forward">arrow_forward</mat-icon> -->
+            <div>
+              <mat-icon matListItemIcon>arrow_forward </mat-icon><span class="aligned-with-icon">{{a?.name}}</span>
+            </div>
+          <!-- <span >
+            {{a?.name}}
+              <mat-icon matListItemIcon>arrow_forward </mat-icon>
+        
+          </span> -->
         </li>
       </ul> 
 </div>

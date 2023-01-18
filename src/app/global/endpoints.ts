@@ -1,4 +1,8 @@
 export const routeEnpoints = {
-    contacts: `contacts`,
-    vendors: `vendors`,
+    contacts: `contact`,
+    vendors: `vendor`,
+    managers: `manager`,
+    coordinators: `coordinator`,
+    organizations: `organization`,
+    typeContacts: `typecontact`,
   };

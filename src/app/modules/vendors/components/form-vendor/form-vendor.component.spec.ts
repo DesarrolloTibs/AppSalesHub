@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManagersPageComponent } from './managers-page.component';
+import { FormVendorComponent } from './form-vendor.component';
 
-describe('ManagersPageComponent', () => {
-  let component: ManagersPageComponent;
-  let fixture: ComponentFixture<ManagersPageComponent>;
+describe('FormVendorComponent', () => {
+  let component: FormVendorComponent;
+  let fixture: ComponentFixture<FormVendorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ManagersPageComponent ]
+      declarations: [ FormVendorComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ManagersPageComponent);
+    fixture = TestBed.createComponent(FormVendorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

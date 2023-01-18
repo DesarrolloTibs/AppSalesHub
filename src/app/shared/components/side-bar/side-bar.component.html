@@ -34,10 +34,20 @@
       [Link]="'contacts'"
     ></app-side-bar-navigation>
     <app-side-bar-navigation
-      [Icon]="'home'"
-      [Title]="'Home'"
-      [Link]="'main'"
+      [Icon]="'person'"
+      [Title]="'Coodinador'"
+      [Link]="'level3'"
     ></app-side-bar-navigation>
+    <app-side-bar-navigation
+    [Icon]="'person'"
+    [Title]="'Gerentes'"
+    [Link]="'level2'"
+  ></app-side-bar-navigation>
+  <app-side-bar-navigation
+    [Icon]="'person'"
+    [Title]="'Vendedor'"
+    [Link]="'level1'"
+  ></app-side-bar-navigation>
 
     <mat-divider></mat-divider>
     <button mat-button class="menu-button" (click)="logOut()" >

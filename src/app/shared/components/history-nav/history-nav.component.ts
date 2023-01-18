@@ -17,7 +17,7 @@ export class HistoryNavComponent implements OnInit {
 }
   ngOnInit(): void {
    // const {name} = this.share.getSettings();
-   const {name} = {"name":"tibs"};
+   const {name} = {"name":"SalesHub"};
    this.title = name;
    this.share.limitAccount.subscribe(res => {
     if (res) {

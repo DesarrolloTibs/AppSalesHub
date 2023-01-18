@@ -17,7 +17,6 @@ import { routeEnpoints } from 'src/app/global/endpoints';
 export class TableGridComponent implements OnInit, AfterViewInit {
   @Input() displayedColumns: Array<TableColumns> = []
   @Input() serviceName: string = ''
-
   routeTo: string = ""
   public columnsToDisplay: string[] = [];
   public dataSource = new MatTableDataSource<any>();
@@ -33,7 +32,7 @@ export class TableGridComponent implements OnInit, AfterViewInit {
 
     this.columnsToDisplay = this.displayedColumns.map(m => m.reference);
     this.routeTo = getCurrentRoute(this.router.url)
-    this.loadData();
+    this.loadData(this.serviceName);
   }
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
@@ -78,9 +77,9 @@ export class TableGridComponent implements OnInit, AfterViewInit {
   }
 
 
-  loadData(): void {
-    console.log(routeEnpoints.contacts)
-    this._restService.get$(routeEnpoints.contacts)
+  loadData(service:string): void {
+    console.log(service)
+    this._restService.get$(service)
       .subscribe((response: any[]) => {
         console.log(response)
         this.dataSource.data = response
