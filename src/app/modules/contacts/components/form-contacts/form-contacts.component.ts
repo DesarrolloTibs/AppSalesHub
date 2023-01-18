@@ -84,6 +84,9 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
 
 
   }
+  clearData(): void {
+    this.form.reset();
+  }
 
   loadDataById(_id: string): void {
     console.log(routeEnpoints.contacts)

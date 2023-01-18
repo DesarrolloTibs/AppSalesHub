@@ -37,8 +37,8 @@ export class RestService {
     if (custom) {
       header = custom
     }
-    if (true) {
-      header.Authorization = `Bearer 647979978`;
+    if (token) {
+      header.Authorization = `Bearer ${token}`;
     }
 
     console.log("HeADER",header)
@@ -166,6 +166,36 @@ export class RestService {
       throw new Error(e);
     }
   }
+    /**
+   * 
+   * @param path 
+   * @param toast 
+   * @returns 
+   */
+    getCheck$(path = '', toast = true): Observable<any> {
+      try {
+        return this.http.get(`${this.url}/${path}`,{headers: this.parseHeader()})
+          .pipe(
+             map(({ data }: any) => {
+              console.log("DataService Get",data)
+              return data
+            }),
+            catchError((e: any) => {
+              console.log(e)
+              if (toast) {
+                // this.sharedService.showError('Error', e.statusText);
+              }
+              this.handleError(e.status, e.statusText);
+              return throwError(() => ({
+                status: e.status,
+                statusText: e.statusText,
+              }));
+            }),
+          );
+      } catch (e: any) {
+        throw new Error(e);
+      }
+    }
    /**
    * 
    * @param path 

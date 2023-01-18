@@ -11,7 +11,7 @@ import {CookieService} from "ngx-cookie-service";
   providedIn: 'root'
 })
 export class ShareService {
-
+  @Output() limitAccount = new EventEmitter<any>();
   constructor(private router: Router,
     private cookie: CookieService,
     private translate: TranslateService) {

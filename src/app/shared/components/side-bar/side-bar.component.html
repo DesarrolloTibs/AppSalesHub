@@ -5,18 +5,18 @@
       *ngIf="sidenav.mode === 'over'" 
       (click)="sidenav.toggle()"
     > -->
-  <button mat-icon-button (click)="sidenav.toggle()">
-    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
-    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
-  </button>
-  SalesHUB
+  <button mat-icon-button (click)="sidenav.toggle()" >
+    <mat-icon *ngIf="!sidenav.opened" class="icon-Custom"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened" class="icon-Custom"> close </mat-icon>
+  </button><img class="mini-icon"src="https://saleshub.com.mx/assets/images/logo-5.png"/>
+  <span class="display-5">SalesHub</span>
 </mat-toolbar>
 
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
     <img
       class="avatar mat-elevation-z8"
-      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+      src="https://lh3.googleusercontent.com/a/AEdFTp4OZ_J7f1IBZqO6sXOUNfxgXazn2rK83z_wMHaV0A=s83-c-mo"
     />
 
     <h4 class="name">Hector Esparza</h4>
@@ -40,11 +40,10 @@
     ></app-side-bar-navigation>
 
     <mat-divider></mat-divider>
-    <app-side-bar-navigation
-      [Icon]="'logout'"
-      [Title]="'Cerrar Sesion'"
-      [Link]="'auth'"
-    ></app-side-bar-navigation>
+    <button mat-button class="menu-button" (click)="logOut()" >
+      <mat-icon>logout</mat-icon>
+      <span>Cerrar Sesion</span>
+    </button>
   </mat-sidenav>
 
   <mat-sidenav-content>

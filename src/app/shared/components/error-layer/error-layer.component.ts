@@ -37,7 +37,6 @@ export class ErrorLayerComponent  implements OnInit, AfterViewInit {
 
   @Input()
   get error() {
-    console.log("Error Layer",this.errorIn)
     return this.errorIn;
   }
 
@@ -53,9 +52,9 @@ export class ErrorLayerComponent  implements OnInit, AfterViewInit {
   //faTimes = faTimes
 
   constructor(private ngZone: NgZone, public rest: RestService, private share: ShareService) {
-    console.log("Susbcribe erro")
+  
     this.rest.catchError.subscribe(err => {
-      console.log("Susbcribe erro",err)
+    
       if (this.codes.includes(err.code)) {
         this.error = null;
       }

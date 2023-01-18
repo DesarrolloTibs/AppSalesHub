@@ -1,12 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-    --color-1: #002b5c;
-    --color-2: #323232;
+    --color-1: #f9c543;
+    --color-2: #3d1a6f;
     --color-3: #000000;
     --color-4: #FFFFFF;
-    --color-5: #181818;
-    --background-color-1: #002b5c;
+    --color-5: #000000;
+    --background-color-1: #3d1a6f;
+    --background-color-2: #FFFFFF;
+    --background-color-3: #f7f7f7;
+    
+    --text-color-1: #3d1a6f;
+    --text-color-2: #FFFFFF;
+    --text-color-3: #000000;
     --font-size-1: 1rem;
     --font-size-2: 1.2rem;
     --font-size-3: 1.8rem;
@@ -22,7 +28,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--color-4);
+    background-color: var(--background-color-3);
     font-family: var(--font-family-1);
     font-size: var(--font-size-1);
     color: var(--color-3);
@@ -66,4 +72,24 @@ button:disabled {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left !important;
+    font-size: 1rem;
+    mat-icon {
+      margin-right: 8px;
+      color: var(--text-color-2);
+    }
+    span{
+      color: var(--text-color-2);
+    }
+  }
+
+  .button-custom1{
+    background-color:var(--color-1) !important;
+    color: var(--color-2) !important;
   }

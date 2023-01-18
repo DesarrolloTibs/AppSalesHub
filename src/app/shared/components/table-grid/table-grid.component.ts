@@ -63,6 +63,11 @@ export class TableGridComponent implements OnInit, AfterViewInit {
     this.router.navigate([`/${this.routeTo}/delete`]);
     //console.log(`redireccionando ${this.routeTo} DELETE con el identificador:${id}`) 
   }
+  public redirectToNew= () => {
+    this.router.navigate([`/${this.routeTo}/new`]);
+    //console.log(`redireccionando ${this.routeTo} DELETE con el identificador:${id}`) 
+  }
+ 
   public doFilter = (event: KeyboardEvent) => {
 
     const search = (event.target as HTMLTextAreaElement).value;
@@ -71,6 +76,7 @@ export class TableGridComponent implements OnInit, AfterViewInit {
   public pageChanged = (event: any) => {
     console.log(event)
   }
+
 
   loadData(): void {
     console.log(routeEnpoints.contacts)

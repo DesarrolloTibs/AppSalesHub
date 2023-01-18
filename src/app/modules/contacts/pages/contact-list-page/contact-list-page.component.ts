@@ -53,10 +53,7 @@ export class ContactListPageComponent implements OnInit {
     ];
     this.routeTo = getCurrentRoute(this.router.url)
   }
-  handleClick = () => {
-    
-    this.router.navigate([`/${this.routeTo}/new`]);
-  }
+  
 
  
 

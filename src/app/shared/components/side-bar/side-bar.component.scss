@@ -1,6 +1,6 @@
 mat-toolbar {
-  background: var(--background-color-1);
-  color: white;
+  background: var(--background-color-2);
+  color: var(--text-color-3);
 }
 
 mat-sidenav {
@@ -8,7 +8,7 @@ mat-sidenav {
   width: 200px;
   border-right: none;
   background: var(--background-color-1);
-  color: white;
+  color: var(--text-color-2);
   /*border-radius: 10px;*/
   padding: 16px;
   text-align: center;
@@ -53,4 +53,20 @@ mat-divider {
   margin-top: 16px;
   margin-bottom: 16px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.display-5 {
+  padding: 5px;
+  font-family: 'Nunito',sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.mini-icon{
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+}
+.icon-Custom{
+  color: var(--color-2) !important;
 }

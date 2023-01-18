@@ -1,82 +1,107 @@
-
-<div class="parent">
+<!-- <div class="row">
+  <div class="input-group">
+  
+  </div>
+  <div class="input-group">
+    
+  </div>
+</div> -->
+<div class="row">
+  <div class="parent-left">
+    <button
+    mat-flat-button
+    aria-label="New button contacts"
+    class="md-fab-custom-position button-custom1"
+    (click)="redirectToNew()"
+  >
+    Registrar
+  </button>
+  </div>
+  <div class="parent-right">
+   
   <mat-form-field>
     <mat-label>Busqueda rápida</mat-label>
     <input matInput type="text" (keyup)="doFilter($event)" placeholder="" />
   </mat-form-field>
+  </div>
 </div>
- 
 
-  <table mat-table  [dataSource]="dataSource" matSort>
-    <ng-container
-      matColumnDef="{{ col.reference }}"
-      *ngFor="let col of displayedColumns"
-    >
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ col.title |translate}}</th>
-      <div *ngIf="!col.action; then thenBlock; else elseBlock"></div>
-      <ng-template #thenBlock>
-        <td mat-cell *matCellDef="let element" matTooltip="{{ element[col.reference] }}">
-          {{ element[col.reference] }}
-        </td>
-      </ng-template>
-      <ng-template #elseBlock>
-        <td mat-cell *matCellDef="let element">
-          <div [ngSwitch]="col.reference">
-            <button
-              *ngSwitchCase="'detail'"
-              mat-icon-button
-              color="primary"
-              (click)="redirectToDetails(element._id)"
-            >
-              <mat-icon class="mat-18">edit</mat-icon>
-            </button>
-            <button
-              *ngSwitchCase="'update'"
-              mat-icon-button
-              color="accent"
-              (click)="redirectToUpdate(element._id)"
-            >
-              <mat-icon class="mat-18">update</mat-icon>
-            </button>
-            <button
-              *ngSwitchCase="'delete'"
-              mat-icon-button
-              color="warn"
-              (click)="redirectToDelete(element._id)"
-            >
-              <mat-icon class="mat-18">delete</mat-icon>
-            </button>
-          </div>
-        </td>
-      </ng-template>
-    </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-    <tr
-      mat-row
-      *matRowDef="let row; columns: columnsToDisplay"
-      [style.minHeight.px]="50"
-    ></tr>
-    <!-- Row shown when there is no matching data that will be provided to the wrapper table. -->
-    <tr class="mat-row" *matNoDataRow>
-      <td class="mat-cell no-data" [attr.colspan]="displayedColumns.length">
-        No se encontro información
+<table mat-table [dataSource]="dataSource" matSort>
+  <ng-container
+    matColumnDef="{{ col.reference }}"
+    *ngFor="let col of displayedColumns"
+  >
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+      {{ col.title | translate }}
+    </th>
+    <div *ngIf="!col.action; then thenBlock; else elseBlock"></div>
+    <ng-template #thenBlock>
+      <td
+        mat-cell
+        *matCellDef="let element"
+        matTooltip="{{ element[col.reference] }}"
+      >
+        {{ element[col.reference] }}
       </td>
-    </tr>
-  </table>
+    </ng-template>
+    <ng-template #elseBlock>
+      <td mat-cell *matCellDef="let element">
+        <div [ngSwitch]="col.reference">
+          <button
+            *ngSwitchCase="'detail'"
+            mat-icon-button
+            color="primary"
+            (click)="redirectToDetails(element._id)"
+          >
+            <mat-icon class="mat-18">edit</mat-icon>
+          </button>
+          <button
+            *ngSwitchCase="'update'"
+            mat-icon-button
+            color="accent"
+            (click)="redirectToUpdate(element._id)"
+          >
+            <mat-icon class="mat-18">update</mat-icon>
+          </button>
+          <button
+            *ngSwitchCase="'delete'"
+            mat-icon-button
+            color="warn"
+            (click)="redirectToDelete(element._id)"
+          >
+            <mat-icon class="mat-18">delete</mat-icon>
+          </button>
+        </div>
+      </td>
+    </ng-template>
+  </ng-container>
 
-  <!-- <table>
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: columnsToDisplay"
+    [style.minHeight.px]="50"
+  ></tr>
+  <!-- Row shown when there is no matching data that will be provided to the wrapper table. -->
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell no-data" [attr.colspan]="displayedColumns.length">
+      No se encontro información
+    </td>
+  </tr>
+</table>
+
+<!-- <table>
     <tr *ngIf="!dataSource.data.length">
       <td style="text-align: center" [attr.colspan]="displayedColumns.length">
         No Records Found!
       </td>
     </tr>
   </table> -->
-  <mat-paginator
-    [hidden]="!dataSource.data.length"
-    [pageSize]="10"
-    [pageSizeOptions]="[10, 20, 50]"
-    (page)="pageChanged($event)"
-  >
-  </mat-paginator>
-
+<mat-paginator
+  [hidden]="!dataSource.data.length"
+  [pageSize]="10"
+  [pageSizeOptions]="[10, 20, 50]"
+  (page)="pageChanged($event)"
+>
+</mat-paginator>

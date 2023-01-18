@@ -4,6 +4,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { delay, filter } from 'rxjs/operators';
 import { NavigationEnd, Router } from '@angular/router';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import {AuthService} from "@core/services/auth.service";
 @UntilDestroy()
 @Component({
   selector: 'app-side-bar',
@@ -14,7 +15,8 @@ export class SideBarComponent{
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
-  constructor(private observer: BreakpointObserver, private router: Router) {}
+  constructor(private observer: BreakpointObserver, private router: Router,
+    private _AuthService: AuthService) {}
 
   ngAfterViewInit() {
     this.observer
@@ -40,5 +42,14 @@ export class SideBarComponent{
           this.sidenav.close();
         }
       });
+  }
+
+  logOut = () => {
+
+    console.log("Entro LogOut")
+    this._AuthService.logout().then(() => {
+    
+      this.router.navigate(['/', 'auth'])
+    })
   }
 }

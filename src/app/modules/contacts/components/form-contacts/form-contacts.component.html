@@ -81,12 +81,11 @@
         </div>
       </div>
       <mat-card-actions class="form-actions">
-        <button mat-flat-button [disabled]="form.invalid" type="submit" color="primary">{{"GENERAL.SAVE" | translate}}</button>
-        <button mat-flat-button color="warn">{{"GENERAL.CLEAR" | translate}}</button>
+        <button mat-flat-button [disabled]="form.invalid" type="submit" class="button-custom1">{{"GENERAL.SAVE" | translate}}</button>
+        <button mat-flat-button type="button" color="warn" (click)="clearData()">{{"GENERAL.CLEAR" | translate}}</button>
       </mat-card-actions>
       </form>
     </mat-card-content>
 
 </mat-card>
 
-{{form.invalid}}

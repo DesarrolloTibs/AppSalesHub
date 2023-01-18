@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from "@angular/router";
-import { AuthService } from '@modules/auth/services/auth.service';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import { AuthService } from '@core/services/auth.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -12,19 +12,15 @@ export class LoginPageComponent implements OnInit {
   formLogin: FormGroup = new FormGroup({});
 
   constructor(
-    private router: Router, 
+    private router: Router,
     private _AuthService: AuthService,
     private responsive: BreakpointObserver
-    ) { }
+  ) { }
   ngOnInit(): void {
-    this.responsive.observe(Breakpoints.HandsetLandscape)
-    .subscribe(result => {
+    this._AuthService.checkSession(true, true)
+    .then(a => this.router.navigate(['/']));
 
-      if (result.matches) {
-        console.log("screens matches HandsetLandscape");
-      }
-
-});
+  
     this.formLogin = new FormGroup({
       email: new FormControl('', [
         Validators.required,
@@ -39,11 +35,16 @@ export class LoginPageComponent implements OnInit {
   }
 
   sendLogin(): void {
-    const {email,password} = this.formLogin.value;
-    this._AuthService.sendCredentials(email,password)
+
+    this._AuthService.login(this.formLogin.value).then(res => {
+      console.log(res)
+      this.router.navigate(['/']).then();
+    }).catch(() => {
+      //this.loading = false
+    })
     //console.log(body)
 
-    this.router.navigate(['/'])
+
 
   }
 }
