@@ -1,0 +1,18 @@
+<div class="justify-content-between"  >
+    <!-- <mat-list class="breadcrumb" *ngIf="!limitAccount">
+        <div matListItemTitle>{{title}}</div>
+        <mat-list-item *ngFor="let a of history">
+          <mat-icon matListItemIcon>arrow_forward</mat-icon>
+          <div matListItemTitle>{{a?.name}}</div>
+        </mat-list-item>
+        
+      </mat-list> -->
+    <ul class="history-menu" *ngIf="!limitAccount">
+        <li>{{title}}</li>
+        <li *ngFor="let a of history" [routerLink]="a.router">
+            <mat-icon class="icon-forward">arrow_forward</mat-icon>
+          <span class="ml-1">{{a?.name}}</span>
+        </li>
+      </ul> 
+</div>
+

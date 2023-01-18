@@ -1,0 +1,75 @@
+// :host {
+//     display: block;
+//     //background-color: white;
+//     position: fixed;
+//     width: 100%;
+//     z-index: 9;
+//     /*box-shadow: 0 0 10px rgba(182, 182, 182, 0.21);*/
+//     /*z-index: 1;*/
+//   }
+.icon-forward{
+    position: fixed;
+    margin-right: .5rem;
+}
+.history-menu {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+    font-weight: 600;
+  }
+  
+  .history-menu li {
+    margin-top: 0px;
+    margin-right: .5rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .ml-1, .mx-1 {
+    margin-left: 2rem!important;
+    //margin-right: .5rem !important;
+}
+  
+  
+  
+// .justify-content-between {
+//     justify-content: space-between!important;
+// }
+ 
+  
+// .breadcrumb {
+//     background: none;
+//     font-size: 0.8em;
+//     margin: 0;
+//     a,
+//     span {
+//       color: darkgrey;
+//     }
+//     a:hover,
+//     span:hover {
+//       color: dimgrey;
+//       text-decoration: none;
+//     }
+//     li {
+//       list-style: none;
+//       float: left;
+//       margin: 5px;
+//     }
+//     li:last-child {
+//       margin-right: 20px;
+//     }
+//     li::after {
+//       content: "->";
+//       color: darkgrey;
+//     }
+//     li:last-child::after {
+//       content: "";
+//     }
+//   }
+  
+  
+  
+  
+
+ 

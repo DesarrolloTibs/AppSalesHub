@@ -33,6 +33,12 @@ export class ContactListPageComponent implements OnInit {
   routeTo:string=""
   public displayedColumns: Array<TableColumns> = [];
 
+  public history: any = [
+    {
+      name: 'Contactos',
+      router:null
+    }
+  ]
 
   ngOnInit(): void {
   

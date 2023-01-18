@@ -13,6 +13,7 @@ import {LottieModule} from 'ngx-lottie';
 import player from 'lottie-web';
 import { LoadingSvgComponent } from './components/loading-svg/loading-svg.component';
 import { ButtonProgressComponent } from './components/button-progress/button-progress.component';
+import { HistoryNavComponent } from './components/history-nav/history-nav.component';
 
 export function playerFactory() {
   return player;
@@ -24,7 +25,8 @@ export function playerFactory() {
        SideBarNavigationComponent,
        ButtonProgressComponent,
        ErrorLayerComponent,
-       LoadingSvgComponent
+       LoadingSvgComponent,
+       HistoryNavComponent
   ],
   imports: [
     CommonModule, 
@@ -32,6 +34,7 @@ export function playerFactory() {
    RouterModule,
    TranslateModule,
    LottieModule.forRoot({player: playerFactory}),
+   
   
   ],
   exports:[
@@ -39,7 +42,8 @@ export function playerFactory() {
     TableGridComponent,
     ButtonProgressComponent,
     ErrorLayerComponent,
-    LoadingSvgComponent
+    LoadingSvgComponent,
+    HistoryNavComponent
   ],
   bootstrap:[SideBarComponent]
 })
