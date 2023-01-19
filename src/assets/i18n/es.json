@@ -19,7 +19,8 @@
     "ARE_YOU_SURE_SENTENCE": "Los cambios no pueden revertirse",
     "OK": "OK",
     "FORMCONTACTS": "Registrar Nuevo Contacto",
-    "FORMCOORDINATORS": "Registrar Nuevo Coordinator"
+    "FORMCOORDINATORS": "Registrar Nuevo Coordinator",
+    "FORMMANAGERS": "Registrar Nuevo Gerente"
   },
   "CONTACTS": {
     "_ID": "Id",
@@ -42,5 +43,16 @@
     "ORGANIZATION": "Organizacion",
     "REGIONS": "Regiones",
     "ZONES": "Zonas"
+  },
+  "MANAGERS": {
+    "_ID": "Id",
+    "FULLNAME": "Nombre Completo",
+    "PHONES": "Teléfonos",
+    "EMAILS": "Correo(s)",
+    "ORGANIZATION": "Organizacion",
+    "COORDINATOR": "Coordinador",
+    "REGIONS": "Regiones",
+    "ZONES": "Zonas"
+   
   }
 }

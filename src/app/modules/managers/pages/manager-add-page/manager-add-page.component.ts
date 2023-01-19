@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./manager-add-page.component.scss']
 })
 export class ManagerAddPageComponent {
-
+  public history: any = [
+    {
+      name: 'Gerente',
+      router:['/','level2']
+    },
+    {
+      name: 'Nuevo',
+      router:null
+    }
+  ]
 }

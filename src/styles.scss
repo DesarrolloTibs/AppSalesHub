@@ -91,5 +91,8 @@ button:disabled {
 
   .button-custom1{
     background-color:var(--color-1) !important;
-    color: var(--color-2) !important;
+    color: var(--color-5) !important;
+  }
+  .button-icon-custom1{
+    --mdc-icon-button-icon-color: var(--color-2) !important;
   }

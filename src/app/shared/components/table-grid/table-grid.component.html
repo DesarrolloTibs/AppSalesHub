@@ -51,23 +51,23 @@
           <button
             *ngSwitchCase="'detail'"
             mat-icon-button
-            color="primary"
+            class="button-icon-custom1"
             (click)="redirectToDetails(element._id)"
           >
-            <mat-icon class="mat-18">edit</mat-icon>
+            <mat-icon class="mat-18">chrome_reader_mode</mat-icon>
           </button>
           <button
             *ngSwitchCase="'update'"
             mat-icon-button
-            color="accent"
+            class="button-icon-custom1"
             (click)="redirectToUpdate(element._id)"
           >
-            <mat-icon class="mat-18">update</mat-icon>
+            <mat-icon class="mat-18">edit</mat-icon>
           </button>
           <button
             *ngSwitchCase="'delete'"
             mat-icon-button
-            color="warn"
+            class="button-icon-custom1"
             (click)="redirectToDelete(element._id)"
           >
             <mat-icon class="mat-18">delete</mat-icon>
