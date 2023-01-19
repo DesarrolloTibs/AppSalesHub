@@ -20,7 +20,8 @@
     "OK": "OK",
     "FORMCONTACTS": "Registrar Nuevo Contacto",
     "FORMCOORDINATORS": "Registrar Nuevo Coordinator",
-    "FORMMANAGERS": "Registrar Nuevo Gerente"
+    "FORMMANAGERS": "Registrar Nuevo Gerente",
+    "FORMVENDORS": "Registrar Nuevo Vendedor"
   },
   "CONTACTS": {
     "_ID": "Id",
@@ -54,5 +55,16 @@
     "REGIONS": "Regiones",
     "ZONES": "Zonas"
    
+  },
+  "VENDORS": {
+    "_ID": "Id",
+    "FULLNAME": "Nombre Completo",
+    "RFC": "RFC",
+    "ADDRESS": "Dirección",
+    "PHONES": "Teléfonos",
+    "EMAILS": "Correo(s)",
+    "ORGANIZATION": "Organizacion",
+    "MANAGER": "Gerente",
+    "ZONES": "Zonas"
   }
 }

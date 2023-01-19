@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./vendor-add-page.component.scss']
 })
 export class VendorAddPageComponent {
-
+  public history: any = [
+    {
+      name: 'Vendedor',
+      router:['/','level1']
+    },
+    {
+      name: 'Nuevo',
+      router:null
+    }
+  ]
 }
