@@ -166,6 +166,36 @@ export class RestService {
       throw new Error(e);
     }
   }
+  /**
+   * 
+   * @param path 
+   * @param toast 
+   * @returns 
+   */
+  getActive$(path = '', toast = true): Observable<any> {
+    try {
+      return this.http.get(`${this.url}/${path}`,{headers: this.parseHeader()})
+        .pipe(
+           map(({ data:{itemsList} }: any) => {
+            console.log("DataService Get",itemsList)
+            return itemsList
+          }),
+          catchError((e: any) => {
+            console.log(e)
+            if (toast) {
+              // this.sharedService.showError('Error', e.statusText);
+            }
+            this.handleError(e.status, e.statusText);
+            return throwError(() => ({
+              status: e.status,
+              statusText: e.statusText,
+            }));
+          }),
+        );
+    } catch (e: any) {
+      throw new Error(e);
+    }
+  }
     /**
    * 
    * @param path 

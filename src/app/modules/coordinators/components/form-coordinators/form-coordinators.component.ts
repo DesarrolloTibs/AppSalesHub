@@ -12,6 +12,7 @@ import { CoordinatorsModel } from '@core/models/coordinators.model';
 })
 export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
   public id: string = "";
+  public products: any = []
   dataform: CoordinatorsModel = {
     _id: '',
     fullName: '',
@@ -47,7 +48,7 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
         phones: [null,[Validators.required]],
       
         emails: [null, [Validators.required]],
-        organization: [null, [Validators.required]],
+        organization: ['', [Validators.required]],
         regions: [null,[Validators.required]],
         zones: [null,[Validators.required]],
         // email: [null, [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
@@ -117,5 +118,41 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
       .subscribe(res => {
         this.router.navigate(['level3/list'])
       })
+  }
+  parseData = (data: any) => {
+    const tmp:any = [];
+    console.log("Pasrse Data",data)
+     data.map((a: { _id: string;fullname:string }) => tmp.push({
+      ...a, ...{
+         router: ['/', 'inventory', a._id]
+       }
+    }));
+    console.log("Pasrse Data tmp",tmp)
+    return tmp;
+  }
+  srcProduct = (e:any) => {
+    const {term} = e;
+    const q = [
+      `organization/get/active?`,
+      `filter=${term}`,
+      `&fields=fullName`,
+      `&page=1&limit=5`,
+      `&sort=fullName&order=-1`,
+    ];
+
+    this._restService.getActive$(q.join(''))
+      .subscribe(res => {
+        console.log("Valores encontrados",res)
+        this.products = [...this.parseData(res)];
+      })
+
+    console.log("Valores a mostrar",this.products)
+  }
+  selectProduct = (e:any) => {
+    console.log("Selectr",e)
+    // if (e.value === 'new') {
+    //   this.form.patchValue({manager: null})
+    //   this.open()
+    // }
   }
 }

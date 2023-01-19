@@ -1,5 +1,6 @@
 {
   "GENERAL": {
+    "NOTFOUNDTEXT":"No se encontraron coincidencias",
     "ERROR_404": "Lo sentimos esta pagina no existe, o estamos trabajando en ella",
     "SAVE": "Guardar",
     "CLEAR": "Limpiar",

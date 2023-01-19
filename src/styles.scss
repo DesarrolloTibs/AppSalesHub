@@ -1,98 +1,141 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "~@ng-select/ng-select/themes/material.theme.css";
 :root {
-    --color-1: #f9c543;
-    --color-2: #3d1a6f;
-    --color-3: #000000;
-    --color-4: #FFFFFF;
-    --color-5: #000000;
-    --background-color-1: #3d1a6f;
-    --background-color-2: #FFFFFF;
-    --background-color-3: #f7f7f7;
-    
-    --text-color-1: #3d1a6f;
-    --text-color-2: #FFFFFF;
-    --text-color-3: #000000;
-    --font-size-1: 1rem;
-    --font-size-2: 1.2rem;
-    --font-size-3: 1.8rem;
-    --shadow-1: rgb(0 0 0 / 35%) 0px 8px 24px;
-    --shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    --border-radius-1: .25rem;
-    --border-radius-2: .5rem;
-    --font-family-1: 'Poppins', sans-serif;
-    --animation-1: 200ms;
+  --color-1: #f9c543;
+  --color-2: #3d1a6f;
+  --color-3: #000000;
+  --color-4: #ffffff;
+  --color-5: #000000;
+  --background-color-1: #3d1a6f;
+  --background-color-2: #ffffff;
+  --background-color-3: #f7f7f7;
+
+  --text-color-1: #3d1a6f;
+  --text-color-2: #ffffff;
+  --text-color-3: #000000;
+  --font-size-1: 1rem;
+  --font-size-2: 1.2rem;
+  --font-size-3: 1.8rem;
+  --shadow-1: rgb(0 0 0 / 35%) 0px 8px 24px;
+  --shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --border-radius-1: 0.25rem;
+  --border-radius-2: 0.5rem;
+  --font-family-1: "Poppins", sans-serif;
+  --animation-1: 200ms;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color-3);
-    font-family: var(--font-family-1);
-    font-size: var(--font-size-1);
-    color: var(--color-3);
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color-3);
+  font-family: var(--font-family-1);
+  font-size: var(--font-size-1);
+  color: var(--color-3);
+  height: 100%;
 }
 body {
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    margin: 0;
-   
-  }
-  
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
 
-  
 input,
 button {
-    cursor: pointer;
-    font-family: var(--font-family-1);
+  cursor: pointer;
+  font-family: var(--font-family-1);
 }
 
 button:disabled {
-    opacity: .5;
+  opacity: 0.5;
 }
 
 .overlay-loading {
-    background: rgba(255, 255, 255, 0.7);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    display: flex;
-    top: 0;
-    justify-content: center;
-    align-items: center;
-    -webkit-transition: all 200ms;
-    -moz-transition: all 200ms;
-    -o-transition: all 200ms;
-    transition: all 200ms;
-  }
-  
-  .overlay-loading .in {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  background: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
 
-  .menu-button {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left !important;
-    font-size: 1rem;
-    mat-icon {
-      margin-right: 8px;
-      color: var(--text-color-2);
-    }
-    span{
-      color: var(--text-color-2);
-    }
-  }
+.overlay-loading .in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .button-custom1{
-    background-color:var(--color-1) !important;
-    color: var(--color-5) !important;
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left !important;
+  font-size: 1rem;
+  mat-icon {
+    margin-right: 8px;
+    color: var(--text-color-2);
   }
-  .button-icon-custom1{
-    --mdc-icon-button-icon-color: var(--color-2) !important;
+  span {
+    color: var(--text-color-2);
   }
+}
+
+.button-custom1 {
+  background-color: var(--color-1) !important;
+  color: var(--color-5) !important;
+}
+.button-icon-custom1 {
+  --mdc-icon-button-icon-color: var(--color-2) !important;
+}
+//   ng-select.ng-invalid.ng-touched .ng-select-container {
+//     border-color: #dc3545;
+//     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px #fde6e8;
+// }
+
+/****ng Select custom class*****/
+.ng-select.ng-select-focused .ng-select-container.ng-appearance-outline:after,
+.ng-select.ng-select-focused
+  .ng-select-container.ng-appearance-outline:hover:after {
+  border-color: #3f51b5 !important;
+  border-width: 2px !important;
+}
+.ng-select.ng-invalid.ng-touched .ng-select-container.ng-appearance-outline {
+  border-color: #dc3545 !important;
+  border-width: 2px !important;
+}
+.ng-select {
+  padding-bottom: 1.8em !important;
+}
+.ng-select .ng-select-container.ng-appearance-outline {
+  padding: 0 0.5em !important;
+  min-height: 62px !important;
+}
+.ng-select .ng-select-container.ng-appearance-outline:after {
+  border: solid 1px rgb(168 168 168) !important;
+  border-radius: 5px;
+  height: calc(100% - 0.5em);
+  pointer-events: none;
+  transition: border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.ng-select .ng-select-container .ng-value-container .ng-input>input {
+  box-sizing: content-box;
+  background: none transparent;
+  border: 0 none;
+  box-shadow: none;
+  outline: none;
+  padding: 0.75rem !important;
+  cursor: default;
+  width: 100%;
+}
+.ng-select .ng-select-container.ng-appearance-outline .ng-placeholder {
+
+  background-color: #fff;
+  z-index: 1;
+  padding-top: 0.5rem !important;
+}
