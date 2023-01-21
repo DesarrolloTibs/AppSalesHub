@@ -44,20 +44,20 @@ export class ContactListPageComponent implements OnInit {
   ngOnInit(): void {
   
     //const f=this.getTranslate('CONTACTS.FULLNAME')
-    // this.displayedColumns = [
-    //   { title: 'CONTACTS.FULLNAME', action: false, reference: 'fullName' },
-    //   { title: 'CONTACTS.OFFICEPHONE', action: false, reference: 'officePhone' },
-    //   { title: 'CONTACTS.MOBILESPHONE', action: false, reference: 'mobilesPhone' },
-    //   { title: 'CONTACTS.EMAILS', action: false, reference: 'emails' },
-    //   { title: 'CONTACTS.CHANNEL', action: false, reference: 'channel' },
-    //   { title: 'CONTACTS.TYPECONTACTS', action: false, reference: 'typeContacts' },
-    //   { title: 'CONTACTS.COUNTRY', action: false, reference: 'country' },
-    //   { title: 'CONTACTS.STATE', action: false, reference: 'state' },
-    //   { title: 'CONTACTS.CITY', action: false, reference: 'city' },
-    //   { title: 'CONTACTS.TOTALBUSINESS', action: false, reference: 'totalBusiness' },
-    //   { title: 'GENERAL.DETAIL', action: true, reference: 'detail' },
-    //   { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
-    // ];
+    this.displayedColumns = [
+      { title: 'CONTACTS.FULLNAME', action: false, reference: 'fullName' },
+      { title: 'CONTACTS.OFFICEPHONE', action: false, reference: 'officePhone' },
+      { title: 'CONTACTS.MOBILESPHONE', action: false, reference: 'mobilesPhone' },
+      { title: 'CONTACTS.EMAILS', action: false, reference: 'emails' },
+      { title: 'CONTACTS.CHANNEL', action: false, reference: 'channel' },
+      { title: 'CONTACTS.TYPECONTACTS', action: false, reference: 'typeContacts' },
+      { title: 'CONTACTS.COUNTRY', action: false, reference: 'country' },
+      { title: 'CONTACTS.STATE', action: false, reference: 'state' },
+      { title: 'CONTACTS.CITY', action: false, reference: 'city' },
+      { title: 'CONTACTS.TOTALBUSINESS', action: false, reference: 'totalBusiness' },
+      { title: 'GENERAL.DETAIL', action: true, reference: 'detail' },
+      { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
+    ];
     this.routeTo = getCurrentRoute(this.router.url)
   }
   

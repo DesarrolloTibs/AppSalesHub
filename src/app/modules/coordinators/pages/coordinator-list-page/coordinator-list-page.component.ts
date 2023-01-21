@@ -44,7 +44,7 @@ export class CoordinatorListPageComponent implements OnInit {
       { title: 'COORDINATORS.FULLNAME', action: false, reference: 'fullName' },
       { title: 'COORDINATORS.PHONES', action: false, reference: 'phones' },
       { title: 'COORDINATORS.EMAILS', action: false, reference: 'emails' },
-      { title: 'COORDINATORS.ORGANIZATION', action: false, reference: 'organization.fullName' },
+      { title: 'COORDINATORS.ORGANIZATION', action: false, reference: 'organization' },
       { title: 'COORDINATORS.REGIONS', action: false, reference: 'regions' },
       { title: 'COORDINATORS.ZONES', action: false, reference: 'zones' },
       { title: 'GENERAL.DETAIL', action: true, reference: 'detail' },

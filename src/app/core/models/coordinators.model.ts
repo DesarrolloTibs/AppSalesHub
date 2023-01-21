@@ -3,7 +3,7 @@ export interface CoordinatorsModel{
         fullName:string,
         phones:Array<number>,
         emails: Array<string>,
-        organization: object,
+        organization: Object,
         regions: Array<string>,
         zones: Array<string>,
        
