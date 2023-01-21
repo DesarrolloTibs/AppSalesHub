@@ -9,7 +9,7 @@ const routes: Routes = [//Todo: Change Routes in Sidebar, Routing module each pa
         loadChildren: () => import("@modules/contacts/contacts.module").then(m => m.ContactsModule),
       },
       {
-        path: "level1",//
+        path: "level3",//
         loadChildren: () => import("@modules/vendors/vendors.module").then(m => m.VendorsModule),
    
       },
@@ -19,7 +19,7 @@ const routes: Routes = [//Todo: Change Routes in Sidebar, Routing module each pa
 
       },
       {
-        path: "level3",//
+        path: "level1",//
         loadChildren: () => import("@modules/coordinators/coordinators.module").then(m => m.CoordinatorsModule),
 
       },

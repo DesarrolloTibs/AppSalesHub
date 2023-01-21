@@ -42,8 +42,9 @@
         *matCellDef="let element"
         matTooltip="{{ element[col.reference] }}"
       >
-        {{ element[col.reference] }}
+      {{ element[col.reference] }}
       </td>
+    
     </ng-template>
     <ng-template #elseBlock>
       <td mat-cell *matCellDef="let element">

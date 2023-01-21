@@ -25,6 +25,7 @@ import { routeEnpoints } from 'src/app/global/endpoints';
 export class CoordinatorListPageComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private _translate:TranslateService) {}
 
+  
   public service:string=routeEnpoints.coordinators;
   routeTo:string=""
   public displayedColumns: Array<TableColumns> = [];
@@ -43,7 +44,7 @@ export class CoordinatorListPageComponent implements OnInit {
       { title: 'COORDINATORS.FULLNAME', action: false, reference: 'fullName' },
       { title: 'COORDINATORS.PHONES', action: false, reference: 'phones' },
       { title: 'COORDINATORS.EMAILS', action: false, reference: 'emails' },
-      { title: 'COORDINATORS.ORGANIZATION', action: false, reference: 'organization' },
+      { title: 'COORDINATORS.ORGANIZATION', action: false, reference: 'organization.fullName' },
       { title: 'COORDINATORS.REGIONS', action: false, reference: 'regions' },
       { title: 'COORDINATORS.ZONES', action: false, reference: 'zones' },
       { title: 'GENERAL.DETAIL', action: true, reference: 'detail' },

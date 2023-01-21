@@ -14,7 +14,9 @@ import player from 'lottie-web';
 import { LoadingSvgComponent } from './components/loading-svg/loading-svg.component';
 import { ButtonProgressComponent } from './components/button-progress/button-progress.component';
 import { HistoryNavComponent } from './components/history-nav/history-nav.component';
-
+import { MtxGridModule } from '@ng-matero/extensions/grid';
+import { MtxSelectModule } from '@ng-matero/extensions/select';
+import { FormsModule } from '@angular/forms';
 export function playerFactory() {
   return player;
 }
@@ -34,6 +36,9 @@ export function playerFactory() {
    RouterModule,
    TranslateModule,
    LottieModule.forRoot({player: playerFactory}),
+   MtxGridModule,
+   MtxSelectModule,
+   FormsModule
    
   
   ],
@@ -43,7 +48,10 @@ export function playerFactory() {
     ButtonProgressComponent,
     ErrorLayerComponent,
     LoadingSvgComponent,
-    HistoryNavComponent
+    HistoryNavComponent,
+    MtxGridModule,
+    MtxSelectModule,
+    FormsModule
   ],
   bootstrap:[SideBarComponent]
 })

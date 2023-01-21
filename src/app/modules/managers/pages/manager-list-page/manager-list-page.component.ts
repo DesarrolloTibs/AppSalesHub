@@ -37,17 +37,17 @@ export class ManagerListPageComponent implements OnInit {
   ngOnInit(): void {
   
     //const f=this.getTranslate('CONTACTS.FULLNAME')
-    this.displayedColumns = [
-      { title: 'MANAGERS.FULLNAME', action: false, reference: 'fullName' },
-      { title: 'MANAGERS.PHONES', action: false, reference: 'phones' },
-      { title: 'MANAGERS.EMAILS', action: false, reference: 'emails' },
-      { title: 'MANAGERS.ORGANIZATION', action: false, reference: 'organization' },
-      { title: 'MANAGERS.COORDINATOR', action: false, reference: 'coordinator' },
-      { title: 'MANAGERS.REGIONS', action: false, reference: 'regions' },
-      { title: 'MANAGERS.ZONES', action: false, reference: 'zones' },
-      { title: 'GENERAL.DETAIL', action: true, reference: 'detail' },
-      { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
-    ];
+    // this.displayedColumns = [
+    //   { title: 'MANAGERS.FULLNAME', action: false, reference: 'fullName' },
+    //   { title: 'MANAGERS.PHONES', action: false, reference: 'phones' },
+    //   { title: 'MANAGERS.EMAILS', action: false, reference: 'emails' },
+    //   { title: 'MANAGERS.ORGANIZATION', action: false, reference: 'organization' },
+    //   { title: 'MANAGERS.COORDINATOR', action: false, reference: 'coordinator' },
+    //   { title: 'MANAGERS.REGIONS', action: false, reference: 'regions' },
+    //   { title: 'MANAGERS.ZONES', action: false, reference: 'zones' },
+    //   { title: 'GENERAL.DETAIL', action: true, reference: 'detail' },
+    //   { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
+    // ];
     this.routeTo = getCurrentRoute(this.router.url)
   }
 

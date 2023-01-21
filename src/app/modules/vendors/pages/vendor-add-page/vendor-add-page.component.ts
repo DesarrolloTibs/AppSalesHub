@@ -9,7 +9,7 @@ export class VendorAddPageComponent {
   public history: any = [
     {
       name: 'Vendedor',
-      router:['/','level1']
+      router:['/','level3']
     },
     {
       name: 'Nuevo',

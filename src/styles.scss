@@ -1,5 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@ng-select/ng-select/themes/material.theme.css";
+// @import "~@ng-select/ng-select/themes/material.theme.css";
+@use '@angular/material' as mat;
+@use '@ng-matero/extensions' as mtx;
+
+// Plus imports for other components in your app.
+
+// Define the default (light) theme.
+$candy-app-primary: mat.define-palette(mat.$indigo-palette);
+$candy-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$candy-app-theme: mat.define-light-theme(
+  (
+    // Define the default colors for our app.
+    color: (
+      primary: $candy-app-primary,
+      accent: $candy-app-accent
+    ),
+    // Define the default typography for our app.
+    typography: mat.define-typography-config(),
+    // Define the default density level for our app.
+    density: 0,
+  )
+);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat.core();
+
+// Include the default theme styles.
+@include mat.all-component-themes($candy-app-theme);
+@include mtx.all-component-themes($candy-app-theme);
+
+// @include mat.legacy-typography-hierarchy($candy-app-theme, '.mat-legacy-typography');
+// @include mat.typography-hierarchy($candy-app-theme);
+@import url('assets/css/forms.scss');
+
 :root {
   --color-1: #f9c543;
   --color-2: #3d1a6f;
@@ -99,43 +134,48 @@ button:disabled {
 // }
 
 /****ng Select custom class*****/
-.ng-select.ng-select-focused .ng-select-container.ng-appearance-outline:after,
-.ng-select.ng-select-focused
-  .ng-select-container.ng-appearance-outline:hover:after {
-  border-color: #3f51b5 !important;
-  border-width: 2px !important;
-}
-.ng-select.ng-invalid.ng-touched .ng-select-container.ng-appearance-outline {
-  border-color: #dc3545 !important;
-  border-width: 2px !important;
-}
-.ng-select {
-  padding-bottom: 1.8em !important;
-}
-.ng-select .ng-select-container.ng-appearance-outline {
-  padding: 0 0.5em !important;
-  min-height: 62px !important;
-}
-.ng-select .ng-select-container.ng-appearance-outline:after {
-  border: solid 1px rgb(168 168 168) !important;
-  border-radius: 5px;
-  height: calc(100% - 0.5em);
-  pointer-events: none;
-  transition: border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-.ng-select .ng-select-container .ng-value-container .ng-input>input {
-  box-sizing: content-box;
-  background: none transparent;
-  border: 0 none;
-  box-shadow: none;
-  outline: none;
-  padding: 0.75rem !important;
-  cursor: default;
-  width: 100%;
-}
-.ng-select .ng-select-container.ng-appearance-outline .ng-placeholder {
+// .ng-select.ng-select-focused .ng-select-container.ng-appearance-outline:after,
+// .ng-select.ng-select-focused
+//   .ng-select-container.ng-appearance-outline:hover:after {
+//   border-color: #3f51b5 !important;
+//   border-width: 2px !important;
+// }
+// .ng-select.ng-invalid.ng-touched .ng-select-container.ng-appearance-outline {
+//   border-color: #dc3545 !important;
+//   border-width: 2px !important;
+// }
+// .ng-select {
+//   padding-bottom: 1.8em !important;
+// }
+// .ng-select .ng-select-container.ng-appearance-outline {
+//   padding: 0 0.5em !important;
+//   min-height: 62px !important;
+// }
+// .ng-select .ng-select-container.ng-appearance-outline:after {
+//   border: solid 1px rgb(168 168 168) !important;
+//   border-radius: 5px;
+//   height: calc(100% - 0.5em);
+//   pointer-events: none;
+//   transition: border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+// }
+// .ng-select .ng-select-container .ng-value-container .ng-input>input {
+//   box-sizing: content-box;
+//   background: none transparent;
+//   border: 0 none;
+//   box-shadow: none;
+//   outline: none;
+//   padding: 0.75rem !important;
+//   cursor: default;
+//   width: 100%;
+// }
+// .ng-select .ng-select-container.ng-appearance-outline .ng-placeholder {
 
-  background-color: #fff;
-  z-index: 1;
-  padding-top: 0.5rem !important;
-}
+//   background-color: #fff;
+//   z-index: 1;
+//   //padding-top: 0.5rem !important;
+// }
+
+
+
+
+// Plus imports for other components in your app.

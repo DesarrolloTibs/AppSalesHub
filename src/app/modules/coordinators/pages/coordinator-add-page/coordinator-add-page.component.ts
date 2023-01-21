@@ -9,7 +9,7 @@ export class CoordinatorAddPageComponent {
   public history: any = [
     {
       name: 'Coordinador',
-      router:['/','level3']
+      router:['/','level1']
     },
     {
       name: 'Nuevo',

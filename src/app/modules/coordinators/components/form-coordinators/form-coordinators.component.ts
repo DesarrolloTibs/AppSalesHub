@@ -18,11 +18,16 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
     fullName: '',
     phones: [],
     emails: [],
-    organization: '',
+    organization: {},
     regions: [],
     zones: [],
   
   };
+  food: any[] = [2];
+
+  multiple = false;
+  disabled = false;
+  required = true;
   form: FormGroup = new FormGroup({});
   routeTo: string = ""
   constructor(
@@ -111,12 +116,13 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
       })
   }
 
+  
   InsertData(): void {
     console.log(routeEnpoints.coordinators)
     const method = (this.id) ? 'patch' : 'post';
     this._restService[`${method}$`](`${routeEnpoints.coordinators}/${(method === 'patch') ? `update/${this.id}` : 'create'}`, this.form.value)
       .subscribe(res => {
-        this.router.navigate(['level3/list'])
+        this.router.navigate(['level1/list'])
       })
   }
   parseData = (data: any) => {
@@ -133,8 +139,8 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
   srcProduct = (e:any) => {
     const {term} = e;
     const q = [
-      `organization/get/active?`,
-      `filter=${term}`,
+      `organization/get/active`,
+      `?filter=${term}`,
       `&fields=fullName`,
       `&page=1&limit=5`,
       `&sort=fullName&order=-1`,
@@ -154,5 +160,6 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
     //   this.form.patchValue({manager: null})
     //   this.open()
     // }
+    //this.form.patchValue({organization: e})
   }
 }

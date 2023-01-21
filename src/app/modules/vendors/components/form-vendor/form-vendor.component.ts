@@ -118,7 +118,7 @@ export class FormVendorComponent implements OnInit {
     const method = (this.id) ? 'patch' : 'post';
     this._restService[`${method}$`](`${routeEnpoints.vendors}/${(method === 'patch') ? `update/${this.id}` : 'create'}`, this.form.value)
       .subscribe(res => {
-        this.router.navigate(['level1/list'])
+        this.router.navigate(['level3/list'])
       })
   }
 }

@@ -1,42 +1,42 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>{{
-      "GENERAL.FORMCOORDINATORS" | translate
-    }}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <form *ngIf="dataform" [formGroup]="form" (ngSubmit)="sendData()">
-      <div class="form-body">
-        <div class="row">
-          <div class="input-group">
-            <mat-form-field appearance="outline">
-              <mat-label>{{ "COORDINATORS.FULLNAME" | translate }}</mat-label>
-              <input
-                matInput
-                matNativeControl="text"
-                formControlName="fullName"
-              />
-            </mat-form-field>
+<div class="card-content">
+  <mat-card class="card-width">
+    <mat-card-header>
+      <mat-card-title
+        >{{ "GENERAL.FORMCOORDINATORS" | translate }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form *ngIf="dataform" [formGroup]="form" (ngSubmit)="sendData()">
+        <div class="form-body">
+          <div class="row">
+            <div class="input-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ "COORDINATORS.FULLNAME" | translate }}</mat-label>
+                <input
+                  matInput
+                  matNativeControl="text"
+                  formControlName="fullName"
+                />
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ "COORDINATORS.PHONES" | translate }}</mat-label>
+                <input
+                  matInput
+                  matNativeControl="text"
+                  formControlName="phones"
+                />
+              </mat-form-field>
+            </div>
           </div>
-          <div class="input-group">
-            <mat-form-field appearance="outline">
-              <mat-label>{{ "COORDINATORS.PHONES" | translate }}</mat-label>
-              <input
-                matInput
-                matNativeControl="text"
-                formControlName="phones"
-              />
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-group">
-            <div>
-              
-              <ng-select
+          <div class="row">
+            <div class="input-group">
+              <!-- <ng-select
+                #selectProductRef
                 appearance="outline"
                 formControlName="organization"
-                #selectProductRef
+                [multiple]="true"
                 [items]="products"
                 (search)="srcProduct($event)"
                 (change)="selectProduct($event)"
@@ -46,50 +46,70 @@
                 notFoundText="{{ 'GENERAL.NOTFOUNDTEXT' | translate }}"
                 placeholder="{{ 'COORDINATORS.ORGANIZATION' | translate }}"
               >
-              </ng-select>
+              </ng-select> -->
+              <mat-form-field appearance="outline">
+                <mat-label>{{
+                  "COORDINATORS.ORGANIZATION" | translate
+                }}</mat-label>
+
+                <mtx-select
+                  (search)="srcProduct($event)"
+                  (change)="selectProduct($event)"
+                  [items]="products"
+                  bindLabel="fullName"
+                  
+                  [multiple]="true"
+                  formControlName="organization"
+                  [required]="true"
+                  notFoundText="{{ 'GENERAL.NOTFOUNDTEXT' | translate }}"
+                >
+                </mtx-select>
+
+                 <mat-error>Please choose a food</mat-error> 
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ "COORDINATORS.EMAILS" | translate }}</mat-label>
+                <input matNativeControl="text" formControlName="emails" />
+              </mat-form-field>
             </div>
           </div>
-          <div class="input-group">
-            <mat-form-field appearance="outline">
-              <mat-label>{{ "COORDINATORS.EMAILS" | translate }}</mat-label>
-              <input matNativeControl="text" formControlName="emails" />
-            </mat-form-field>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="input-group">
-            <mat-form-field appearance="outline">
-              <mat-label>{{ "COORDINATORS.REGIONS" | translate }}</mat-label>
-              <input matNativeControl="text" formControlName="regions" />
-            </mat-form-field>
-          </div>
-          <div class="input-group">
-            <mat-form-field appearance="outline">
-              <mat-label>{{ "COORDINATORS.ZONES" | translate }}</mat-label>
-              <input matNativeControl="text" formControlName="zones" />
-            </mat-form-field>
+          <div class="row">
+            <div class="input-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ "COORDINATORS.REGIONS" | translate }}</mat-label>
+                <input matNativeControl="text" formControlName="regions" />
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ "COORDINATORS.ZONES" | translate }}</mat-label>
+                <input matNativeControl="text" formControlName="zones" />
+              </mat-form-field>
+            </div>
           </div>
         </div>
-      </div>
-      <mat-card-actions class="form-actions">
-        <button
-          mat-flat-button
-          [disabled]="form.invalid"
-          type="submit"
-          class="button-custom1"
-        >
-          {{ "GENERAL.SAVE" | translate }}
-        </button>
-        <button
-          mat-flat-button
-          type="button"
-          color="warn"
-          (click)="clearData()"
-        >
-          {{ "GENERAL.CLEAR" | translate }}
-        </button>
-      </mat-card-actions>
-    </form>
-  </mat-card-content>
-</mat-card>
+        <mat-card-actions class="form-actions">
+          <button
+            mat-flat-button
+            [disabled]="form.invalid"
+            type="submit"
+            class="button-custom1"
+          >
+            {{ "GENERAL.SAVE" | translate }}
+          </button>
+          <button
+            mat-flat-button
+            type="button"
+            color="warn"
+            (click)="clearData()"
+          >
+            {{ "GENERAL.CLEAR" | translate }}
+          </button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

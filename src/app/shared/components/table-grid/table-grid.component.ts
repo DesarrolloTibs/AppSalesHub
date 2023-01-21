@@ -79,11 +79,18 @@ export class TableGridComponent implements OnInit, AfterViewInit {
 
   loadData(service:string): void {
     console.log(service)
+    
+
     this._restService.get$(service)
       .subscribe((response: any[]) => {
         console.log(response)
         this.dataSource.data = response
       })
+  }
+  getDataObject(origin:any,property:string): void {
+    console.log("origin",origin);
+    const extractedIds = origin.map((e:any) => e[property]);
+   return  extractedIds
   }
 
 }
