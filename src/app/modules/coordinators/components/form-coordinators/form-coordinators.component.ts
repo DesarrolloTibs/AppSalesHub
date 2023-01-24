@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { RestService } from '@core/services/rest.service';
 import { routeEnpoints } from 'src/app/global/endpoints';
 import { CoordinatorsModel } from '@core/models/coordinators.model';
+import { ShareService } from '@core/services/share.service';
 
 @Component({
   selector: 'app-form-coordinators',
@@ -12,7 +13,7 @@ import { CoordinatorsModel } from '@core/models/coordinators.model';
 })
 export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
   public id: string = "";
-  public products: any = []
+  public organizations: any = []
   dataform: CoordinatorsModel = {
     _id: '',
     fullName: '',
@@ -21,7 +22,7 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
     organization: {},
     regions: [],
     zones: [],
-  
+
   };
   food: any[] = [2];
 
@@ -34,7 +35,8 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
     private route: ActivatedRoute,
     public router: Router,
     private fb: FormBuilder,
-    private _restService: RestService) {
+    private _restService: RestService,
+    private _shareService: ShareService) {
   }
   ngOnInit(): void {
 
@@ -50,12 +52,12 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
       }
       this.form = this.fb.group({
         fullName: [null, [Validators.required, Validators.minLength(10)]],
-        phones: [null,[Validators.required]],
-      
+        phones: [null, [Validators.required]],
+
         emails: [null, [Validators.required]],
         organization: ['', [Validators.required]],
-        regions: [null,[Validators.required]],
-        zones: [null,[Validators.required]],
+        regions: [null, [Validators.required]],
+        zones: [null, [Validators.required]],
         // email: [null, [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
         // dob: [null, [Validators.required]],
         // address: [null],
@@ -95,18 +97,18 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
 
         const { fullName,
           phones,
-          
+
           emails,
-          
+
           organization,
           regions,
           zones, } = this.dataform
         this.form.patchValue({
           fullName,
           phones,
-  
+
           emails,
-          
+
           organization,
           regions,
           zones
@@ -116,7 +118,7 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
       })
   }
 
-  
+
   InsertData(): void {
     console.log(routeEnpoints.coordinators)
     const method = (this.id) ? 'patch' : 'post';
@@ -125,37 +127,20 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
         this.router.navigate(['level1/list'])
       })
   }
-  parseData = (data: any) => {
-    const tmp:any = [];
-    console.log("Pasrse Data",data)
-     data.map((a: { _id: string;fullname:string }) => tmp.push({
-      ...a, ...{
-         router: ['/', 'inventory', a._id]
-       }
-    }));
-    console.log("Pasrse Data tmp",tmp)
-    return tmp;
-  }
-  srcProduct = (e:any) => {
-    const {term} = e;
-    const q = [
-      `organization/get/active`,
-      `?filter=${term}`,
-      `&fields=fullName`,
-      `&page=1&limit=5`,
-      `&sort=fullName&order=-1`,
-    ];
 
-    this._restService.getActive$(q.join(''))
-      .subscribe(res => {
-        console.log("Valores encontrados",res)
-        this.products = [...this.parseData(res)];
-      })
+  srcOrganization = (e: any) => {
 
-    console.log("Valores a mostrar",this.products)
+    this._shareService.findSelect(e, routeEnpoints.organizations).then(res => {
+      this.organizations = res
+    }).catch(e=>{
+      this.organizations=[]
+    })
+
+
+    console.log("Valores a mostrar", this.organizations)
   }
-  selectProduct = (e:any) => {
-    console.log("Selectr",e)
+  selectOrganization = (e: any) => {
+    console.log("Selectr", e)
     // if (e.value === 'new') {
     //   this.form.patchValue({manager: null})
     //   this.open()

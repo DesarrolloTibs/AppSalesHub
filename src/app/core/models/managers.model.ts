@@ -1,10 +1,10 @@
 export interface ManagersModel{
         _id:string,
-        fullName:string,
-        phones:Array<number>,
+        coordinator: Object,
         emails: Array<string>,
-        organization: string,
-        coordinator: string,
+        fullName:string,
+        organization: Object,
+        phones:Array<number>,
         regions: Array<string>,
         zones: Array<string>,
        

@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { RestService } from '@core/services/rest.service';
 import { routeEnpoints } from 'src/app/global/endpoints';
 import { VendorsModel } from '@core/models/vendors.model';
+import { ShareService } from '@core/services/share.service';
 @Component({
   selector: 'app-form-vendor',
   templateUrl: './form-vendor.component.html',
@@ -11,6 +12,8 @@ import { VendorsModel } from '@core/models/vendors.model';
 })
 export class FormVendorComponent implements OnInit {
   public id: string = "";
+  public organizations: any = []
+  public managers: any = []
   dataform: VendorsModel = {
     _id: '',
     fullName: '',
@@ -29,7 +32,8 @@ export class FormVendorComponent implements OnInit {
     private route: ActivatedRoute,
     public router: Router,
     private fb: FormBuilder,
-    private _restService: RestService) {
+    private _restService: RestService,
+    private _shareService:ShareService) {
   }
   ngOnInit(): void {
 
@@ -120,5 +124,43 @@ export class FormVendorComponent implements OnInit {
       .subscribe(res => {
         this.router.navigate(['level3/list'])
       })
+  }
+  srcOrganization = (e: any) => {
+
+    this._shareService.findSelect(e, routeEnpoints.organizations).then(res => {
+      this.organizations = res
+    }).catch(e=>{
+      this.organizations=[]
+    })
+
+
+    console.log("Valores a mostrar", this.organizations)
+  }
+  selectOrganization = (e: any) => {
+    console.log("Selectr", e)
+    // if (e.value === 'new') {
+    //   this.form.patchValue({manager: null})
+    //   this.open()
+    // }
+    //this.form.patchValue({organization: e})
+  }
+  srcManager = (e: any) => {
+
+    this._shareService.findSelect(e, routeEnpoints.managers).then(res => {
+      this.managers = res
+    }).catch(e=>{
+      this.managers=[]
+    })
+
+
+    console.log("Valores a mostrar", this.managers)
+  }
+  selectManager = (e: any) => {
+    console.log("Selectr", e)
+    // if (e.value === 'new') {
+    //   this.form.patchValue({manager: null})
+    //   this.open()
+    // }
+    //this.form.patchValue({organization: e})
   }
 }

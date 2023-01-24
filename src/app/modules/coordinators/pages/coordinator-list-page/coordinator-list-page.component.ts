@@ -46,8 +46,6 @@ export class CoordinatorListPageComponent implements OnInit {
       { title: 'COORDINATORS.EMAILS', action: false, reference: 'emails' },
       { title: 'COORDINATORS.ORGANIZATION', action: false, reference: 'organization' },
       { title: 'COORDINATORS.REGIONS', action: false, reference: 'regions' },
-      { title: 'COORDINATORS.ZONES', action: false, reference: 'zones' },
-      { title: 'GENERAL.DETAIL', action: true, reference: 'detail' },
       { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
     ];
     this.routeTo = getCurrentRoute(this.router.url)

@@ -10,6 +10,7 @@ import { SharedModule } from '@shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { MaterialModule } from '@shared/material.module';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({

@@ -53,9 +53,9 @@
                 }}</mat-label>
 
                 <mtx-select
-                  (search)="srcProduct($event)"
-                  (change)="selectProduct($event)"
-                  [items]="products"
+                  (search)="srcOrganization($event)"
+                  (change)="selectOrganization($event)"
+                  [items]="organizations"
                   bindLabel="fullName"
                   
                   [multiple]="true"

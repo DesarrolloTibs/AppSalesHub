@@ -3,6 +3,7 @@ import {Router} from "@angular/router";
 import Swal from 'sweetalert2';
 import {TranslateService} from "@ngx-translate/core";
 import {CookieService} from "ngx-cookie-service";
+import { RestService } from './rest.service';
 //mport {ModalUserComponent} from "./components/modal-user/modal-user.component";
 //import {ModalUpdateComponent} from "./components/modal-update/modal-update.component";
 //import {ModalWizardComponent} from "./components/modal-wizard/modal-wizard.component";
@@ -14,7 +15,8 @@ export class ShareService {
   @Output() limitAccount = new EventEmitter<any>();
   constructor(private router: Router,
     private cookie: CookieService,
-    private translate: TranslateService) {
+    private translate: TranslateService,
+    private _restService:RestService) {
 }
 public parseData = (data: any, source: string = '') => {
   try {
@@ -90,4 +92,40 @@ public openUpdateModal = (data: any = {}) => {
       return null
     }
   }
+  parseDataSelect = (data: any) => {
+    const tmp:any = [];
+    console.log("Pasrse Data",data)
+     data.map((a: { _id: string;fullname:string }) => tmp.push({
+      ...a, ...{
+         router: ['/', 'inventory', a._id]
+       }
+    }));
+    console.log("Pasrse Data tmp",tmp)
+    return tmp;
+  }
+  findSelect = (e:any,route:string)=> new Promise((resolve, reject) => {
+    const {term} = e;
+    const q = [
+      `${route}/get/active`,
+      `?filter=${term}`,
+      `&fields=fullName`,
+      `&page=1&limit=5`,
+      `&sort=fullName&order=-1`,
+    ];
+    try {
+      this._restService.getActive$(q.join(''))
+      .subscribe(res => {
+        if(res){
+          console.log("Valores encontrados",res)
+          resolve([...this.parseDataSelect(res)]);
+        }else{
+          reject([])
+        }
+        
+      })
+    } catch (error) {
+      reject([])
+    }
+  
+  })
 }

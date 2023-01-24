@@ -40,15 +40,14 @@ export class VendorListPageComponent implements OnInit {
   
     //const f=this.getTranslate('CONTACTS.FULLNAME')
     this.displayedColumns = [
-      { title: 'VENDORS.FULLNAME', action: false, reference: 'fullName' },
-      { title: 'VENDORS.RFC', action: false, reference: 'rfc' },
       { title: 'VENDORS.ADDRESS', action: false, reference: 'address' },
-      { title: 'VENDORS.PHONES', action: false, reference: 'phones' },
       { title: 'VENDORS.EMAILS', action: false, reference: 'emails' },
-      { title: 'VENDORS.ORGANIZATION', action: false, reference: 'organization' },
+      { title: 'VENDORS.FULLNAME', action: false, reference: 'fullName' },
       { title: 'VENDORS.MANAGER', action: false, reference: 'manager' },
+      { title: 'VENDORS.ORGANIZATION', action: false, reference: 'organization' },
+      { title: 'VENDORS.PHONES', action: false, reference: 'phones' },
+      { title: 'VENDORS.RFC', action: false, reference: 'rfc' },
       { title: 'VENDORS.ZONES', action: false, reference: 'zones' },
-      { title: 'GENERAL.DETAIL', action: true, reference: 'detail' },
       { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
     ];
     this.routeTo = getCurrentRoute(this.router.url)

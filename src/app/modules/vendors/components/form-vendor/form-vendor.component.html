@@ -24,16 +24,54 @@
           </div>
           <div class="row">
             <div class="input-group">
-                <mat-form-field appearance="outline">
+              <mat-form-field appearance="outline">
+                <mat-label>{{
+                  "VENDORS.MANAGER" | translate
+                }}</mat-label>
+
+                <mtx-select
+                  (search)="srcManager($event)"
+                  (change)="selectManager($event)"
+                  [items]="managers"
+                  [multiple]="true"
+                  bindLabel="fullName"
+                  formControlName="manager"
+                  [required]="true"
+                  notFoundText="{{ 'GENERAL.NOTFOUNDTEXT' | translate }}"
+                >
+                </mtx-select>
+
+                 <!-- <mat-error>Please choose a food</mat-error>  -->
+              </mat-form-field>
+                <!-- <mat-form-field appearance="outline">
                   <mat-label>{{"VENDORS.MANAGER" | translate}}</mat-label>
                   <input matNativeControl="text" formControlName="manager"  />
-                </mat-form-field>
+                </mat-form-field> -->
               </div>
               <div class="input-group">
-                  <mat-form-field appearance="outline">
+                <mat-form-field appearance="outline">
+                  <mat-label>{{
+                    "VENDORS.ORGANIZATION" | translate
+                  }}</mat-label>
+  
+                  <mtx-select
+                    (search)="srcOrganization($event)"
+                    (change)="selectOrganization($event)"
+                    [items]="organizations"
+                    [multiple]="true"
+                    bindLabel="fullName"
+                    formControlName="organization"
+                    [required]="true"
+                    notFoundText="{{ 'GENERAL.NOTFOUNDTEXT' | translate }}"
+                  >
+                  </mtx-select>
+  
+                   <!-- <mat-error>Please choose a food</mat-error>  -->
+                </mat-form-field>
+                  <!-- <mat-form-field appearance="outline">
                     <mat-label>{{"VENDORS.ORGANIZATION" | translate}}</mat-label>
                     <input matNativeControl="text" formControlName="organization"  />
-                  </mat-form-field>
+                  </mat-form-field> -->
                 </div>
           </div>
           <div class="row">

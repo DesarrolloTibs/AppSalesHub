@@ -30,15 +30,46 @@
               </mat-form-field>
             </div>
             <div class="input-group">
-                <mat-form-field appearance="outline">
-                  <mat-label>{{"MANAGERS.ORGANIZATION" | translate}}</mat-label>
-                  <input matNativeControl="text" formControlName="organization"  />
-                </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>{{
+                  "MANAGERS.COORDINATOR" | translate
+                }}</mat-label>
+
+                <mtx-select
+                  (search)="srcCoordinator($event)"
+                  (change)="selectCoordinator($event)"
+                  [items]="coordinators"
+                  [multiple]="true"
+                  bindLabel="fullName"
+                  formControlName="coordinator"
+                  [required]="true"
+                  notFoundText="{{ 'GENERAL.NOTFOUNDTEXT' | translate }}"
+                >
+                </mtx-select>
+
+                 <!-- <mat-error>Please choose a food</mat-error>  -->
+              </mat-form-field>
+               
               </div>
               <div class="input-group">
                 <mat-form-field appearance="outline">
-                  <mat-label>{{"MANAGERS.COORDINATOR" | translate}}</mat-label>
-                  <input matNativeControl="text" formControlName="coordinator"  />
+                  <mat-label>{{
+                    "MANAGERS.ORGANIZATION" | translate
+                  }}</mat-label>
+  
+                  <mtx-select
+                  (search)="srcOrganization($event)"
+                  (change)="selectOrganization($event)"
+                    [items]="organizations"
+                    bindLabel="fullName"
+                    [multiple]="true"
+                    formControlName="organization"
+                    [required]="true"
+                    notFoundText="{{ 'GENERAL.NOTFOUNDTEXT' | translate }}"
+                  >
+                  </mtx-select>
+  
+                   <!-- <mat-error>Please choose a food</mat-error>  -->
                 </mat-form-field>
               </div>
           </div>
