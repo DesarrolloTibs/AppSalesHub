@@ -9,5 +9,10 @@ export interface ContactsModel{
         country: string,
         state: string,
         city: string,
-        totalBusiness: number
+        totalBusiness: number,
+        organization:Object
+        level1:Object
+        level2:Object
+        level3:Object;
+
 }

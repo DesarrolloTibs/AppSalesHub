@@ -142,6 +142,31 @@ export class RestService {
    * @param toast 
    * @returns 
    */
+
+  getTable$(path = '', toast = true): Observable<any> {
+    try {
+      return this.http.get(`${this.url}/${path}`,{headers: this.parseHeader()})
+        .pipe(
+           map(({ data:{itemsList,pagination} }: any) => {
+            //console.log("DataService Get",itemsList)
+            return {itemsList,pagination}
+          }),
+          catchError((e: any) => {
+            console.log(e)
+            if (toast) {
+              // this.sharedService.showError('Error', e.statusText);
+            }
+            this.handleError(e.status, e.statusText);
+            return throwError(() => ({
+              status: e.status,
+              statusText: e.statusText,
+            }));
+          }),
+        );
+    } catch (e: any) {
+      throw new Error(e);
+    }
+  }
   get$(path = '', toast = true): Observable<any> {
     try {
       return this.http.get(`${this.url}/${path}/get`,{headers: this.parseHeader()})

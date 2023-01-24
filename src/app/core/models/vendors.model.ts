@@ -6,7 +6,7 @@ export interface VendorsModel{
         zones: Array<string>,
         phones: Array<string>,
         emails: Array<string>,
-        manager: string,
-        organization: string,
+        manager: Object,
+        organization: Object,
        
 }

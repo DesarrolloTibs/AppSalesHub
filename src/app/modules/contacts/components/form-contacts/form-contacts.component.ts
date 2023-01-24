@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { RestService } from '@core/services/rest.service';
 import { routeEnpoints } from 'src/app/global/endpoints';
 import { ContactsModel } from '@core/models/contacts.model';
+import { ShareService } from '@core/services/share.service';
 
 @Component({
   selector: 'app-form-contacts',
@@ -12,6 +13,10 @@ import { ContactsModel } from '@core/models/contacts.model';
 })
 export class FormContactsComponent implements OnInit, AfterViewInit {
   public id: string = "";
+  public organizations: any = []
+  public managers: any = []
+  public vendors: any = []
+  public coordinators: any = []
   dataform: ContactsModel = {
     _id: '',
     fullName: '',
@@ -23,6 +28,11 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
     country: '',
     state: '',
     city: '',
+    organization: [],
+    level1: [],
+    level2: [],
+    level3: [],
+
     totalBusiness: 0
   };
   form: FormGroup = new FormGroup({});
@@ -32,7 +42,8 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
     private route: ActivatedRoute,
     public router: Router,
     private fb: FormBuilder,
-    private _restService: RestService) {
+    private _restService: RestService,
+    private _shareService: ShareService) {
   }
   ngOnInit(): void {
 
@@ -57,6 +68,10 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
         state: [null,],
         city: [null,],
         totalBusiness: [null,],
+        organization: [null, [Validators.required]],
+        level1: [null, [Validators.required]],
+        level2: [null, [Validators.required]],
+        level3: [null, [Validators.required]],
         // email: [null, [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
         // dob: [null, [Validators.required]],
         // address: [null],
@@ -104,7 +119,11 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
           country,
           state,
           city,
-          totalBusiness } = this.dataform
+          totalBusiness,
+          organization,
+          level1,
+          level2,
+          level3 } = this.dataform
         this.form.patchValue({
           fullName,
           officePhone,
@@ -115,7 +134,11 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
           country,
           state,
           city,
-          totalBusiness
+          totalBusiness,
+          organization,
+          level1,
+          level2,
+          level3
 
         });
 
@@ -130,4 +153,52 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
         this.router.navigate(['contacts/list'])
       })
   }
+  srcOrganization = (e: any) => {
+
+    this._shareService.findSelect(e, routeEnpoints.organizations).then(res => {
+      this.organizations = res
+    }).catch(e => {
+      this.organizations = []
+    })
+
+
+    console.log("Valores a mostrar", this.organizations)
+  }
+
+  srcCoordinator = (e: any) => {
+
+    this._shareService.findSelect(e, routeEnpoints.coordinators).then(res => {
+      this.coordinators = res
+    }).catch(e => {
+      this.coordinators = []
+    })
+
+
+    console.log("Valores a mostrar", this.coordinators)
+  }
+
+  srcManager = (e: any) => {
+
+    this._shareService.findSelect(e, routeEnpoints.managers).then(res => {
+      this.managers = res
+    }).catch(e => {
+      this.managers = []
+    })
+
+
+    console.log("Valores a mostrar", this.managers)
+  }
+
+  srcVendor = (e: any) => {
+
+    this._shareService.findSelect(e, routeEnpoints.vendors).then(res => {
+      this.vendors = res
+    }).catch(e => {
+      this.vendors = []
+    })
+
+
+    console.log("Valores a mostrar", this.vendors)
+  }
+
 }

@@ -55,6 +55,10 @@ export class ContactListPageComponent implements OnInit {
       { title: 'CONTACTS.STATE', action: false, reference: 'state' },
       { title: 'CONTACTS.CITY', action: false, reference: 'city' },
       { title: 'CONTACTS.TOTALBUSINESS', action: false, reference: 'totalBusiness' },
+      { title: 'CONTACTS.ORGANIZATION', action: false, reference: 'organization' },
+      { title: 'CONTACTS.LEVEL1', action: false, reference: 'level1' },
+      { title: 'CONTACTS.LEVEL2', action: false, reference: 'level2' },
+      { title: 'CONTACTS.LEVEL3', action: false, reference: 'level3' },
       { title: 'GENERAL.DETAIL', action: true, reference: 'detail' },
       { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
     ];

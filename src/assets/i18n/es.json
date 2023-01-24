@@ -35,6 +35,10 @@
     "COUNTRY": "País",
     "STATE": "Estado",
     "CITY": "Ciudad",
+    "ORGANIZATION": "Organización",
+    "LEVEL1": "Coordinador",
+    "LEVEL2": "Gerente",
+    "LEVEL3": "Vendedor",
     "TOTALBUSINESS": "Total"
   },
   "COORDINATORS": {
