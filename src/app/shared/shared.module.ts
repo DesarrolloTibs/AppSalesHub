@@ -18,6 +18,8 @@ import { MtxGridModule } from '@ng-matero/extensions/grid';
 import { MtxSelectModule } from '@ng-matero/extensions/select';
 import { FormsModule } from '@angular/forms';
 import { DinamycPipePipe } from './pipe/dinamyc-pipe.pipe';
+import { ActivePipe } from './pipe/active.pipe';
+import { DialogDeleteComponent } from './components/dialog-delete/dialog-delete.component';
 export function playerFactory() {
   return player;
 }
@@ -30,7 +32,9 @@ export function playerFactory() {
        ErrorLayerComponent,
        LoadingSvgComponent,
        HistoryNavComponent,
-       DinamycPipePipe
+       DinamycPipePipe,
+       ActivePipe,
+       DialogDeleteComponent
   ],
   imports: [
     CommonModule, 
@@ -56,7 +60,7 @@ export function playerFactory() {
     FormsModule
   ,DinamycPipePipe
   ],
-  providers:[CurrencyPipe,DecimalPipe,SlicePipe,TitleCasePipe],
+  providers:[CurrencyPipe,DecimalPipe,SlicePipe,TitleCasePipe,ActivePipe],
   bootstrap:[SideBarComponent]
 })
 export class SharedModule { }

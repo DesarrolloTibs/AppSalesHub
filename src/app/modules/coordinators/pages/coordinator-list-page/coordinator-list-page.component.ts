@@ -41,13 +41,14 @@ export class CoordinatorListPageComponent implements OnInit {
   
     //const f=this.getTranslate('CONTACTS.FULLNAME')
     this.displayedColumns = [
-      { title: 'COORDINATORS.FULLNAME', action: false, reference: 'fullName',activePipe:true,namePipe:['titlecase'] },
-      { title: 'COORDINATORS.PHONES', action: false, reference: 'phones', activePipe:false },
-      { title: 'COORDINATORS.EMAILS', action: false, reference: 'emails', activePipe:false },
-      { title: 'COORDINATORS.ORGANIZATION', action: false, reference: 'organization',activePipe:true,namePipe:['titlecase'] },
-      { title: 'COORDINATORS.REGIONS', action: false, reference: 'regions',activePipe:false },
+      { title: 'COORDINATORS.FULLNAME', action: false, reference: 'fullName',activePipe:true,namePipe:['titlecase'], activeSearch:true },
+      { title: 'COORDINATORS.PHONES', action: false, reference: 'phones', activePipe:false, activeSearch:true},
+      { title: 'COORDINATORS.EMAILS', action: false, reference: 'emails', activePipe:false, activeSearch:true },
+      { title: 'COORDINATORS.ORGANIZATION', action: false, reference: 'organization',activePipe:true,namePipe:['titlecase'], activeSearch:true },
+      { title: 'COORDINATORS.REGIONS', action: false, reference: 'regions',activePipe:false, activeSearch:true },
+      { title: 'GENERAL.ESTATUS', action: false, reference: 'deleted',activePipe:true,namePipe:['status'], activeSearch:false },
       { title: 'GENERAL.UPDATE', action: true, reference: 'update' },
-      { title: 'GENERAL.DELETE', action: true, reference: 'delete' }
+      { title: 'GENERAL.DELETERESTORE', action: true, reference: 'deleterestore' }
     ];
     this.routeTo = getCurrentRoute(this.router.url)
   }

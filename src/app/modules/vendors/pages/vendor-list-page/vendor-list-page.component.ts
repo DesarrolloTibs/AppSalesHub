@@ -40,16 +40,17 @@ export class VendorListPageComponent implements OnInit {
   
     //const f=this.getTranslate('CONTACTS.FULLNAME')
     this.displayedColumns = [
-      { title: 'VENDORS.FULLNAME', action: false, reference: 'fullName',activePipe:true,namePipe:['titlecase']  },
-      { title: 'VENDORS.RFC', action: false, reference: 'rfc' },
-      { title: 'VENDORS.ADDRESS', action: false, reference: 'address',activePipe:false },
-      { title: 'VENDORS.EMAILS', action: false, reference: 'emails',activePipe:false  },
-      { title: 'VENDORS.PHONES', action: false, reference: 'phones',activePipe:false  },
-      { title: 'VENDORS.MANAGER', action: false, reference: 'manager',activePipe:true,namePipe:['titlecase'] },
-      { title: 'VENDORS.ORGANIZATION', action: false, reference: 'organization',activePipe:true,namePipe:['titlecase'] },
-      { title: 'VENDORS.ZONES', action: false, reference: 'zones',activePipe:false  },
+      { title: 'VENDORS.FULLNAME', action: false, reference: 'fullName',activePipe:true,namePipe:['titlecase'], activeSearch:true  },
+      { title: 'VENDORS.RFC', action: false, reference: 'rfc', activeSearch:true },
+      { title: 'VENDORS.ADDRESS', action: false, reference: 'address',activePipe:false, activeSearch:true },
+      { title: 'VENDORS.EMAILS', action: false, reference: 'emails',activePipe:false, activeSearch:true  },
+      { title: 'VENDORS.PHONES', action: false, reference: 'phones',activePipe:false, activeSearch:true  },
+      { title: 'VENDORS.MANAGER', action: false, reference: 'manager',activePipe:true,namePipe:['titlecase'], activeSearch:true },
+      { title: 'VENDORS.ORGANIZATION', action: false, reference: 'organization',activePipe:true,namePipe:['titlecase'], activeSearch:true },
+      { title: 'VENDORS.ZONES', action: false, reference: 'zones',activePipe:false, activeSearch:true  },
+      { title: 'GENERAL.ESTATUS', action: false, reference: 'deleted',activePipe:true,namePipe:['status'], activeSearch:false },
       { title: 'GENERAL.UPDATE', action: true, reference: 'update' },
-      { title: 'GENERAL.DELETE', action: true, reference: 'delete' }
+      { title: 'GENERAL.DELETERESTORE', action: true, reference: 'deleterestore' }
     ];
     this.routeTo = getCurrentRoute(this.router.url)
   }

@@ -1,6 +1,7 @@
 import {Injector, Pipe, PipeTransform } from '@angular/core';
 import { DecimalPipe, SlicePipe,CurrencyPipe, TitleCasePipe } from '@angular/common';
 import { pipe } from 'rxjs';
+import { ActivePipe } from './active.pipe';
 //import { TitlecasePipe } from './titlecase.pipe';
 
 @Pipe({
@@ -18,6 +19,7 @@ export class DinamycPipePipe implements PipeTransform {
       decimal: DecimalPipe,
       slice: SlicePipe,
       customcurrency:CurrencyPipe,
+      status:ActivePipe
       
     };
 

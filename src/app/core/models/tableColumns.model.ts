@@ -4,4 +4,5 @@ export interface TableColumns{
     reference:string,
     activePipe?:boolean,
     namePipe?:Array<string>
+    activeSearch?:boolean
 }

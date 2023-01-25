@@ -6,10 +6,12 @@
     "CLEAR": "Limpiar",
     "LOADING": "Cargando información",
     "LOADING_SINGLE": "Cargando",
+    "ESTATUS": "Estatus",
     "LIST": "Lista",
     "ADD": "Agregar",
     "DETAIL": "Detalle",
     "DELETE": "Eliminar",
+    "DELETERESTORE": "Actions",
     "UPDATE": "Actualizar",
     "EMPTY": "Sin resultados",
     "NOT_ALLOWED": "No tienes permisos",
@@ -71,5 +73,14 @@
     "ORGANIZATION": "Organizacion",
     "MANAGER": "Gerente",
     "ZONES": "Zonas"
+  },
+  "DIALOGDELETE": {
+    "TITLEDELETE": "Eliminar temporalmente registro",
+    "TITLERESTORE": "Restaurar registro",
+    "MSGDELETE": "Desea continuar con la eliminacion?",
+    "MSGRESTORE": "Desear continual con la restauración?",
+    "BTNRESTORE": "Restaurar",
+    "BTNDELETE": "Eliminar",
+    "CANCELAR": "Cancelar"
   }
 }

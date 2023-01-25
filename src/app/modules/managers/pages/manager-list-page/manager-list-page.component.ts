@@ -38,17 +38,18 @@ export class ManagerListPageComponent implements OnInit {
   
     //const f=this.getTranslate('CONTACTS.FULLNAME')
     this.displayedColumns = [
-      { title: 'MANAGERS.FULLNAME', action: false, reference: 'fullName',activePipe:true,namePipe:['titlecase'] },
-      { title: 'MANAGERS.COORDINATOR', action: false, reference: 'coordinator',activePipe:true,namePipe:['titlecase'] },
+      { title: 'MANAGERS.FULLNAME', action: false, reference: 'fullName',activePipe:true,namePipe:['titlecase'], activeSearch:true },
+      { title: 'MANAGERS.COORDINATOR', action: false, reference: 'coordinator',activePipe:true,namePipe:['titlecase'], activeSearch:true },
 
 
-      { title: 'MANAGERS.ORGANIZATION', action: false, reference: 'organization',activePipe:true,namePipe:['titlecase'] },
-      { title: 'MANAGERS.EMAILS', action: false, reference: 'emails',activePipe:false },
-      { title: 'MANAGERS.PHONES', action: false, reference: 'phones',activePipe:false },
-      { title: 'MANAGERS.REGIONS', action: false, reference: 'regions',activePipe:false },
-      { title: 'MANAGERS.ZONES', action: false, reference: 'zones',activePipe:false },
+      { title: 'MANAGERS.ORGANIZATION', action: false, reference: 'organization',activePipe:true,namePipe:['titlecase'], activeSearch:true },
+      { title: 'MANAGERS.EMAILS', action: false, reference: 'emails',activePipe:false, activeSearch:true },
+      { title: 'MANAGERS.PHONES', action: false, reference: 'phones',activePipe:false, activeSearch:true },
+      { title: 'MANAGERS.REGIONS', action: false, reference: 'regions',activePipe:false, activeSearch:true },
+      { title: 'MANAGERS.ZONES', action: false, reference: 'zones',activePipe:false, activeSearch:true },
+      { title: 'GENERAL.ESTATUS', action: false, reference: 'deleted',activePipe:true,namePipe:['status'], activeSearch:false },
       { title: 'GENERAL.UPDATE', action: true, reference: 'update' },
-      { title: 'GENERAL.DELETE', action: true, reference: 'delete' }
+      { title: 'GENERAL.DELETERESTORE', action: true, reference: 'deleterestore' }
     ];
     this.routeTo = getCurrentRoute(this.router.url)
   }

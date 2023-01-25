@@ -63,11 +63,21 @@
             <mat-icon class="mat-18">edit</mat-icon>
           </button>
           <button
+            *ngSwitchCase="'deleterestore'"
+            mat-icon-button
+            class="button-icon-custom1"
+            (click)="redirectToDeleteRestore(element._id,element.deleted)"
+          >
+        
+            <mat-icon class="mat-18">{{!element.deleted?'delete':'restore'}}</mat-icon>
+          </button>
+          <button
             *ngSwitchCase="'delete'"
             mat-icon-button
             class="button-icon-custom1"
             (click)="redirectToDelete(element._id)"
           >
+        
             <mat-icon class="mat-18">delete</mat-icon>
           </button>
         </div>

@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{(data.toggle?"DIALOGDELETE.TITLERESTORE" :"DIALOGDELETE.TITLEDELETE")|translate}}</h1>
+<div mat-dialog-content>
+    
+    {{(data.toggle?"DIALOGDELETE.MSGRESTORE" :"DIALOGDELETE.MSGDELETE")|translate}}
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button  (click)="onNoClick()">{{'DIALOGDELETE.CANCELAR' | translate}}</button>
+    <button mat-raised-button  color="{{data.toggle?'primary':'warn'}}" [mat-dialog-close]="data.id" cdkFocusInitial>{{(data.toggle?"DIALOGDELETE.BTNRESTORE" :"DIALOGDELETE.BTNDELETE")|translate}}</button>
+</div>

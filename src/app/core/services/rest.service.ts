@@ -312,4 +312,27 @@ export class RestService {
       throw new Error(e);
     }
   }
+  restore$(path = '',body='', toast = true): Observable<any> {
+    try {
+      return this.http.put(`${this.url}/${path}`,body)
+        .pipe(
+          map(({ data }: any) => {
+            console.log("DataService restore",data)
+            return data
+          }),
+          catchError((e: any) => {
+            if (toast) {
+              // this.sharedService.showError('Error', e.statusText);
+            }
+            this.handleError(e.status, e.statusText);
+            return throwError(() => ({
+              status: e.status,
+              statusText: e.statusText,
+            }));
+          }),
+        );
+    } catch (e: any) {
+      throw new Error(e);
+    }
+  }
 }
