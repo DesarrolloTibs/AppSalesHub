@@ -83,7 +83,22 @@ export class TableGridComponent implements OnInit, AfterViewInit {
   public doFilter = (event: KeyboardEvent) => {
 
     const search = (event.target as HTMLTextAreaElement).value;
-    this.dataSource.filter = search.trim().toLocaleLowerCase();
+    //const fields=this.displayedColumns.map(z=> !z.action ? z.reference:'')
+    const fields=this.displayedColumns.map(z=> !z.action?z.reference:'')
+   
+    //console.log(fields.filter(c=> c!=''))
+    const q = [
+      `${this.serviceName}/get`,
+      `?filter=${search.trim()}`,
+      //`&fields=${fields.filter(c=> c!='').join(',')}`,
+      `&fields=fullName`,
+      `&page=${this.pageIndex+1}&limit=${this.pageSize}`,
+      `&order=-1`,
+    ];
+    //try {
+      //this._restService.getActive$(q.join(''))
+    this.loadData(q.join(''));
+    //this.dataSource.filter = search.trim().toLocaleLowerCase();
   }
   public pageChanged = (e: PageEvent) => {
     console.log(e)

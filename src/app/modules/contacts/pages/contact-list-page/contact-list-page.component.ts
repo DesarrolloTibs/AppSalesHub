@@ -45,22 +45,23 @@ export class ContactListPageComponent implements OnInit {
   
     //const f=this.getTranslate('CONTACTS.FULLNAME')
     this.displayedColumns = [
-      { title: 'CONTACTS.FULLNAME', action: false, reference: 'fullName' },
-      { title: 'CONTACTS.OFFICEPHONE', action: false, reference: 'officePhone' },
-      { title: 'CONTACTS.MOBILESPHONE', action: false, reference: 'mobilesPhone' },
-      { title: 'CONTACTS.EMAILS', action: false, reference: 'emails' },
-      { title: 'CONTACTS.CHANNEL', action: false, reference: 'channel' },
-      { title: 'CONTACTS.TYPECONTACTS', action: false, reference: 'typeContacts' },
-      { title: 'CONTACTS.COUNTRY', action: false, reference: 'country' },
-      { title: 'CONTACTS.STATE', action: false, reference: 'state' },
-      { title: 'CONTACTS.CITY', action: false, reference: 'city' },
-      { title: 'CONTACTS.TOTALBUSINESS', action: false, reference: 'totalBusiness' },
-      { title: 'CONTACTS.ORGANIZATION', action: false, reference: 'organization' },
-      { title: 'CONTACTS.LEVEL1', action: false, reference: 'level1' },
-      { title: 'CONTACTS.LEVEL2', action: false, reference: 'level2' },
-      { title: 'CONTACTS.LEVEL3', action: false, reference: 'level3' },
+      { title: 'CONTACTS.FULLNAME', action: false, reference: 'fullName',activePipe:true,namePipe:['titlecase'] },
+      { title: 'CONTACTS.OFFICEPHONE', action: false, reference: 'officePhone',activePipe:false },
+      { title: 'CONTACTS.MOBILESPHONE', action: false, reference: 'mobilesPhone',activePipe:false },
+      { title: 'CONTACTS.EMAILS', action: false, reference: 'emails' ,activePipe:false},
+      { title: 'CONTACTS.CHANNEL', action: false, reference: 'channel',activePipe:false },
+      { title: 'CONTACTS.TYPECONTACTS', action: false, reference: 'typeContacts',activePipe:false },
+      { title: 'CONTACTS.COUNTRY', action: false, reference: 'country',activePipe:true,namePipe:['titlecase'] },
+      { title: 'CONTACTS.STATE', action: false, reference: 'state',activePipe:true,namePipe:['titlecase'] },
+      { title: 'CONTACTS.CITY', action: false, reference: 'city',activePipe:true,namePipe:['titlecase']},
+      { title: 'CONTACTS.TOTALBUSINESS', action: false, reference: 'totalBusiness',activePipe:true,namePipe:['customcurrency'] },
+      { title: 'CONTACTS.ORGANIZATION', action: false, reference: 'organization',activePipe:true,namePipe:['titlecase'] },
+      { title: 'CONTACTS.LEVEL1', action: false, reference: 'level1',activePipe:true,namePipe:['titlecase'] },
+      { title: 'CONTACTS.LEVEL2', action: false, reference: 'level2',activePipe:true,namePipe:['titlecase'] },
+      { title: 'CONTACTS.LEVEL3', action: false, reference: 'level3',activePipe:true,namePipe:['titlecase'] },
       { title: 'GENERAL.DETAIL', action: true, reference: 'detail' },
-      { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
+      { title: 'GENERAL.UPDATE', action: true, reference: 'update' },
+      { title: 'GENERAL.DELETE', action: true, reference: 'delete' }
     ];
     this.routeTo = getCurrentRoute(this.router.url)
   }

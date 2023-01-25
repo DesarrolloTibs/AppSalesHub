@@ -26,7 +26,7 @@ import {TranslateModule} from "@ngx-translate/core";
     MaterialModule,
     SharedModule,
     ReactiveFormsModule,
-    TranslateModule
+    TranslateModule,
    
 
 

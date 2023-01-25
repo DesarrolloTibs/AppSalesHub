@@ -1,23 +1,21 @@
 <div class="row">
   <div class="parent-left">
     <button
-    mat-flat-button
-    aria-label="New button contacts"
-    class="md-fab-custom-position button-custom1"
-    (click)="redirectToNew()"
-  >
-    Registrar
-  </button>
+      mat-flat-button
+      aria-label="New button contacts"
+      class="md-fab-custom-position button-custom1"
+      (click)="redirectToNew()"
+    >
+      Registrar
+    </button>
   </div>
   <div class="parent-right">
-   
-  <mat-form-field>
-    <mat-label>Busqueda rápida</mat-label>
-    <input matInput type="text" (keyup)="doFilter($event)" placeholder="" />
-  </mat-form-field>
+    <mat-form-field>
+      <mat-label>Busqueda rápida</mat-label>
+      <input matInput type="text" (keyup)="doFilter($event)" placeholder="" />
+    </mat-form-field>
   </div>
 </div>
-
 
 <table mat-table [dataSource]="dataSource" matSort>
   <ng-container
@@ -32,11 +30,18 @@
       <td
         mat-cell
         *matCellDef="let element"
-        matTooltip="{{ element[col.reference] }}"
+        matTooltip=" {{
+          col.activePipe
+            ? (element[col.reference] | dinamycPipe : [col.namePipe] : [0])
+            : element[col.reference]
+        }}"
       >
-      {{ element[col.reference] }}
+        {{
+          col.activePipe
+            ? (element[col.reference] | dinamycPipe : [col.namePipe] : [0])
+            : element[col.reference]
+        }}
       </td>
-    
     </ng-template>
     <ng-template #elseBlock>
       <td mat-cell *matCellDef="let element">

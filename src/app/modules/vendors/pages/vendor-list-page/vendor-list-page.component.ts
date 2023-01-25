@@ -40,15 +40,16 @@ export class VendorListPageComponent implements OnInit {
   
     //const f=this.getTranslate('CONTACTS.FULLNAME')
     this.displayedColumns = [
-      { title: 'VENDORS.ADDRESS', action: false, reference: 'address' },
-      { title: 'VENDORS.EMAILS', action: false, reference: 'emails' },
-      { title: 'VENDORS.FULLNAME', action: false, reference: 'fullName' },
-      { title: 'VENDORS.MANAGER', action: false, reference: 'manager' },
-      { title: 'VENDORS.ORGANIZATION', action: false, reference: 'organization' },
-      { title: 'VENDORS.PHONES', action: false, reference: 'phones' },
+      { title: 'VENDORS.FULLNAME', action: false, reference: 'fullName',activePipe:true,namePipe:['titlecase']  },
       { title: 'VENDORS.RFC', action: false, reference: 'rfc' },
-      { title: 'VENDORS.ZONES', action: false, reference: 'zones' },
-      { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
+      { title: 'VENDORS.ADDRESS', action: false, reference: 'address',activePipe:false },
+      { title: 'VENDORS.EMAILS', action: false, reference: 'emails',activePipe:false  },
+      { title: 'VENDORS.PHONES', action: false, reference: 'phones',activePipe:false  },
+      { title: 'VENDORS.MANAGER', action: false, reference: 'manager',activePipe:true,namePipe:['titlecase'] },
+      { title: 'VENDORS.ORGANIZATION', action: false, reference: 'organization',activePipe:true,namePipe:['titlecase'] },
+      { title: 'VENDORS.ZONES', action: false, reference: 'zones',activePipe:false  },
+      { title: 'GENERAL.UPDATE', action: true, reference: 'update' },
+      { title: 'GENERAL.DELETE', action: true, reference: 'delete' }
     ];
     this.routeTo = getCurrentRoute(this.router.url)
   }

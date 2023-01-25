@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe, DecimalPipe, SlicePipe, TitleCasePipe } from '@angular/common';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 import { MaterialModule } from './material.module';
@@ -17,6 +17,7 @@ import { HistoryNavComponent } from './components/history-nav/history-nav.compon
 import { MtxGridModule } from '@ng-matero/extensions/grid';
 import { MtxSelectModule } from '@ng-matero/extensions/select';
 import { FormsModule } from '@angular/forms';
+import { DinamycPipePipe } from './pipe/dinamyc-pipe.pipe';
 export function playerFactory() {
   return player;
 }
@@ -28,7 +29,8 @@ export function playerFactory() {
        ButtonProgressComponent,
        ErrorLayerComponent,
        LoadingSvgComponent,
-       HistoryNavComponent
+       HistoryNavComponent,
+       DinamycPipePipe
   ],
   imports: [
     CommonModule, 
@@ -52,7 +54,9 @@ export function playerFactory() {
     MtxGridModule,
     MtxSelectModule,
     FormsModule
+  ,DinamycPipePipe
   ],
+  providers:[CurrencyPipe,DecimalPipe,SlicePipe,TitleCasePipe],
   bootstrap:[SideBarComponent]
 })
 export class SharedModule { }

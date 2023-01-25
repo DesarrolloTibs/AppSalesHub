@@ -41,12 +41,13 @@ export class CoordinatorListPageComponent implements OnInit {
   
     //const f=this.getTranslate('CONTACTS.FULLNAME')
     this.displayedColumns = [
-      { title: 'COORDINATORS.FULLNAME', action: false, reference: 'fullName' },
-      { title: 'COORDINATORS.PHONES', action: false, reference: 'phones' },
-      { title: 'COORDINATORS.EMAILS', action: false, reference: 'emails' },
-      { title: 'COORDINATORS.ORGANIZATION', action: false, reference: 'organization' },
-      { title: 'COORDINATORS.REGIONS', action: false, reference: 'regions' },
-      { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
+      { title: 'COORDINATORS.FULLNAME', action: false, reference: 'fullName',activePipe:true,namePipe:['titlecase'] },
+      { title: 'COORDINATORS.PHONES', action: false, reference: 'phones', activePipe:false },
+      { title: 'COORDINATORS.EMAILS', action: false, reference: 'emails', activePipe:false },
+      { title: 'COORDINATORS.ORGANIZATION', action: false, reference: 'organization',activePipe:true,namePipe:['titlecase'] },
+      { title: 'COORDINATORS.REGIONS', action: false, reference: 'regions',activePipe:false },
+      { title: 'GENERAL.UPDATE', action: true, reference: 'update' },
+      { title: 'GENERAL.DELETE', action: true, reference: 'delete' }
     ];
     this.routeTo = getCurrentRoute(this.router.url)
   }

@@ -38,14 +38,17 @@ export class ManagerListPageComponent implements OnInit {
   
     //const f=this.getTranslate('CONTACTS.FULLNAME')
     this.displayedColumns = [
-      { title: 'MANAGERS.COORDINATOR', action: false, reference: 'coordinator' },
-      { title: 'MANAGERS.EMAILS', action: false, reference: 'emails' },
-      { title: 'MANAGERS.FULLNAME', action: false, reference: 'fullName' },
-      { title: 'MANAGERS.ORGANIZATION', action: false, reference: 'organization' },
-      { title: 'MANAGERS.PHONES', action: false, reference: 'phones' },
-      { title: 'MANAGERS.REGIONS', action: false, reference: 'regions' },
-      { title: 'MANAGERS.ZONES', action: false, reference: 'zones' },
-      { title: 'GENERAL.UPDATE', action: true, reference: 'update' }
+      { title: 'MANAGERS.FULLNAME', action: false, reference: 'fullName',activePipe:true,namePipe:['titlecase'] },
+      { title: 'MANAGERS.COORDINATOR', action: false, reference: 'coordinator',activePipe:true,namePipe:['titlecase'] },
+
+
+      { title: 'MANAGERS.ORGANIZATION', action: false, reference: 'organization',activePipe:true,namePipe:['titlecase'] },
+      { title: 'MANAGERS.EMAILS', action: false, reference: 'emails',activePipe:false },
+      { title: 'MANAGERS.PHONES', action: false, reference: 'phones',activePipe:false },
+      { title: 'MANAGERS.REGIONS', action: false, reference: 'regions',activePipe:false },
+      { title: 'MANAGERS.ZONES', action: false, reference: 'zones',activePipe:false },
+      { title: 'GENERAL.UPDATE', action: true, reference: 'update' },
+      { title: 'GENERAL.DELETE', action: true, reference: 'delete' }
     ];
     this.routeTo = getCurrentRoute(this.router.url)
   }
