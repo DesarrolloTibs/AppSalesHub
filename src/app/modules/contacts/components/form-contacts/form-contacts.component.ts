@@ -5,7 +5,7 @@ import { RestService } from '@core/services/rest.service';
 import { routeEnpoints } from 'src/app/global/endpoints';
 import { ContactsModel } from '@core/models/contacts.model';
 import { ShareService } from '@core/services/share.service';
-
+import { OrganizationModel } from '@core/models/organization.model';
 @Component({
   selector: 'app-form-contacts',
   templateUrl: './form-contacts.component.html',
@@ -17,6 +17,7 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
   public managers: any = []
   public vendors: any = []
   public coordinators: any = []
+  public typeContacts: any = []
   dataform: ContactsModel = {
     _id: '',
     fullName: '',
@@ -79,6 +80,7 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
         // gender: [null]
       });
     });
+    
     const method = (this.id) ? 'patch' : 'post';
     console.log(this.id)
     console.log(method)
@@ -142,6 +144,8 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
 
         });
 
+        //this.srcTypeContacts(organization)
+        this.srcOnChangeOrganization(organization)
       })
   }
 
@@ -155,16 +159,42 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
   }
   srcOrganization = (e: any) => {
 
-    this._shareService.findSelect(e, routeEnpoints.organizations).then(res => {
-      this.organizations = res
-    }).catch(e => {
-      this.organizations = []
-    })
+    this._shareService.findSelect(e, routeEnpoints.organizations)
+      .then((res) => {
+
+        this.organizations = res
+        //  this.typeContacts= result
+      }).catch(e => {
+        this.organizations = []
+        //this.typeContacts = []
+      })
 
 
     console.log("Valores a mostrar", this.organizations)
   }
+  srcOnChangeOrganization = (organization: any) => {
+    if (organization) {
+      var { typeContacts } = organization as OrganizationModel;
+      this.typeContacts = typeContacts
+    }else{
+      this.typeContacts=[]
+    }
+  }
+  srcTypeContacts = (e: any) => {
 
+    this._shareService.findSelect(e, routeEnpoints.organizations)
+      .then((res) => {
+
+        this.organizations = res
+        //  this.typeContacts= result
+      }).catch(e => {
+        this.organizations = []
+        //this.typeContacts = []
+      })
+
+
+    console.log("Valores a mostrar", this.organizations)
+  }
   srcCoordinator = (e: any) => {
 
     this._shareService.findSelect(e, routeEnpoints.coordinators).then(res => {

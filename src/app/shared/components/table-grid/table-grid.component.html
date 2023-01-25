@@ -22,7 +22,7 @@
     matColumnDef="{{ col.reference }}"
     *ngFor="let col of displayedColumns"
   >
-    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+    <th class="{{col.sizeWidth}}" mat-header-cell *matHeaderCellDef mat-sort-header>
       {{ col.title | translate }}
     </th>
     <div *ngIf="!col.action; then thenBlock; else elseBlock"></div>

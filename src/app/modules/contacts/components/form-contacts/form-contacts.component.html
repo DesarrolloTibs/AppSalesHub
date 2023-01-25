@@ -47,9 +47,26 @@
             </div>
             <div class="input-group">
               <mat-form-field appearance="outline">
+                <mat-label>{{
+                  "CONTACTS.TYPECONTACTS" | translate
+                }}</mat-label>
+  
+                <mtx-select
+                (search)="srcTypeContacts($event)"
+                  [items]="typeContacts"
+                  bindLabel="tag"
+                  formControlName="typeContacts"
+                  [required]="true"
+                  notFoundText="{{ 'GENERAL.NOTFOUNDTEXT' | translate }}"
+                >
+                </mtx-select>
+  
+                 <!-- <mat-error>Please choose a food</mat-error>  -->
+              </mat-form-field>
+              <!-- <mat-form-field appearance="outline">
                 <mat-label>{{"CONTACTS.TYPECONTACTS" | translate}}</mat-label>
                 <input matNativeControl="text" formControlName="typeContacts"  />
-              </mat-form-field>
+              </mat-form-field> -->
             </div>
           </div>
           <div class="row">
@@ -90,7 +107,7 @@
                 <mtx-select
                   (search)="srcOrganization($event)"
                   [items]="organizations"
-                  
+                  (change)="srcOnChangeOrganization($event)"
                   bindLabel="fullName"
                   formControlName="organization"
                   [required]="true"
