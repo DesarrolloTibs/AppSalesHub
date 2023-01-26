@@ -12,13 +12,15 @@ import { FormContactsComponent } from './components/form-contacts/form-contacts.
 import { ContactAddPageComponent } from './pages/contact-add-page/contact-add-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {TranslateModule} from "@ngx-translate/core";
+import { DetailContactsComponent } from './components/detail-contacts/detail-contacts.component';
 
 @NgModule({
   declarations: [
     ContactListPageComponent,
     ContactDetailPageComponent,
     ContactAddPageComponent,
-    FormContactsComponent
+    FormContactsComponent,
+    DetailContactsComponent
   ],
   imports: [
     CommonModule,

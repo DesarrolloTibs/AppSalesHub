@@ -24,7 +24,8 @@
     "FORMCONTACTS": "Registrar Nuevo Contacto",
     "FORMCOORDINATORS": "Registrar Nuevo Coordinator",
     "FORMMANAGERS": "Registrar Nuevo Gerente",
-    "FORMVENDORS": "Registrar Nuevo Vendedor"
+    "FORMVENDORS": "Registrar Nuevo Vendedor",
+    "DETAILS": "Información General"
   },
   "CONTACTS": {
     "_ID": "Id",

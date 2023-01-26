@@ -173,6 +173,7 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
     console.log("Valores a mostrar", this.organizations)
   }
   srcOnChangeOrganization = (organization: any) => {
+ 
     if (organization) {
       var { typeContacts } = organization as OrganizationModel;
       this.typeContacts = typeContacts
