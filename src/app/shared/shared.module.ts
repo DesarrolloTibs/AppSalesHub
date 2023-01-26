@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { DinamycPipePipe } from './pipe/dinamyc-pipe.pipe';
 import { ActivePipe } from './pipe/active.pipe';
 import { DialogDeleteComponent } from './components/dialog-delete/dialog-delete.component';
+
 export function playerFactory() {
   return player;
 }

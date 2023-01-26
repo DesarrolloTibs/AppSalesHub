@@ -12,11 +12,6 @@ const routes: Routes = [
     pathMatch: "full",
   },
   {
-    path: '',
-    component: ContactListPageComponent,
-      
-  },
-  {
     path: 'list',
     component: ContactListPageComponent,
   },
@@ -27,12 +22,36 @@ const routes: Routes = [
   {
     path: 'detail/:id',
     component: ContactDetailPageComponent,
+    children: [
+      {
+        path: "notes",//
+         loadChildren: () => import("@modules/notes/notes.module").then(m => m.NotesModule),
+        //component: ListNoteComponent
+      },
+      {
+        path: "email",//
+        // loadChildren: () => import("@modules/notes/notes.module").then(m => m.NotesModule),
+        loadChildren: () => import("@modules/emails/emails.module").then(m => m.EmailsModule),
+      },
+      {
+        path: "activities",//
+        // loadChildren: () => import("@modules/notes/notes.module").then(m => m.NotesModule),
+        loadChildren: () => import("@modules/activities/activities.module").then(m => m.ActivitiesModule),
+      },
+      {
+        path: "social",//
+        // loadChildren: () => import("@modules/notes/notes.module").then(m => m.NotesModule),
+        loadChildren: () => import("@modules/social/social.module").then(m => m.SocialModule),
+      }
+      
+    ]
   },
+
   {
     path: 'new',
     component: ContactAddPageComponent,
-    pathMatch:'full'
-  }
+    pathMatch: 'full'
+  },
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

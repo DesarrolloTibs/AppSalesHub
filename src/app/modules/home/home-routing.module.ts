@@ -33,7 +33,13 @@ const routes: Routes = [//Todo: Change Routes in Sidebar, Routing module each pa
         loadChildren: () => import("@modules/main/main.module").then(m => m.MainModule),
       
       },
-      {
+      
+      // {
+      //   path: "notes",//
+      //   loadChildren: () => import("@modules/notes/notes.module").then(m => m.NotesModule),
+      
+      // },
+       {
         path: '**',//TODO 404 cuando no existe la ruta
         redirectTo: '/main'
       }
