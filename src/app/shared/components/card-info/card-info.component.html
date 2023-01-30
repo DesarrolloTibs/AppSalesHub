@@ -1,0 +1,41 @@
+<!-- <button
+  mat-fab
+  color="primary"
+  aria-label="Example icon button with a delete icon"
+>
+  <mat-icon>add</mat-icon>
+</button> -->
+<div class="row">
+  <div class="parent-left">
+    <!-- <button
+      mat-flat-button
+      aria-label="New button contacts"
+      class="md-fab-custom-position button-custom1"
+      (click)="''"
+    >
+      Registrar
+    </button> -->
+    <h2 class="title">{{ title }}</h2>
+  </div>
+  <div class="parent-right">
+    <button
+      mat-flat-button
+      aria-label="New button contacts"
+      class="md-fab-custom-position button-custom1 createbtn"
+      (click)="redirectToNew()"
+    
+    >
+      Crear Nota
+    </button>
+  </div>
+</div>
+<mat-card class="card-width">
+  <mat-card-header>
+    <mat-card-title>Actions Buttons</mat-card-title>
+    <mat-card-subtitle>Start</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-button   (click)="redirectToEdit()">Editar</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

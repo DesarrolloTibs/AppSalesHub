@@ -1,0 +1,36 @@
+.card-width{
+    width:90%;
+  margin:1rem 3rem;
+  //padding: 1rem;
+  }
+  .title{
+    width:90%;
+  margin:1rem 3rem;
+  //padding: 1rem;
+  }
+  .createbtn{
+  margin:1rem 3.5rem;
+  //padding: 1rem;
+  }
+  .parent-left {
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    //padding: 10px;
+    
+  }
+  .parent-right {
+    display: flex;
+   
+     justify-content: right;
+    align-items: center;
+    flex-direction: row;
+     padding: 10px;
+  }
+  .row {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+  }

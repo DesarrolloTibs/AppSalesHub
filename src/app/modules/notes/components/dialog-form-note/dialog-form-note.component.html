@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>texto</h1>
+<div mat-dialog-content>
+    
+    text
+</div>
+<div mat-dialog-actions align="center">
+    <button mat-raised-button  (click)="onNoClick()">cancelar texto</button>
+    <button mat-raised-button   [mat-dialog-close]="data.id" cdkFocusInitial>agregar texto</button>
+</div>

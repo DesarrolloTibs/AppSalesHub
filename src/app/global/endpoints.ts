@@ -5,4 +5,5 @@ export const routeEnpoints = {
     coordinators: `coordinator`,
     organizations: `organization`,
     typeContacts: `typecontact`,
+    notes: `notes`,
   };

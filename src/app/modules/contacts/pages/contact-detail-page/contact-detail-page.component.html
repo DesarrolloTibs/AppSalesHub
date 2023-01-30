@@ -1,18 +1,32 @@
 <section class="layout">
-  <div class="grow1">
+  <div class="grow2">
     <app-detail-contacts></app-detail-contacts>
   </div>
   <div class="grow10">
-    <nav mat-tab-nav-bar ngClass="tabs">
-      <a mat-tab-link routerLink="activities" routerLinkActive="active-link">Actividad</a>
-      <a mat-tab-link routerLink="notes" routerLinkActive="active-link">Notes</a>
-      <a mat-tab-link routerLink="email" routerLinkActive="active-link">Correos</a>
-      <a mat-tab-link routerLink="social" routerLinkActive="active-link">Social</a>
-    
+    <nav
+      mat-tab-nav-bar
+      ngClass="tabs"
+      [backgroundColor]="'primary'"
+      [tabPanel]="tabPanel"
+    >
+      <a mat-tab-link routerLink="activities" routerLinkActive="active-link"
+        >Actividad</a
+      >
+      <a mat-tab-link routerLink="notes" routerLinkActive="active-link"
+        >Notas</a
+      >
+      <a mat-tab-link routerLink="email" routerLinkActive="active-link"
+        >Correos</a
+      >
+      <a mat-tab-link routerLink="social" routerLinkActive="active-link"
+        >Social</a
+      >
     </nav>
     <div>
-      Aqui el contenido
-      <router-outlet ></router-outlet>
+      <mat-tab-nav-panel #tabPanel>
+        <router-outlet></router-outlet>
+      </mat-tab-nav-panel>
     </div>
+  
   </div>
 </section>

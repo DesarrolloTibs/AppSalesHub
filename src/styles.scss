@@ -2,7 +2,29 @@
 // @import "~@ng-select/ng-select/themes/material.theme.css";
 @use '@angular/material' as mat;
 @use '@ng-matero/extensions' as mtx;
+:root {
+  --color-1: #f9c543;
+  --color-2: #3d1a6f;
+  --color-3: #000000;
+  --color-4: #ffffff;
+  --color-5: #000000;
+  --background-color-1: #3d1a6f;
+  --background-color-2: #ffffff;
+  --background-color-3: #f7f7f7;
 
+  --text-color-1: #3d1a6f;
+  --text-color-2: #ffffff;
+  --text-color-3: #000000;
+  --font-size-1: 1rem;
+  --font-size-2: 1.2rem;
+  --font-size-3: 1.8rem;
+  --shadow-1: rgb(0 0 0 / 35%) 0px 8px 24px;
+  --shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --border-radius-1: 0.25rem;
+  --border-radius-2: 0.5rem;
+  --font-family-1: "Poppins", sans-serif;
+  --animation-1: 200ms;
+}
 // Plus imports for other components in your app.
 
 // Define the default (light) theme.
@@ -35,29 +57,7 @@ $candy-app-theme: mat.define-light-theme(
 // @include mat.typography-hierarchy($candy-app-theme);
 @import url('assets/css/forms.scss');
 
-:root {
-  --color-1: #f9c543;
-  --color-2: #3d1a6f;
-  --color-3: #000000;
-  --color-4: #ffffff;
-  --color-5: #000000;
-  --background-color-1: #3d1a6f;
-  --background-color-2: #ffffff;
-  --background-color-3: #f7f7f7;
 
-  --text-color-1: #3d1a6f;
-  --text-color-2: #ffffff;
-  --text-color-3: #000000;
-  --font-size-1: 1rem;
-  --font-size-2: 1.2rem;
-  --font-size-3: 1.8rem;
-  --shadow-1: rgb(0 0 0 / 35%) 0px 8px 24px;
-  --shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  --border-radius-1: 0.25rem;
-  --border-radius-2: 0.5rem;
-  --font-family-1: "Poppins", sans-serif;
-  --animation-1: 200ms;
-}
 
 html,
 body {

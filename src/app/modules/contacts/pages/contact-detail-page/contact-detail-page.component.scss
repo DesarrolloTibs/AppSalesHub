@@ -1,7 +1,20 @@
+// .layout {
+//     width: 100%;
+//     display: flex;
+//     gap: 10px;
+//     justify-content: center;
+//   flex-direction: row;
+//   }
+//    .grow1 { flex-grow: 1; }
+//   .grow10 { flex-grow: 10; }
 .layout {
-    width: 100%;
-    display: flex;
-    gap: 30px;
-  }
-  .grow1 { flex-grow: 1; }
-  .grow10 { flex-grow: 10; }
+  width: 100%;
+
+  display: flex;
+  gap: 25px;
+
+  // justify-content: center;
+}
+
+.grow10 { flex-grow: 10; background-color: #fff; }
+  .grow2 { flex-grow: 2; }

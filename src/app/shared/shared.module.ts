@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { DinamycPipePipe } from './pipe/dinamyc-pipe.pipe';
 import { ActivePipe } from './pipe/active.pipe';
 import { DialogDeleteComponent } from './components/dialog-delete/dialog-delete.component';
+import { CardInfoComponent } from './components/card-info/card-info.component';
 
 export function playerFactory() {
   return player;
@@ -35,7 +36,8 @@ export function playerFactory() {
        HistoryNavComponent,
        DinamycPipePipe,
        ActivePipe,
-       DialogDeleteComponent
+       DialogDeleteComponent,
+       CardInfoComponent
   ],
   imports: [
     CommonModule, 
@@ -58,7 +60,8 @@ export function playerFactory() {
     HistoryNavComponent,
     MtxGridModule,
     MtxSelectModule,
-    FormsModule
+    FormsModule,
+    CardInfoComponent
   ,DinamycPipePipe
   ],
   providers:[CurrencyPipe,DecimalPipe,SlicePipe,TitleCasePipe,ActivePipe],
