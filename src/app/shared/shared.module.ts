@@ -21,6 +21,10 @@ import { DinamycPipePipe } from './pipe/dinamyc-pipe.pipe';
 import { ActivePipe } from './pipe/active.pipe';
 import { DialogDeleteComponent } from './components/dialog-delete/dialog-delete.component';
 import { CardInfoComponent } from './components/card-info/card-info.component';
+import { CardInfoDetailComponent } from './components/card-info-detail/card-info-detail.component';
+
+import { SafeHtmlPipe } from './pipe/safe-html.pipe';
+import { DateAsAgoPipe } from './pipe/date-as-ago.pipe';
 
 export function playerFactory() {
   return player;
@@ -37,7 +41,10 @@ export function playerFactory() {
        DinamycPipePipe,
        ActivePipe,
        DialogDeleteComponent,
-       CardInfoComponent
+       CardInfoComponent,
+       CardInfoDetailComponent,
+       SafeHtmlPipe,
+       DateAsAgoPipe
   ],
   imports: [
     CommonModule, 

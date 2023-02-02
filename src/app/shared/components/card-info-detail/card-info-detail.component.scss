@@ -1,0 +1,22 @@
+// .align-left{
+
+//     align-items: flex-start !important;
+//     justify-content: center;
+// }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+  .container-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+  }
+ 
+ 

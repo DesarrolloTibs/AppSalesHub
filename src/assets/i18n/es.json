@@ -25,6 +25,7 @@
     "FORMCOORDINATORS": "Registrar Nuevo Coordinator",
     "FORMMANAGERS": "Registrar Nuevo Gerente",
     "FORMVENDORS": "Registrar Nuevo Vendedor",
+    "FORMNOTES": "Registrar Nueva  Nota",
     "DETAILS": "Información General"
   },
   "CONTACTS": {
@@ -83,5 +84,13 @@
     "BTNRESTORE": "Restaurar",
     "BTNDELETE": "Eliminar",
     "CANCELAR": "Cancelar"
+  },
+  "LISTNOTE": {
+    "TITLE": "Notas recientes:",
+    "BTNNEWNOTE": "Crear Nota"
+  },
+  "LISTEMAIL": {
+    "TITLE": "Correo recientes:",
+    "BTNNEWEMAIL": "Crear Correo"
   }
 }

@@ -1,0 +1,37 @@
+<!-- {{dataItem |json}} -->
+<div [ngSwitch]="typeCard">
+  <ng-container *ngSwitchCase="'Note'">
+    <mat-card-content>
+      <mat-grid-list cols="4" rowHeight="25px">
+        <mat-grid-tile [colspan]="3" [rowspan]="1"  >
+          <div class="container">
+            <p>Nota por:<span><b>{{ dataItem.creatorName }}</b></span></p></div>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="2"   >
+          <div class="container-right">
+           <span>publicado: {{ dataItem.createdAt |dateAsAgo }}</span>
+           </div>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="3" [rowspan]="1" >
+          <div
+            class="container"
+            [innerHtml]="(dataItem.description ) | slice:0:120"
+          ></div>
+        </mat-grid-tile>
+        <!-- <mat-grid-tile [colspan]="1" [rowspan]="1"  [style.background]="'red'">
+        
+          <button mat-button   >{{"GENERAL.UPDATE"|translate}}</button>
+       
+        </mat-grid-tile> -->
+       
+      </mat-grid-list>
+    </mat-card-content>
+  </ng-container>
+  <ng-container *ngSwitchCase="'Email'">
+    <!-- <mat-card-header>
+      <mat-card-title>Correo creado por:{{dataItem.creatorName}}</mat-card-title>
+      <mat-card-subtitle>Start</mat-card-subtitle>
+    </mat-card-header> -->
+    <mat-card-content> Correo from:{{ dataItem.from }} </mat-card-content>
+  </ng-container>
+</div>

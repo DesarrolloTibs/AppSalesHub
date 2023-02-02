@@ -1,5 +1,6 @@
 import { ComponentType } from '@angular/cdk/portal';
 import { Component } from '@angular/core';
+import { TypeCard } from '@core/enum/typeCard.enum';
 import { DialogFormNoteComponent } from '@modules/notes/components/dialog-form-note/dialog-form-note.component';
 import { routeEnpoints } from 'src/app/global/endpoints';
 @Component({
@@ -9,5 +10,6 @@ import { routeEnpoints } from 'src/app/global/endpoints';
 })
 export class ListNoteComponent {
   public service:string=routeEnpoints.notes;
+  public typeCard:TypeCard=TypeCard.Note;
   public componentDialog:ComponentType<unknown>=DialogFormNoteComponent
 }
