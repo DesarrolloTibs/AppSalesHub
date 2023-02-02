@@ -38,13 +38,13 @@ export class FormManagerComponent implements OnInit  {
   ngOnInit(): void {
 
     this.route.params.subscribe(params => {
-      console.log("params", params['id'])
+      
       this.id = (params['id'] === 'add') ? "" : params['id'];
       if (this.id !== "") {
 
         this.loadDataById(this.id)
         //this.form.patchValue(this.dataform);
-        console.log("Editar", this.dataform.fullName)
+        
 
       }
       this.form = this.fb.group({
@@ -64,17 +64,17 @@ export class FormManagerComponent implements OnInit  {
       });
     });
     const method = (this.id) ? 'patch' : 'post';
-    console.log(this.id)
-    console.log(method)
+    
+    
 
 
   }
   sendData(): void {
     //const {email,password} = this.form.value;
 
-    console.log("data update", this.form.value)
+    
     //this._AuthService.sendCredentials(email,password)
-    //console.log(body)
+    //
     this.InsertData()
 
 
@@ -83,10 +83,10 @@ export class FormManagerComponent implements OnInit  {
     this.form.reset();
   }
   loadDataById(_id: string): void {
-    console.log(routeEnpoints.managers)
+    
     this._restService.getById$(routeEnpoints.managers, _id)
       .subscribe((response: ManagersModel) => {
-        console.log(response)
+        
         this.dataform = response
 
         const { fullName,
@@ -114,7 +114,7 @@ export class FormManagerComponent implements OnInit  {
   }
 
   InsertData(): void {
-    console.log(routeEnpoints.managers)
+    
     const method = (this.id) ? 'patch' : 'post';
     this._restService[`${method}$`](`${routeEnpoints.managers}/${(method === 'patch') ? `update/${this.id}` : 'create'}`, this.form.value)
       .subscribe(res => {
@@ -130,10 +130,10 @@ export class FormManagerComponent implements OnInit  {
     })
 
 
-    console.log("Valores a mostrar", this.organizations)
+    
   }
   selectOrganization = (e: any) => {
-    console.log("Selectr", e)
+    
     // if (e.value === 'new') {
     //   this.form.patchValue({manager: null})
     //   this.open()
@@ -149,10 +149,10 @@ export class FormManagerComponent implements OnInit  {
     })
 
 
-    console.log("Valores a mostrar", this.coordinators)
+    
   }
   selectCoordinator = (e: any) => {
-    console.log("Selectr", e)
+    
     // if (e.value === 'new') {
     //   this.form.patchValue({manager: null})
     //   this.open()

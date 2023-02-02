@@ -1,8 +1,33 @@
-<h1 mat-dialog-title>{{"GENERAL.FORMNOTES" | translate}}</h1>
+<h1 mat-dialog-title>{{ "GENERAL.FORMNOTES" | translate }}</h1>
 <div mat-dialog-content>
-    text
-</div>
-<div mat-dialog-actions align="center">
-    <button mat-raised-button  (click)="onNoClick()">{{"GENERAL.CLEAR" | translate}}</button>
-    <button mat-raised-button   [mat-dialog-close]="data.id" cdkFocusInitial>{{"GENERAL.SAVE" | translate}}</button>
+  <form *ngIf="dataform" [formGroup]="form" (ngSubmit)="sendData()">
+    <div class="form-body">
+      <div class="row">
+        <div class="input-group">
+          <mat-form-field appearance="outline">
+            <mat-label>{{ "CONTACTS.FULLNAME" | translate }}</mat-label>
+            <input
+              matInput
+              matNativeControl="text"
+              formControlName="description"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <mat-card-actions class="form-actions">
+      <button
+        [mat-dialog-close]="true"
+        mat-flat-button
+        [disabled]="form.invalid"
+        type="submit"
+        class="button-custom1"
+      >
+        {{ "GENERAL.SAVE" | translate }}
+      </button>
+      <button mat-flat-button type="button" color="warn" (click)="clearData()">
+        {{ "GENERAL.CLEAR" | translate }}
+      </button>
+    </mat-card-actions>
+  </form>
 </div>

@@ -46,7 +46,7 @@ export class SideBarComponent{
 
   logOut = () => {
 
-    console.log("Entro LogOut")
+    
     this._AuthService.logout().then(() => {
     
       this.router.navigate(['/', 'auth'])

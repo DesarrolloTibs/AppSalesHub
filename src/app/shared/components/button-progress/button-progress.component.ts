@@ -34,18 +34,18 @@ export class ButtonProgressComponent implements OnInit {
 
   loopComplete(e:any): void {
     // e.stop().then();
-    console.log(0);
+    
     // this.pause()
   }
 
   play(): void {
-    console.log('fef')
+    
     this.ngZone.runOutsideAngular(() => this.animationItem.play());
   }
 
 
   pause(): void {
-    console.log('fef')
+    
     this.ngZone.runOutsideAngular(() => this.animationItem.pause());
   }
 
@@ -63,6 +63,6 @@ export class ButtonProgressComponent implements OnInit {
   }
 
   o = () => {
-    console.log('dsdsd')
+    
   }
 }

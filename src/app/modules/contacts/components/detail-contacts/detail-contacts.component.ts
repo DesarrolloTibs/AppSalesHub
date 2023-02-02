@@ -39,28 +39,27 @@ export class DetailContactsComponent implements OnInit {
   }
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      console.log("params", params['id'])
+
       this.id = (params['id'] === 'add') ? "" : params['id'];
       if (this.id !== "") {
 
         this.loadDataById(this.id)
         //this.form.patchValue(this.dataform);
-       // console.log("Editar", this.dataform.fullName)
+
 
       }
       
     });
     
     const method = (this.id) ? 'patch' : 'post';
-    console.log(this.id)
-    console.log(method)
+    
   }
 
   loadDataById(_id: string): void {
-    console.log(routeEnpoints.contacts)
+
     this._restService.getById$(routeEnpoints.contacts, _id)
       .subscribe((response: ContactsDetailModel) => {
-console.log(response)
+
         const {
           _id, 
           fullName,

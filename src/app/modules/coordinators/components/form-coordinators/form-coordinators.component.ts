@@ -41,13 +41,13 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
 
     this.route.params.subscribe(params => {
-      console.log("params", params['id'])
+      
       this.id = (params['id'] === 'add') ? "" : params['id'];
       if (this.id !== "") {
 
         this.loadDataById(this.id)
         //this.form.patchValue(this.dataform);
-        console.log("Editar", this.dataform.fullName)
+        
 
       }
       this.form = this.fb.group({
@@ -66,8 +66,8 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
       });
     });
     const method = (this.id) ? 'patch' : 'post';
-    console.log(this.id)
-    console.log(method)
+    
+    
 
 
   }
@@ -78,9 +78,9 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
   sendData(): void {
     //const {email,password} = this.form.value;
 
-    console.log("data update", this.form.value)
+    
     //this._AuthService.sendCredentials(email,password)
-    //console.log(body)
+    //
     this.InsertData()
 
 
@@ -89,10 +89,10 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
     this.form.reset();
   }
   loadDataById(_id: string): void {
-    console.log(routeEnpoints.coordinators)
+    
     this._restService.getById$(routeEnpoints.coordinators, _id)
       .subscribe((response: CoordinatorsModel) => {
-        console.log(response)
+        
         this.dataform = response
 
         const { fullName,
@@ -120,7 +120,7 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
 
 
   InsertData(): void {
-    console.log(routeEnpoints.coordinators)
+    
     const method = (this.id) ? 'patch' : 'post';
     this._restService[`${method}$`](`${routeEnpoints.coordinators}/${(method === 'patch') ? `update/${this.id}` : 'create'}`, this.form.value)
       .subscribe(res => {
@@ -137,10 +137,10 @@ export class FormCoordinatorsComponent implements OnInit, AfterViewInit {
     })
 
 
-    console.log("Valores a mostrar", this.organizations)
+    
   }
   selectOrganization = (e: any) => {
-    console.log("Selectr", e)
+    
     // if (e.value === 'new') {
     //   this.form.patchValue({manager: null})
     //   this.open()

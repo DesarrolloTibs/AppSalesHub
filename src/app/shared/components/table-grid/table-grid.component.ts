@@ -60,7 +60,7 @@ export class TableGridComponent implements OnInit, AfterViewInit {
   }
 
   public redirectToDetails = (id: string) => {
-    console.log(`redireccionando ${this.routeTo} DETALLE con el identificador:${id}`)
+    
     this.router.navigate([`/${this.routeTo}/detail/${id}`]);
   }
   public redirectToUpdate = (id: string) => {
@@ -70,7 +70,7 @@ export class TableGridComponent implements OnInit, AfterViewInit {
     this.router.navigate([`/${this.routeTo}/delete/${id}`]);
   }
   public redirectToDeleteRestore = (id: string, toggle: boolean) => {
-    console.log("Delete", id, toggle)
+    
     this.openDialog('0ms', '0ms', id, this.serviceName, toggle)
   }
   public redirectToNew = () => {
@@ -106,14 +106,14 @@ export class TableGridComponent implements OnInit, AfterViewInit {
 
 
   loadData(service: string): void {
-    console.log(service)
+    
 
 
     this._restService.getTable$(service)
       .subscribe((response: TableService) => {
 
         const { itemsList, pagination } = response;
-        console.log(itemsList)
+        
         this.pageSetValue(pagination)
         this.dataSource.data = itemsList as any
 
@@ -144,8 +144,8 @@ export class TableGridComponent implements OnInit, AfterViewInit {
       exitAnimationDuration,
     });
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      console.log(result);
+      
+      
       if (result) {
         const url = `${service}/${toggle ? 'restore' : 'delete'}/${result}`
         toggle

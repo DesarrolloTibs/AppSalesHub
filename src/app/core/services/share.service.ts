@@ -44,7 +44,7 @@ public confirm = () => new Promise((resolve, reject) => {
   this.translate.get("GENERAL").subscribe((res: string) => {
     // @ts-ignore
     const {ARE_YOU_SURE, ARE_YOU_SURE_SENTENCE, OK, ANY_ISSUE} = res;
-    // console.log(res)
+    // 
     Swal.fire({
       title: ARE_YOU_SURE,
       text: ARE_YOU_SURE_SENTENCE,
@@ -94,13 +94,13 @@ public openUpdateModal = (data: any = {}) => {
   }
   parseDataSelect = (data: any) => {
     const tmp:any = [];
-    console.log("Pasrse Data",data)
+  
      data.map((a: { _id: string;fullname:string }) => tmp.push({
       ...a, ...{
          router: ['/', 'inventory', a._id]
        }
     }));
-    console.log("Pasrse Data tmp",tmp)
+   
     return tmp;
   }
   findSelect = (e:any,route:string)=> new Promise((resolve, reject) => {
@@ -116,7 +116,7 @@ public openUpdateModal = (data: any = {}) => {
       this._restService.getActive$(q.join(''))
       .subscribe(res => {
         if(res){
-          console.log("Valores encontrados",res)
+
           resolve([...this.parseDataSelect(res)]);
         }else{
           reject([])

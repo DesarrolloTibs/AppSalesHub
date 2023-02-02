@@ -20,7 +20,7 @@ export class AuthService {
 
   // sendCredentials(email:string,password:string):void{
 
-  //   console.log('OKOK', email,password)
+  //   
   // }
   public login = (data: any) => new Promise((resolve, reject) => {
 
@@ -28,7 +28,7 @@ export class AuthService {
     //   return this.http.get(`${this.URL}/${route}/get`)
     //     .pipe(
     //       map(({ data:{itemsList} }: any) => {
-    //         console.log("DataService",itemsList)
+    //         
     //         return itemsList
     //       })
     //     )
@@ -37,7 +37,7 @@ export class AuthService {
       data)
       .subscribe({
         next:(res)=>{
-          console.log(res)
+          
           this.cookieService.set(
             'session',
             res.session,
@@ -48,11 +48,12 @@ export class AuthService {
             JSON.stringify(res.user),
             environment.daysTokenExpire,
             '/');
-          this.cookieService.set(
-            'settings',
-            JSON.stringify(res.settings),
-            environment.daysTokenExpire,
-            '/');
+          // this.cookieService.set(
+          //   'settings',
+          //   JSON.stringify(res.settings),
+          //   environment.daysTokenExpire,
+          //   '/');
+           
           resolve(res);
         },
         error:(error)=>{
@@ -83,7 +84,7 @@ export class AuthService {
         if (this.cookieService.check('session')) {
           this.rest.getCheck$(`token`).subscribe({
             next:(res)=>{
-              console.log("Datos Check out",res)
+          
               if (res.user &&
                 (res.user.role === 'admin') &&
                 (!res.settings.currency || !res.settings.logo || !res.settings.currencySymbol || !res.settings.name)) 
@@ -112,7 +113,7 @@ export class AuthService {
           resolve(true);
         } else {
 
-          console.log("NO COOKIE")
+          
           //reject(false);
           redirect ? this.redirectLogin() : null;
           

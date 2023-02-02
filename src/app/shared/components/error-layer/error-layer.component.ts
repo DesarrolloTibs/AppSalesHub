@@ -104,7 +104,7 @@ export class ErrorLayerComponent  implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log('--->', this.error)
+    
   }
 
   test = () => {

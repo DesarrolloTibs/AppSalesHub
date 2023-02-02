@@ -41,7 +41,7 @@ export class RestService {
       header.Authorization = `Bearer ${token}`;
     }
 
-    console.log("HeADER",header)
+  
     return new HttpHeaders(header);
   };
 
@@ -90,7 +90,7 @@ export class RestService {
       return this.http.post(`${this.url}/${path}`, body)
         .pipe(
           map(({ data }: any) => {
-            console.log("DataService Post",data)
+           
             return data
           }),
           catchError((e: any) => {
@@ -118,7 +118,7 @@ export class RestService {
       return this.http.patch(`${this.url}/${path}`, body)
         .pipe(
           map(({ data }: any) => {
-            console.log("DataService patch",data)
+          
             return data
           }),
           catchError((e: any) => {
@@ -148,11 +148,11 @@ export class RestService {
       return this.http.get(`${this.url}/${path}`,{headers: this.parseHeader()})
         .pipe(
            map(({ data:{itemsList,pagination} }: any) => {
-            //console.log("DataService Get",itemsList)
+         
             return {itemsList,pagination}
           }),
           catchError((e: any) => {
-            console.log(e)
+         
             if (toast) {
               // this.sharedService.showError('Error', e.statusText);
             }
@@ -172,11 +172,11 @@ export class RestService {
       return this.http.get(`${this.url}/${path}/get`,{headers: this.parseHeader()})
         .pipe(
            map(({ data:{itemsList} }: any) => {
-            console.log("DataService Get",itemsList)
+           
             return itemsList
           }),
           catchError((e: any) => {
-            console.log(e)
+
             if (toast) {
               // this.sharedService.showError('Error', e.statusText);
             }
@@ -202,11 +202,11 @@ export class RestService {
       return this.http.get(`${this.url}/${path}`,{headers: this.parseHeader()})
         .pipe(
            map(({ data:{itemsList} }: any) => {
-            console.log("DataService Get",itemsList)
+          
             return itemsList
           }),
           catchError((e: any) => {
-            console.log(e)
+           
             if (toast) {
               // this.sharedService.showError('Error', e.statusText);
             }
@@ -232,11 +232,11 @@ export class RestService {
         return this.http.get(`${this.url}/${path}`,{headers: this.parseHeader()})
           .pipe(
              map(({ data }: any) => {
-              console.log("DataService Get",data)
+             
               return data
             }),
             catchError((e: any) => {
-              console.log(e)
+         
               if (toast) {
                 // this.sharedService.showError('Error', e.statusText);
               }
@@ -259,15 +259,15 @@ export class RestService {
    */
    getById$(path = '',param='', toast = true): Observable<any> {
     try {
-      console.log("URLFORM",`${this.url}/${path}/get/${param}`)
+     
       return this.http.get(`${this.url}/${path}/get/${param}`,{headers: this.parseHeader()})
         .pipe(
            map(({ data }: any) => {
-            console.log("DataService GetByID",data)
+          
             return data
           }),
           catchError((e: any) => {
-            console.log(e)
+   
             if (toast) {
               // this.sharedService.showError('Error', e.statusText);
             }
@@ -294,7 +294,7 @@ export class RestService {
       return this.http.delete(`${this.url}/${path}`)
         .pipe(
           map(({ data }: any) => {
-            console.log("DataService delete",data)
+        
             return data
           }),
           catchError((e: any) => {
@@ -317,7 +317,7 @@ export class RestService {
       return this.http.put(`${this.url}/${path}`,body)
         .pipe(
           map(({ data }: any) => {
-            console.log("DataService restore",data)
+        
             return data
           }),
           catchError((e: any) => {

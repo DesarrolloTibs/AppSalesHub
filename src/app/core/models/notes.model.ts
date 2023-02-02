@@ -9,6 +9,16 @@ export interface NoteService{
     updatedAt:Date,
     tenantId:string
 }
+export interface NoteModel{
+    description:string,
+    creator:string,
+    creatorName:string,
+    contact:string,
+    // deleted:boolean,
+    // createdAt:Date,
+    // updatedAt:Date,
+    // tenantId:string
+}
 
 /*{[{"_id":"63d8453ec00f90ca6d139e03",
 "description":"<p>test notes</p>",

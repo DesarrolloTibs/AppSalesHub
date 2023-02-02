@@ -12,7 +12,7 @@ export class DinamycPipePipe implements PipeTransform {
   public constructor(private injector: Injector) {}
 
   transform(value: any, pipeToken: any, pipeArgs: any[]): any {
-    //console.log(value, pipeToken,pipeArgs);
+    //
 
     const MAP = {
       titlecase: TitleCasePipe,

@@ -49,13 +49,13 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
 
     this.route.params.subscribe(params => {
-      console.log("params", params['id'])
+   
       this.id = (params['id'] === 'add') ? "" : params['id'];
       if (this.id !== "") {
 
         this.loadDataById(this.id)
         //this.form.patchValue(this.dataform);
-        console.log("Editar", this.dataform.fullName)
+      
 
       }
       this.form = this.fb.group({
@@ -82,8 +82,7 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
     });
     
     const method = (this.id) ? 'patch' : 'post';
-    console.log(this.id)
-    console.log(method)
+   
 
 
   }
@@ -94,9 +93,9 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
   sendData(): void {
     //const {email,password} = this.form.value;
 
-    console.log("data update", this.form.value)
+    
     //this._AuthService.sendCredentials(email,password)
-    //console.log(body)
+    //
     this.InsertData()
 
 
@@ -106,10 +105,10 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
   }
 
   loadDataById(_id: string): void {
-    console.log(routeEnpoints.contacts)
+
     this._restService.getById$(routeEnpoints.contacts, _id)
       .subscribe((response: ContactsModel) => {
-        console.log(response)
+    
         this.dataform = response
 
         const { fullName,
@@ -150,7 +149,7 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
   }
 
   InsertData(): void {
-    console.log(routeEnpoints.contacts)
+
     const method = (this.id) ? 'patch' : 'post';
     this._restService[`${method}$`](`${routeEnpoints.contacts}/${(method === 'patch') ? `update/${this.id}` : 'create'}`, this.form.value)
       .subscribe(res => {
@@ -170,7 +169,6 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
       })
 
 
-    console.log("Valores a mostrar", this.organizations)
   }
   srcOnChangeOrganization = (organization: any) => {
  
@@ -194,7 +192,6 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
       })
 
 
-    console.log("Valores a mostrar", this.organizations)
   }
   srcCoordinator = (e: any) => {
 
@@ -205,7 +202,7 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
     })
 
 
-    console.log("Valores a mostrar", this.coordinators)
+  
   }
 
   srcManager = (e: any) => {
@@ -217,7 +214,7 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
     })
 
 
-    console.log("Valores a mostrar", this.managers)
+   
   }
 
   srcVendor = (e: any) => {
@@ -229,7 +226,7 @@ export class FormContactsComponent implements OnInit, AfterViewInit {
     })
 
 
-    console.log("Valores a mostrar", this.vendors)
+   
   }
 
 }

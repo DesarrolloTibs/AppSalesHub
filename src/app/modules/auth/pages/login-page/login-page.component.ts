@@ -37,12 +37,12 @@ export class LoginPageComponent implements OnInit {
   sendLogin(): void {
 
     this._AuthService.login(this.formLogin.value).then(res => {
-      console.log(res)
+
       this.router.navigate(['/']).then();
     }).catch(() => {
       //this.loading = false
     })
-    //console.log(body)
+    //
 
 
 

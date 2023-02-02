@@ -32,14 +32,13 @@ export class AppComponent implements OnInit {
     private swPush: SwPush,){
     const state = this.loader.useRef("http");
     state.value$.subscribe(res => {
-      console.log("Progress",res)
       
       this.progress = res;
     })
 
   
     this.rest.catchError.subscribe(res => {
-      console.log("ErrorGeneral",res)
+      
       this.error = res;
     })
   }

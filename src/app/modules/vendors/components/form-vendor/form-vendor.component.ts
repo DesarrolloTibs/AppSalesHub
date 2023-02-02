@@ -38,13 +38,13 @@ export class FormVendorComponent implements OnInit {
   ngOnInit(): void {
 
     this.route.params.subscribe(params => {
-      console.log("params", params['id'])
+      
       this.id = (params['id'] === 'add') ? "" : params['id'];
       if (this.id !== "") {
 
         this.loadDataById(this.id)
         //this.form.patchValue(this.dataform);
-        console.log("Editar", this.dataform.fullName)
+        
 
       }
       this.form = this.fb.group({
@@ -68,17 +68,17 @@ export class FormVendorComponent implements OnInit {
       });
     });
     const method = (this.id) ? 'patch' : 'post';
-    console.log(this.id)
-    console.log(method)
+    
+    
 
 
   }
   sendData(): void {
     //const {email,password} = this.form.value;
 
-    console.log("data update", this.form.value)
+    
     //this._AuthService.sendCredentials(email,password)
-    //console.log(body)
+    //
     this.InsertData()
 
 
@@ -87,10 +87,10 @@ export class FormVendorComponent implements OnInit {
     this.form.reset();
   }
   loadDataById(_id: string): void {
-    console.log(routeEnpoints.managers)
+    
     this._restService.getById$(routeEnpoints.vendors, _id)
       .subscribe((response: VendorsModel) => {
-        console.log(response)
+        
         this.dataform = response
 
         const { fullName,
@@ -118,7 +118,7 @@ export class FormVendorComponent implements OnInit {
   }
 
   InsertData(): void {
-    console.log(routeEnpoints.vendors)
+    
     const method = (this.id) ? 'patch' : 'post';
     this._restService[`${method}$`](`${routeEnpoints.vendors}/${(method === 'patch') ? `update/${this.id}` : 'create'}`, this.form.value)
       .subscribe(res => {
@@ -134,10 +134,10 @@ export class FormVendorComponent implements OnInit {
     })
 
 
-    console.log("Valores a mostrar", this.organizations)
+    
   }
   selectOrganization = (e: any) => {
-    console.log("Selectr", e)
+    
     // if (e.value === 'new') {
     //   this.form.patchValue({manager: null})
     //   this.open()
@@ -153,10 +153,10 @@ export class FormVendorComponent implements OnInit {
     })
 
 
-    console.log("Valores a mostrar", this.managers)
+    
   }
   selectManager = (e: any) => {
-    console.log("Selectr", e)
+    
     // if (e.value === 'new') {
     //   this.form.patchValue({manager: null})
     //   this.open()
