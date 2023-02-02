@@ -1,11 +1,12 @@
 import { ComponentType } from '@angular/cdk/portal';
-import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RestService } from '@core/services/rest.service';
 import { CardService } from '@core/models/cardService.model';
 import { TypeCard } from '@core/enum/typeCard.enum';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
+
 @Component({
   selector: 'app-card-info',
   templateUrl: './card-info.component.html',
@@ -16,6 +17,7 @@ export class CardInfoComponent implements OnInit {
   @ViewChild(CdkVirtualScrollViewport)
   viewport!: CdkVirtualScrollViewport;
   @Input() title: string = ''
+  @Input() idContact: string = ''
   @Input() serviceName: string = ''
   @Input() typeCard: TypeCard = TypeCard.Note
   routeTo: string = ""
@@ -26,7 +28,7 @@ export class CardInfoComponent implements OnInit {
   public pageIndex = 1;
   public pageSize = 10;
   public totalLoad = 0;
-
+  //public idContact = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -40,7 +42,8 @@ export class CardInfoComponent implements OnInit {
 
   }
   ngOnInit(): void {
-
+    //let params=(collectRouteParams(this.router))
+    //this.idContact= (params as ObjectValue).id
     this.loadData(this.serviceName, this.pageIndex, this.pageSize)
     this.pageIndex += 1;
   }
@@ -49,16 +52,16 @@ export class CardInfoComponent implements OnInit {
   public redirectToNew = () => {
     
     //this.router.navigate([`/${this.routeTo}/new`]);b
-    this.openDialog('0ms', '0ms', '', this.serviceName, true)
+    this.openDialog('0ms', '0ms', '', this.serviceName, true,this.idContact)
   }
   public redirectToEdit = (id: string) => {
     
     //this.router.navigate([`/${this.routeTo}/new`]);b
-    this.openDialog('0ms', '0ms', id, this.serviceName, true)
+    this.openDialog('0ms', '0ms', id, this.serviceName, true,this.idContact)
   }
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string, id: string, serviceName: string, toggle: boolean): void {
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string, id: string, serviceName: string, toggle: boolean,idContact:string): void {
     const dialogRef = this.dialog.open(this.componentDialog, {
-      data: { id, toggle, serviceName },
+      data: { id, toggle, serviceName,idContact },
       width: '850px',
       height: '600px',
       enterAnimationDuration,
@@ -94,7 +97,11 @@ export class CardInfoComponent implements OnInit {
     const q = [
       `${serviceName}/get/`,
       `?page=${pageIndex}&limit=${pageSize}`,
-      `&order=-1`,
+      `&order=-1&sort=updatedAt`,
+     // `&fields=_id,description,creator,creatorName,contact,deleted,createdAt,updatedAt,tenantId`,
+     `&fields=contact`, 
+     `&filter=${this.idContact}`,
+    // 
     ];
     
     this._restService.getTable$(q.join(''))
@@ -136,7 +143,7 @@ export class CardInfoComponent implements OnInit {
     if (this.infoToDisplay.length !== this.totalCount) {
 
       const nativeElement = this.viewport.elementRef.nativeElement
-      if (nativeElement.clientHeight + Math.round(nativeElement.scrollTop) === nativeElement.scrollHeight) {
+      if (nativeElement.clientHeight + Math.round(nativeElement.scrollTop) >= (nativeElement.scrollHeight-50)) {
         if (this.totalLoad < this.totalCount) {
           this.loadData(this.serviceName, this.pageIndex, this.pageSize)
           this.pageIndex += 1

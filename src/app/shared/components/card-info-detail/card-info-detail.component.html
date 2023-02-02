@@ -9,7 +9,8 @@
         </mat-grid-tile>
         <mat-grid-tile [colspan]="1" [rowspan]="2"   >
           <div class="container-right">
-           <span>publicado: {{ dataItem.createdAt |dateAsAgo }}</span>
+            <!-- <span>publicado: {{ dataItem.createdAt }}</span> -->
+           <span>publicado: {{ dataItem.updatedAt|dateAsAgo }}</span>
            </div>
         </mat-grid-tile>
         <mat-grid-tile [colspan]="3" [rowspan]="1" >

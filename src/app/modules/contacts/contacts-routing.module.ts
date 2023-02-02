@@ -24,6 +24,13 @@ const routes: Routes = [
     component: ContactDetailPageComponent,
     children: [
       {
+        path: "",//
+        redirectTo: 'notes',
+         pathMatch: "full",
+         //loadChildren: () => import("@modules/notes/notes.module").then(m => m.NotesModule),
+        //component: ListNoteComponent
+      },
+      {
         path: "notes",//
          loadChildren: () => import("@modules/notes/notes.module").then(m => m.NotesModule),
         //component: ListNoteComponent
