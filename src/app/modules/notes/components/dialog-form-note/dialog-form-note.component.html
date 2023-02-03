@@ -4,14 +4,18 @@
     <div class="form-body">
       <div class="row">
         <div class="input-group">
-          <mat-form-field appearance="outline">
+          <quill-editor
+          [modules]="modulesQuill" 
+            formControlName="description"
+            [styles]="{ height: '300px' }"
+            [placeholder]="'SOmethiing'"
+          >
+          </quill-editor>
+          <!-- <mat-form-field appearance="outline">
             <mat-label>{{ "CONTACTS.FULLNAME" | translate }}</mat-label>
-            <input
-              matInput
-              matNativeControl="text"
-              formControlName="description"
-            />
-          </mat-form-field>
+           
+
+          </mat-form-field> -->
         </div>
       </div>
     </div>

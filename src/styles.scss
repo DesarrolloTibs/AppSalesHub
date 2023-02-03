@@ -2,6 +2,7 @@
 // @import "~@ng-select/ng-select/themes/material.theme.css";
 @use '@angular/material' as mat;
 @use '@ng-matero/extensions' as mtx;
+@import '~quill/dist/quill.snow.css'; 
 :root {
   --color-1: #f9c543;
   --color-2: #3d1a6f;

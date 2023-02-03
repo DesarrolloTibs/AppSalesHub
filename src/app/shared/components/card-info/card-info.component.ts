@@ -62,7 +62,7 @@ export class CardInfoComponent implements OnInit {
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string, id: string, serviceName: string, toggle: boolean,idContact:string): void {
     const dialogRef = this.dialog.open(this.componentDialog, {
       data: { id, toggle, serviceName,idContact },
-      width: '850px',
+      width: '950px',
       height: '600px',
       enterAnimationDuration,
       exitAnimationDuration,

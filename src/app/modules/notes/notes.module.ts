@@ -8,7 +8,7 @@ import { MaterialModule } from '@shared/material.module';
 import { DialogFormNoteComponent } from './components/dialog-form-note/dialog-form-note.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { TranslateModule } from '@ngx-translate/core';
     SharedModule,
     MaterialModule,
     ReactiveFormsModule,
-    TranslateModule
+    TranslateModule,
+    QuillModule
   ]
 })
 export class NotesModule { }
