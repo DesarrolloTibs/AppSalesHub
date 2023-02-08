@@ -6,6 +6,7 @@ import { RestService } from '@core/services/rest.service';
 import { CardService } from '@core/models/cardService.model';
 import { TypeCard } from '@core/enum/typeCard.enum';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
+import { ShareService } from '@core/services/share.service';
 
 @Component({
   selector: 'app-card-info',
@@ -23,6 +24,7 @@ export class CardInfoComponent implements OnInit {
   routeTo: string = ""
   @Input() componentDialog!: ComponentType<unknown>
   someSubscription: any;
+
   public infoToDisplay: Array<any> = [];
   public totalCount = 0;
   public pageIndex = 1;
@@ -34,7 +36,8 @@ export class CardInfoComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private dialog: MatDialog,
-    private _restService: RestService) {
+    private _restService: RestService,
+    private _shareService:ShareService) {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
@@ -52,46 +55,14 @@ export class CardInfoComponent implements OnInit {
   public redirectToNew = () => {
     
     //this.router.navigate([`/${this.routeTo}/new`]);b
-    this.openDialog('0ms', '0ms', '', this.serviceName, true,this.idContact)
+    this._shareService.openDialog('0ms', '0ms', '', this.serviceName, true,this.idContact,this.componentDialog)
   }
-  public redirectToEdit = (id: string) => {
+  // public redirectToEdit = (id: string) => {
     
-    //this.router.navigate([`/${this.routeTo}/new`]);b
-    this.openDialog('0ms', '0ms', id, this.serviceName, true,this.idContact)
-  }
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string, id: string, serviceName: string, toggle: boolean,idContact:string): void {
-    const dialogRef = this.dialog.open(this.componentDialog, {
-      data: { id, toggle, serviceName,idContact },
-      width: '950px',
-      height: '600px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      
-      
-      if (result) {
-        // setTimeout(() => {
-        //   
-        //   this.router.navigate([this.router.url])
-        // }, 5000);
+  //   //this.router.navigate([`/${this.routeTo}/new`]);b
+  //   this.openDialog('0ms', '0ms', id, this.serviceName, true,this.idContact)
+  // }
 
-        this.router.navigate([this.router.url])
-        //  this.pageIndex=1;
-        //  this.infoToDisplay=[]
-        //  const q = [
-        //   `${this.serviceName}/get/`,
-        //   `?page=${this.pageIndex}&limit=${this.pageSize}`,
-        //   `&order=-1`,
-        // ];
-        // this.loadData(q.join(''))
-        // this.cd.detectChanges();
-
-      }
-
-    });
-
-  }
 
   loadData(serviceName: string, pageIndex: number, pageSize: number): void {
     const q = [

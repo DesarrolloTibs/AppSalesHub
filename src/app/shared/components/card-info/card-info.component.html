@@ -7,7 +7,11 @@
 </button> -->
 <div class="row">
   <div class="parent-left">
-    <h2 class="title">  {{(typeCard=='Note'?"LISTNOTE.TITLE" :"LISTEMAIL.TITLE")|translate}}Total({{totalLoad}}/{{totalCount}})</h2>
+    <h2 class="title">
+      {{
+        (typeCard == "Note" ? "LISTNOTE.TITLE" : "LISTEMAIL.TITLE") | translate
+      }}Total({{ totalLoad }}/{{ totalCount }})
+    </h2>
   </div>
   <div class="parent-right">
     <button
@@ -15,24 +19,40 @@
       aria-label="New button"
       class="md-fab-custom-position button-custom1 createbtn"
       (click)="redirectToNew()"
-    
     >
-    {{(typeCard=='Note'?"LISTNOTE.BTNNEWNOTE" :"LISTEMAIL.BTNNEWEMAIL")|translate}}
+      {{
+        (typeCard == "Note" ? "LISTNOTE.BTNNEWNOTE" : "LISTEMAIL.BTNNEWEMAIL")
+          | translate
+      }}
     </button>
   </div>
 </div>
 
-  <cdk-virtual-scroll-viewport itemSize="5" class="example-viewport" (scrolledIndexChange)="onScrollLoadData()" >
-    <mat-card class="card-width"  *ngFor="let item of infoToDisplay" (click)="redirectToEdit (item._id)">
-      <app-card-info-detail [typeCard]="typeCard" [dataItem]="item"></app-card-info-detail>
-      <!-- <mat-card-actions [align]="'end'">
-        
+<cdk-virtual-scroll-viewport
+  itemSize="5"
+  class="example-viewport"
+  (scrolledIndexChange)="onScrollLoadData()"
+>
+  <div class="row">
+    <div class="parent-center">
+      <!-- <mat-accordion class="card-width"  *ngFor="let item of infoToDisplay"
+      (click)="redirectToEdit(item._id)"> -->
+      <app-card-info-detail
+        class="card-width"
+        [typeCard]="typeCard"
+        [dataItem]="infoToDisplay"
+        [componentDialog]="componentDialog"
+        [idContact]="idContact"
+        [serviceName]="serviceName"
+      ></app-card-info-detail>
+      <!-- </mat-accordion> -->
+      <!-- <mat-card class="card-width"  *ngFor="let item of infoToDisplay" (click)="redirectToEdit (item._id)">
+        <app-card-info-detail [typeCard]="typeCard" [dataItem]="item"></app-card-info-detail>
     
-      </mat-card-actions> -->
-    </mat-card>
-   
-    </cdk-virtual-scroll-viewport>
-    <!-- <button type="button" (click)="onloadMore()">
+      </mat-card> -->
+    </div>
+  </div>
+</cdk-virtual-scroll-viewport>
+<!-- <button type="button" (click)="onloadMore()">
       ver mas..
     </button> -->
-

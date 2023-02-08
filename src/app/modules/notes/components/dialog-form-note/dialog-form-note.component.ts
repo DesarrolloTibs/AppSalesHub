@@ -27,7 +27,8 @@ export class DialogFormNoteComponent implements OnInit {
       [{ align: [] }],
       ['blockquote', 'code-block'],
       [{ list: 'ordered'}, { list: 'bullet' }],
-      ['link', 'image', 'video'],
+      //['link'],
+      ['link', 'image'],
       ['clean'],
     ]
   };

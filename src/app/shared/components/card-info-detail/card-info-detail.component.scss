@@ -3,6 +3,10 @@
 //     align-items: flex-start !important;
 //     justify-content: center;
 // }
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: right;
+  align-items: center;
+}
 
 .container {
     display: flex;

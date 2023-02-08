@@ -4,6 +4,8 @@ import Swal from 'sweetalert2';
 import {TranslateService} from "@ngx-translate/core";
 import {CookieService} from "ngx-cookie-service";
 import { RestService } from './rest.service';
+import { ComponentType } from '@angular/cdk/portal';
+import { MatDialog } from '@angular/material/dialog';
 //mport {ModalUserComponent} from "./components/modal-user/modal-user.component";
 //import {ModalUpdateComponent} from "./components/modal-update/modal-update.component";
 //import {ModalWizardComponent} from "./components/modal-wizard/modal-wizard.component";
@@ -16,7 +18,8 @@ export class ShareService {
   constructor(private router: Router,
     private cookie: CookieService,
     private translate: TranslateService,
-    private _restService:RestService) {
+    private _restService:RestService,
+    private dialog: MatDialog,) {
 }
 public parseData = (data: any, source: string = '') => {
   try {
@@ -64,7 +67,39 @@ public confirm = () => new Promise((resolve, reject) => {
   });
 
 })
+openDialog(enterAnimationDuration: string, exitAnimationDuration: string, id: string, serviceName: string, toggle: boolean,idContact:string,componentDialog:ComponentType<unknown>): void {
+  const dialogRef = this.dialog.open(componentDialog, {
+    data: { id, toggle, serviceName,idContact },
+    width: '950px',
+    height: '600px',
+    enterAnimationDuration,
+    exitAnimationDuration,
+  });
+  dialogRef.afterClosed().subscribe(result => {
+    
+    
+    if (result) {
+      // setTimeout(() => {
+      //   
+      //   this.router.navigate([this.router.url])
+      // }, 5000);
 
+      this.router.navigate([this.router.url])
+      //  this.pageIndex=1;
+      //  this.infoToDisplay=[]
+      //  const q = [
+      //   `${this.serviceName}/get/`,
+      //   `?page=${this.pageIndex}&limit=${this.pageSize}`,
+      //   `&order=-1`,
+      // ];
+      // this.loadData(q.join(''))
+      // this.cd.detectChanges();
+
+    }
+
+  });
+
+}
 public openUpdateModal = (data: any = {}) => {
   const initialState = {
     section: data
