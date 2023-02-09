@@ -56,6 +56,32 @@
     </mat-card-content> -->
   </ng-container>
   <ng-container *ngSwitchCase="'Email'">
+    <mat-accordion class="card-width example-headers-align">
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+        *ngFor="let item of dataItem"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title
+            >Correo enviado por: {{ item.creatorName }}
+          </mat-panel-title>
+          <mat-panel-description
+            matTooltip="{{ item.createdAt | date }}"
+            [matTooltipPosition]="'after'"
+          >
+            Enviado: {{ item.updatedAt | dateAsAgo }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div class="container" [innerHtml]="item.description"></div>
+        <mat-action-row>
+          <button mat-button color="primary" (click)="redirectToEdit(item._id)">
+            Editar <mat-icon>edit</mat-icon>
+          </button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
     <!-- <mat-card-header>
       <mat-card-title>Correo creado por:{{dataItem.creatorName}}</mat-card-title>
       <mat-card-subtitle>Start</mat-card-subtitle>

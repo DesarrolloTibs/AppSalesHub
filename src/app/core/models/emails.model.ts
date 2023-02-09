@@ -11,6 +11,12 @@ export interface EmailService{
     updatedAt:Date,
     tenantId:string
 }
+export interface EmailModel{
+    description:string,
+    creator:string,
+    creatorName:string,
+    contact:string,
+}
 
 /*{[{"_id":"63d8453ec00f90ca6d139e03",
 "description":"<p>test notes</p>",

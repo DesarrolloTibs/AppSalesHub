@@ -74,7 +74,7 @@ export class CardInfoComponent implements OnInit {
      `&filter=${this.idContact}`,
     // 
     ];
-    
+    if (this.typeCard === TypeCard.Note) {
     this._restService.getTable$(q.join(''))
       .subscribe((response: CardService) => {
         const { itemsList, pagination } = response;
@@ -82,32 +82,33 @@ export class CardInfoComponent implements OnInit {
         
         this.totalCount = pagination.totalDocs
         //this.totalLoad=(pagination.page*this.pageSize)
-        if (this.typeCard === TypeCard.Note) {
+      
           this.infoToDisplay = [...this.infoToDisplay, ...itemsList]
           //Object.assign(this.infoToDisplay, itemsList);
           this.totalLoad = (this.infoToDisplay.length)
           
-        } else {
-          this.infoToDisplay = [{
-            _id: "63d8453ec00f90ca6d139e03",
-            description: "<p>test Emails</p>",
-            from: 'hector.esparza@tibs.com.mx',
-            to: 'hfemlsca@gmail.com',
-            creator: "63cef93793dfd56487577aec",
-            creatorName: "Hector Esparza",
-            contact: "63d1c5b5d9131813199caaa8",
-            deleted: false,
-            createdAt: "2023-01-30T22:31:26.305Z",
-            updatedAt: "2023-01-30T22:31:26.305Z",
-            tenantId: "tibs"
-          }]
-        }
+       
 
 
 
         //this.pageSetValue(pagination)
         //this.dataSource.data = itemsList as any
       })
+    } else {
+      this.infoToDisplay = [{
+        _id: "63d8453ec00f90ca6d139e03",
+        description: "<p>test Emails</p>",
+        from: 'hector.esparza@tibs.com.mx',
+        to: 'hfemlsca@gmail.com',
+        creator: "63cef93793dfd56487577aec",
+        creatorName: "Hector Esparza",
+        contact: "63d1c5b5d9131813199caaa8",
+        deleted: false,
+        createdAt: "2023-01-30T22:31:26.305Z",
+        updatedAt: "2023-01-30T22:31:26.305Z",
+        tenantId: "tibs"
+      }]
+    }
   }
 
   public async onScrollLoadData() {
