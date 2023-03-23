@@ -38,6 +38,7 @@
       <!-- <mat-accordion class="card-width"  *ngFor="let item of infoToDisplay"
       (click)="redirectToEdit(item._id)"> -->
       <app-card-info-detail
+        *ngIf="infoToDisplay.length>0"
         class="card-width"
         [typeCard]="typeCard"
         [dataItem]="infoToDisplay"
@@ -45,6 +46,7 @@
         [idContact]="idContact"
         [serviceName]="serviceName"
       ></app-card-info-detail>
+      <div *ngIf="infoToDisplay.length<=0">no elementos</div>
       <!-- </mat-accordion> -->
       <!-- <mat-card class="card-width"  *ngFor="let item of infoToDisplay" (click)="redirectToEdit (item._id)">
         <app-card-info-detail [typeCard]="typeCard" [dataItem]="item"></app-card-info-detail>
