@@ -7,7 +7,7 @@ const routes: Routes = [
   path:'auth',//TODO: http://localhost:4200/
   loadChildren:()=> import(`../app/modules/auth/auth.module`).then(m=>m.AuthModule)
 },{
-  path:'',//TODO: http://localhost:4200/
+  path:'',//TODO: http://localhost:4200////
   component:HomePageComponent,
   loadChildren:()=> import(`../app/modules/home/home.module`).then(m=>m.HomeModule)
 }
